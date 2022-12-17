@@ -40,7 +40,7 @@
         android:theme="@style/Theme.App"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.yazantarifi.coina.android.MainActivity"
+            android:name="com.yazantarifi.coina.android.MainScreen"
             android:exported="true"
             android:screenOrientation="fullSensor"
             android:theme="@style/Theme.MainScreen" >

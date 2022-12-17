@@ -26,7 +26,7 @@
         android:appCategory="news">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".MainScreen"
             android:theme="@style/Theme.MainScreen"
             android:screenOrientation="fullSensor"
             android:exported="true">

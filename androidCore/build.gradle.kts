@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
 }
 
@@ -9,9 +9,6 @@ android {
     defaultConfig {
         minSdk = 24
         targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
-        multiDexEnabled = true
     }
 
     buildFeatures {
@@ -47,8 +44,8 @@ dependencies {
     addJetpackComposeDependencies(this)
     addMaterialConfiguration(this)
 
-    implementation("androidx.lifecycle:lifecycle-viewmodel:2.4.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel:2.5.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
 }
 
 fun addJetpackComposeDependencies(configuration: DependencyHandlerScope) {

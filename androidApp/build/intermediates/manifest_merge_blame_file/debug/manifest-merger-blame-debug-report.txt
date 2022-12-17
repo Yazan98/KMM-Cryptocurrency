@@ -77,8 +77,8 @@
 41-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:24:9-44
 42        <activity
 42-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:28:9-37:20
-43            android:name="com.yazantarifi.coina.android.MainActivity"
-43-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:29:13-41
+43            android:name="com.yazantarifi.coina.android.MainScreen"
+43-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:29:13-39
 44            android:exported="true"
 44-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:32:13-36
 45            android:screenOrientation="fullSensor"
