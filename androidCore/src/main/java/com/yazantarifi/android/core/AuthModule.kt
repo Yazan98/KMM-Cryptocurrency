@@ -2,6 +2,7 @@ package com.yazantarifi.android.core
 
 import com.yazantarifi.coina.api.HttpBaseClient
 import com.yazantarifi.coina.api.requests.ApplicationApiManager
+import com.yazantarifi.coina.database.CoinImagesDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,6 +17,12 @@ object AuthModule {
     @Singleton
     fun getApplicationApiManager(): ApplicationApiManager {
         return ApplicationApiManager(HttpBaseClient().httpClient)
+    }
+
+    @Provides
+    @Singleton
+    fun getImagesDatabaseInstance(): CoinImagesDatabase {
+        return CoinImagesDatabase()
     }
 
 }

@@ -3,6 +3,7 @@ package com.yazantarifi.coina.api.requests
 import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.api.CoinaApiInfo
 import com.yazantarifi.coina.api.CoinaResponseCode
+import com.yazantarifi.coina.database.CoinImagesDatabase
 import com.yazantarifi.coina.models.CoinImage
 import com.yazantarifi.coina.ofInnerClassParameter
 import io.ktor.client.HttpClient
@@ -38,10 +39,11 @@ class ApplicationApiManager constructor(private val httpClient: HttpClient): App
         }
     }
 
-    override suspend fun getCoinsImages(onNewStateTriggered: (CoinaApplicationState<ArrayList<CoinImage>>) -> Unit) {
+    override suspend fun getCoinsImages(database: CoinImagesDatabase, onNewStateTriggered: (CoinaApplicationState<ArrayList<CoinImage>>) -> Unit) {
         withContext(Dispatchers.Default) {
             try {
                 val request: ArrayList<CoinImage> = httpClient.get(CoinaApiInfo.BASE_URL + "assets/icons/200").body()
+                database.writeImages(request)
                 onNewStateTriggered(CoinaApplicationState.Success(request))
             } catch (ex: Exception) {
                 onNewStateTriggered(CoinaApplicationState.Error(ex))

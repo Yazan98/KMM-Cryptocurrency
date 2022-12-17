@@ -4,7 +4,7 @@
             "outputFile": "com.yazantarifi.coina.android.androidApp-mergeDebugResources-70:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/d86be3b1c5c147b47260285764d392ad/transformed/core-1.8.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/f6c27e0f6dd939ffd8e4e530a3116497/transformed/core-1.8.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/60e7ccf94c84273a01ea78eb736f58e6/transformed/appcompat-1.5.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/d5a743d96a6ee62e86ab6e33f583ae7c/transformed/appcompat-1.5.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

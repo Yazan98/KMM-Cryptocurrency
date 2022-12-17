@@ -4,7 +4,7 @@
             "outputFile": "com.yazantarifi.coina.android.androidApp-mergeDebugResources-70:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/a811a11c805b5e78ccd9b5afe01e52b7/transformed/material-1.8.0-alpha01/res/values-small-v4/values-small-v4.xml",
+                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/4570e27c563d5f0d34ca6d56bba336a4/transformed/material-1.8.0-alpha01/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

@@ -16,6 +16,7 @@ buildscript {
         classpath("com.google.firebase:firebase-crashlytics-gradle:2.9.2")
         classpath("com.google.dagger:hilt-android-gradle-plugin:2.44")
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.6.0-alpha04")
+        classpath("io.realm.kotlin:gradle-plugin:1.4.0")
     }
 }
 

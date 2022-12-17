@@ -3,6 +3,6 @@
 3    package="com.yazantarifi.coina" >
 4
 5    <uses-sdk android:minSdkVersion="24" />
-5-->/Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml
+5-->/Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10381562943479605196.xml
 6
 7</manifest>

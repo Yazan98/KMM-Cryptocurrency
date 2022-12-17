@@ -13,8 +13,10 @@ import com.yazantarifi.android.auth.AuthViewModel_HiltModules_KeyModule_ProvideF
 import com.yazantarifi.android.auth.LoginScreen;
 import com.yazantarifi.android.core.AuthModule;
 import com.yazantarifi.android.core.AuthModule_GetApplicationApiManagerFactory;
+import com.yazantarifi.android.core.AuthModule_GetImagesDatabaseInstanceFactory;
 import com.yazantarifi.coina.api.requests.ApplicationApiManager;
 import com.yazantarifi.coina.context.CoinaStorageProvider;
+import com.yazantarifi.coina.database.CoinImagesDatabase;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
 import dagger.hilt.android.flags.HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule;
@@ -463,7 +465,7 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
       public T get() {
         switch (id) {
           case 0: // com.yazantarifi.android.auth.AuthViewModel 
-          return (T) new AuthViewModel(singletonCImpl.getStorageProviderImplementationInstanceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get());
+          return (T) new AuthViewModel(singletonCImpl.getStorageProviderImplementationInstanceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get(), singletonCImpl.getImagesDatabaseInstanceProvider.get());
 
           default: throw new AssertionError(id);
         }
@@ -548,6 +550,8 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
     private Provider<ApplicationApiManager> getApplicationApiManagerProvider;
 
+    private Provider<CoinImagesDatabase> getImagesDatabaseInstanceProvider;
+
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
       this.applicationContextModule = applicationContextModuleParam;
       initialize(applicationContextModuleParam);
@@ -558,6 +562,7 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
     private void initialize(final ApplicationContextModule applicationContextModuleParam) {
       this.getStorageProviderImplementationInstanceProvider = DoubleCheck.provider(new SwitchingProvider<CoinaStorageProvider>(singletonCImpl, 0));
       this.getApplicationApiManagerProvider = DoubleCheck.provider(new SwitchingProvider<ApplicationApiManager>(singletonCImpl, 1));
+      this.getImagesDatabaseInstanceProvider = DoubleCheck.provider(new SwitchingProvider<CoinImagesDatabase>(singletonCImpl, 2));
     }
 
     @Override
@@ -598,6 +603,9 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
           case 1: // com.yazantarifi.coina.api.requests.ApplicationApiManager 
           return (T) AuthModule_GetApplicationApiManagerFactory.getApplicationApiManager();
+
+          case 2: // com.yazantarifi.coina.database.CoinImagesDatabase 
+          return (T) AuthModule_GetImagesDatabaseInstanceFactory.getImagesDatabaseInstance();
 
           default: throw new AssertionError(id);
         }
