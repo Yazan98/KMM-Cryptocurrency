@@ -1,5 +1,7 @@
 package com.yazantarifi.coina.android;
 
+import com.yazantarifi.android.auth.AuthViewModel_HiltModules;
+import com.yazantarifi.android.auth.LoginScreen_GeneratedInjector;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -141,6 +143,7 @@ public final class CoinaApplication_HiltComponents {
 
   @Subcomponent(
       modules = {
+          AuthViewModel_HiltModules.KeyModule.class,
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class
@@ -165,7 +168,8 @@ public final class CoinaApplication_HiltComponents {
       }
   )
   @ActivityScoped
-  public abstract static class ActivityC implements MainScreen_GeneratedInjector,
+  public abstract static class ActivityC implements LoginScreen_GeneratedInjector,
+      MainScreen_GeneratedInjector,
       ActivityComponent,
       DefaultViewModelFactories.ActivityEntryPoint,
       HiltWrapper_HiltViewModelFactory_ActivityCreatorEntryPoint,
@@ -178,7 +182,10 @@ public final class CoinaApplication_HiltComponents {
   }
 
   @Subcomponent(
-      modules = HiltWrapper_HiltViewModelFactory_ViewModelModule.class
+      modules = {
+          AuthViewModel_HiltModules.BindsModule.class,
+          HiltWrapper_HiltViewModelFactory_ViewModelModule.class
+      }
   )
   @ViewModelScoped
   public abstract static class ViewModelC implements ViewModelComponent,

@@ -17,6 +17,9 @@ import dagger.hilt.processor.internal.definecomponent.codegen._dagger_hilt_andro
 import dagger.hilt.processor.internal.definecomponent.codegen._dagger_hilt_android_internal_builders_ViewModelComponentBuilder;
 import dagger.hilt.processor.internal.definecomponent.codegen._dagger_hilt_android_internal_builders_ViewWithFragmentComponentBuilder;
 import dagger.hilt.processor.internal.definecomponent.codegen._dagger_hilt_components_SingletonComponent;
+import hilt_aggregated_deps._com_yazantarifi_android_auth_AuthViewModel_HiltModules_BindsModule;
+import hilt_aggregated_deps._com_yazantarifi_android_auth_AuthViewModel_HiltModules_KeyModule;
+import hilt_aggregated_deps._com_yazantarifi_android_auth_LoginScreen_GeneratedInjector;
 import hilt_aggregated_deps._com_yazantarifi_coina_android_ApplicationModule;
 import hilt_aggregated_deps._com_yazantarifi_coina_android_CoinaApplication_GeneratedInjector;
 import hilt_aggregated_deps._com_yazantarifi_coina_android_MainScreen_GeneratedInjector;
@@ -59,6 +62,9 @@ import hilt_aggregated_deps._dagger_hilt_android_internal_modules_HiltWrapper_Ac
         _dagger_hilt_components_SingletonComponent.class
     },
     aggregatedDeps = {
+        _com_yazantarifi_android_auth_AuthViewModel_HiltModules_BindsModule.class,
+        _com_yazantarifi_android_auth_AuthViewModel_HiltModules_KeyModule.class,
+        _com_yazantarifi_android_auth_LoginScreen_GeneratedInjector.class,
         _com_yazantarifi_coina_android_ApplicationModule.class,
         _com_yazantarifi_coina_android_CoinaApplication_GeneratedInjector.class,
         _com_yazantarifi_coina_android_MainScreen_GeneratedInjector.class,

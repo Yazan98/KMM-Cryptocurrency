@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email_hint">Enter Your Email</string>
+    <string name="email_pass">Password</string>
+    <string name="app_name">Coina</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="welcome_back_sub">We Missed You</string>
+    <string name="forget_password">Forget Password ?</string>
+    <string name="loading_message">Loading, Please Wait ...</string>
+    <string name="login">Login</string>
+    <string name="continue_with">"Continue With "</string>
+    <string name="not_a_member">Not a Member ?</string>
+    <string name="register_now">Register Now</string>
+    <string name="email_not_valid">Email Required !!</string>
+    <string name="password_req">Password Required !!</string>
+</resources>
