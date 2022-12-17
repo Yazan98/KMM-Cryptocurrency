@@ -1,0 +1,8 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.yazantarifi.coina" >
+4
+5    <uses-sdk android:minSdkVersion="24" />
+5-->/Users/yazantarifi/DevelopmentProjects/CoinApp/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15887667312337283663.xml
+6
+7</manifest>
