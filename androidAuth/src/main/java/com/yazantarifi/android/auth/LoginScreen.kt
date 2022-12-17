@@ -66,6 +66,7 @@ import kotlinx.coroutines.launch
 import com.yazantarifi.android.core.BaseScreen
 import com.yazantarifi.android.core.composables.ApplicationLoadingComposable
 import com.yazantarifi.android.core.composables.ApplicationToolbar
+import com.yazantarifi.android.core.navigation.CoinaScreenNavigation
 import com.yazantarifi.android.core.ui.ApplicationColors
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -254,7 +255,8 @@ private fun onLoginButtonClicked(scaffoldState: ScaffoldState, viewModel: AuthVi
 
     viewModel.onGetLoginInformation {
         coroutineScope.launch(Dispatchers.Main) {
-
+            CoinaScreenNavigation.startScreen(context, CoinaScreenNavigation.HOME_SCREEN)
+            context.finish()
         }
     }
 }

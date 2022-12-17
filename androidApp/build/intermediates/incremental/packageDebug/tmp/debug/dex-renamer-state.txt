@@ -1,4 +1,4 @@
-#Sat Dec 17 14:21:37 EET 2022
+#Sat Dec 17 14:34:52 EET 2022
 base.0=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/dex/debug/mergeLibDexDebug/10/classes.dex
 base.10=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
@@ -6,6 +6,7 @@ base.11=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermedia
 base.12=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
 base.13=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
 base.14=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/dex/debug/mergeExtDexDebug/classes3.dex
+base.15=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/dex/debug/mergeLibDexDebug/2/classes.dex
 base.2=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/dex/debug/mergeLibDexDebug/12/classes.dex
 base.3=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/dex/debug/mergeLibDexDebug/13/classes.dex
 base.4=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/dex/debug/mergeLibDexDebug/14/classes.dex
@@ -21,6 +22,7 @@ path.11=7/classes.dex
 path.12=9/classes.dex
 path.13=classes2.dex
 path.14=classes3.dex
+path.15=2/classes.dex
 path.2=12/classes.dex
 path.3=13/classes.dex
 path.4=14/classes.dex
@@ -36,6 +38,7 @@ renamed.11=classes12.dex
 renamed.12=classes13.dex
 renamed.13=classes14.dex
 renamed.14=classes15.dex
+renamed.15=classes16.dex
 renamed.2=classes3.dex
 renamed.3=classes4.dex
 renamed.4=classes5.dex
