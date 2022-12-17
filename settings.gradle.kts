@@ -17,3 +17,4 @@ dependencyResolutionManagement {
 rootProject.name = "Coina"
 include(":androidApp")
 include(":shared")
+include(":androidCore")

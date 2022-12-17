@@ -53,7 +53,9 @@ android {
 
 dependencies {
     implementation(project(":shared"))
+    implementation(project(":androidCore"))
     implementation(platform("com.google.firebase:firebase-bom:30.0.1"))
+
     addJetpackComposeDependencies(this)
     addMaterialConfiguration(this)
     addFirebaseConfiguration(this)

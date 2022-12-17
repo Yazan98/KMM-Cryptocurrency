@@ -1,4 +1,4 @@
-package com.yazantarifi.coina.android
+package com.yazantarifi.android.core.ui
 
 
 import androidx.compose.material3.MaterialTheme
