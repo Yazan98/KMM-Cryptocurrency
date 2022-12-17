@@ -2,6 +2,7 @@ package com.yazantarifi.coina.api
 
 object CoinaResponseCode {
     const val ERROR_RESPONSE_CODE_NOT_FOUND = 404
+    const val RESPONSE_CODE_SUCCESS = 200
     const val ERROR_RESPONSE_CODE_REDIRECT = 300
     const val ERROR_RESPONSE_CODE_BAD_REQUEST = 400
     const val ERROR_RESPONSE_CODE_INTERNAL_SERVER_ERROR_START = 500

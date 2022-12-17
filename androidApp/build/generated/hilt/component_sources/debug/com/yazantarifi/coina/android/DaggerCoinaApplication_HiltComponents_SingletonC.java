@@ -11,6 +11,9 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.yazantarifi.android.auth.AuthViewModel;
 import com.yazantarifi.android.auth.AuthViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.yazantarifi.android.auth.LoginScreen;
+import com.yazantarifi.android.core.AuthModule;
+import com.yazantarifi.android.core.AuthModule_GetApplicationApiManagerFactory;
+import com.yazantarifi.coina.api.requests.ApplicationApiManager;
 import com.yazantarifi.coina.context.CoinaStorageProvider;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
@@ -65,6 +68,15 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
     @Deprecated
     public Builder applicationModule(ApplicationModule applicationModule) {
       Preconditions.checkNotNull(applicationModule);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder authModule(AuthModule authModule) {
+      Preconditions.checkNotNull(authModule);
       return this;
     }
 
@@ -451,7 +463,7 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
       public T get() {
         switch (id) {
           case 0: // com.yazantarifi.android.auth.AuthViewModel 
-          return (T) new AuthViewModel(singletonCImpl.getStorageProviderImplementationInstanceProvider.get());
+          return (T) new AuthViewModel(singletonCImpl.getStorageProviderImplementationInstanceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get());
 
           default: throw new AssertionError(id);
         }
@@ -534,6 +546,8 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
     private Provider<CoinaStorageProvider> getStorageProviderImplementationInstanceProvider;
 
+    private Provider<ApplicationApiManager> getApplicationApiManagerProvider;
+
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
       this.applicationContextModule = applicationContextModuleParam;
       initialize(applicationContextModuleParam);
@@ -543,6 +557,7 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
     @SuppressWarnings("unchecked")
     private void initialize(final ApplicationContextModule applicationContextModuleParam) {
       this.getStorageProviderImplementationInstanceProvider = DoubleCheck.provider(new SwitchingProvider<CoinaStorageProvider>(singletonCImpl, 0));
+      this.getApplicationApiManagerProvider = DoubleCheck.provider(new SwitchingProvider<ApplicationApiManager>(singletonCImpl, 1));
     }
 
     @Override
@@ -580,6 +595,9 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
         switch (id) {
           case 0: // com.yazantarifi.coina.context.CoinaStorageProvider 
           return (T) ApplicationModule_GetStorageProviderImplementationInstanceFactory.getStorageProviderImplementationInstance(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 1: // com.yazantarifi.coina.api.requests.ApplicationApiManager 
+          return (T) AuthModule_GetApplicationApiManagerFactory.getApplicationApiManager();
 
           default: throw new AssertionError(id);
         }

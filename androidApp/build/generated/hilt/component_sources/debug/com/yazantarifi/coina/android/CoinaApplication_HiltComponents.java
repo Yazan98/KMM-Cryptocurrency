@@ -2,6 +2,7 @@ package com.yazantarifi.coina.android;
 
 import com.yazantarifi.android.auth.AuthViewModel_HiltModules;
 import com.yazantarifi.android.auth.LoginScreen_GeneratedInjector;
+import com.yazantarifi.android.core.AuthModule;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -118,6 +119,7 @@ public final class CoinaApplication_HiltComponents {
       modules = {
           ApplicationContextModule.class,
           ApplicationModule.class,
+          AuthModule.class,
           ActivityRetainedCBuilderModule.class,
           ServiceCBuilderModule.class,
           HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule.class

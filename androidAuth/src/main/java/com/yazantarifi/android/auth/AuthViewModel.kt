@@ -5,6 +5,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.yazantarifi.coina.api.requests.ApplicationApiManager
 import com.yazantarifi.coina.context.CoinaStorageProvider
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -14,7 +15,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AuthViewModel @Inject constructor(
-    private val provider: CoinaStorageProvider
+    private val provider: CoinaStorageProvider,
+    private val apiManager: ApplicationApiManager
 ): ViewModel() {
 
     val userEmailState: MutableState<String> by lazy { mutableStateOf("") }
@@ -32,11 +34,16 @@ class AuthViewModel @Inject constructor(
     fun onGetLoginInformation(onUserLoggedInResponse: () -> Unit) {
         viewModelScope.launch(Dispatchers.IO) {
             loginLoadingState.value = true
-            delay(3000)
-            // Execute Your UseCase Here (Database or Api Request)
-            loginLoadingState.value = false
-            provider.updateLoggedInUser(true)
-            onUserLoggedInResponse()
+            apiManager.getCoinsImages {
+                it.handleResult({
+                    loginLoadingState.value = false
+                    provider.updateLoggedInUser(true)
+                    onUserLoggedInResponse()
+                }, {
+                    loginLoadingState.value = false
+                })
+            }
         }
     }
+
 }

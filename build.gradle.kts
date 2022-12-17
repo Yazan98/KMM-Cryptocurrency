@@ -26,8 +26,9 @@ plugins {
     id("com.google.dagger.hilt.android") version "2.44" apply false
     kotlin("multiplatform").version("1.6.20").apply(false)
     kotlin("jvm").version("1.6.20")
-    kotlin("plugin.serialization").version("1.6.20")
+//    kotlin("plugin.serialization").version("1.6.20")
     id("com.android.library") version "8.0.0-alpha05" apply false
+    id("org.jetbrains.kotlin.plugin.serialization").version("1.7.20")
 //    id("org.jetbrains.kotlin.android") version "1.7.20" apply false
 //    id("com.android.library").version("8.0.0-alpha05").apply(false)
 }

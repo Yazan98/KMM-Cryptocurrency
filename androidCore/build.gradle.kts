@@ -1,6 +1,9 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -43,10 +46,14 @@ android {
 dependencies {
     addJetpackComposeDependencies(this)
     addMaterialConfiguration(this)
+    setupHiltConfigurations(this)
 
     implementation(project(":shared"))
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.5.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+
+    implementation("io.ktor:ktor-client-core:2.2.1")
+    implementation("io.ktor:ktor-client-android:2.2.1")
 }
 
 fun addJetpackComposeDependencies(configuration: DependencyHandlerScope) {
@@ -71,6 +78,11 @@ fun addJetpackComposeDependencies(configuration: DependencyHandlerScope) {
     configuration.implementation("androidx.hilt:hilt-navigation-compose:1.0.0-alpha02")
 }
 
+fun setupHiltConfigurations(configurations: DependencyHandlerScope) {
+    configurations.implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+    configurations.implementation("com.google.dagger:hilt-android:2.44")
+    configurations.kapt("com.google.dagger:hilt-android-compiler:2.44")
+}
 
 fun addMaterialConfiguration(configuration: DependencyHandlerScope) {
     configuration.implementation("androidx.compose.material3:material3:1.0.0-alpha11")

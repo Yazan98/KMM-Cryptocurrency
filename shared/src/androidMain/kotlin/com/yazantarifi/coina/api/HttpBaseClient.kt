@@ -1,5 +1,7 @@
 package com.yazantarifi.coina.api
 
+import com.yazantarifi.coina.api.errors.CoinaNoInternetException
+import com.yazantarifi.coina.api.errors.CoinaUnknownException
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.plugins.ClientRequestException
@@ -9,7 +11,12 @@ import io.ktor.client.plugins.ResponseException
 import io.ktor.client.plugins.ServerResponseException
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.defaultRequest
+import io.ktor.client.plugins.logging.DEFAULT
+import io.ktor.client.plugins.logging.LogLevel
+import io.ktor.client.plugins.logging.Logger
+import io.ktor.client.plugins.logging.Logging
 import io.ktor.client.request.HttpRequest
+import io.ktor.client.request.headers
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
@@ -20,11 +27,17 @@ actual class HttpBaseClient {
 
     actual val httpClient: HttpClient = HttpClient {
         defaultRequest {
-            host = ""
+            host = CoinaApiInfo.BASE_URL
             contentType(ContentType.Application.Json)
+            headers {
+                append("Content-Type", "application/json")
+                append("Accept", "application/json")
+                append(CoinaApiInfo.AUTH_HEADER_NAME, CoinaApiInfo.API_KEY)
+            }
         }
 
         expectSuccess = false
+        developmentMode = true
         install(ContentNegotiation) {
             json(Json {
                 prettyPrint = true
@@ -32,6 +45,11 @@ actual class HttpBaseClient {
                 allowSpecialFloatingPointValues = true
                 isLenient = true
             })
+        }
+
+        install(Logging) {
+            logger = Logger.DEFAULT
+            level = LogLevel.ALL
         }
 
         HttpResponseValidator {
@@ -44,16 +62,22 @@ actual class HttpBaseClient {
             }
 
             handleResponseExceptionWithRequest { cause: Throwable, request: HttpRequest ->
-                var error = null
                 when (cause) {
-                    is ResponseException -> {}
-                    is UnknownHostException -> {}
-                    else -> {}
-                }
+                    is ResponseException -> {
+                        throw cause
+                    }
 
-                throw Exception("")
+                    is UnknownHostException -> {
+                        throw CoinaNoInternetException()
+                    }
+
+                    else -> {
+                        throw CoinaUnknownException(cause)
+                    }
+                }
             }
         }
+
     }
 
 }

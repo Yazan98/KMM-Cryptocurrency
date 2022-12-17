@@ -4,7 +4,7 @@
             "outputFile": "com.yazantarifi.coina.android.androidApp-mergeDebugResources-70:/values-ca/values-ca.xml",
             "map": [
                 {
-                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/0e010b07786ad3c19b28dd90e1b5333e/transformed/jetified-play-services-base-18.0.1/res/values-ca/values.xml",
+                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/4bcc9170cd172d4f4ae182ee67a5a31f/transformed/jetified-play-services-base-18.0.1/res/values-ca/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/d171dda3a28846f39b40ddf163548570/transformed/jetified-play-services-basement-18.0.0/res/values-ca/values.xml",
+                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/618066211ff1ac1c8cdd0285a7a65735/transformed/jetified-play-services-basement-18.0.0/res/values-ca/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/4f075ca897986f8dceec2965805eeb0e/transformed/jetified-ui-1.2.0/res/values-ca/values-ca.xml",
+                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/468d421cb6bd691cad30a95b6b890040/transformed/jetified-ui-1.2.0/res/values-ca/values-ca.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -55,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/41301c5fe0a073c9bb26d6624e1e36af/transformed/core-1.8.0/res/values-ca/values-ca.xml",
+                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/d86be3b1c5c147b47260285764d392ad/transformed/core-1.8.0/res/values-ca/values-ca.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -72,7 +72,7 @@
                     }
                 },
                 {
-                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/ef328e0443b586414acdcc5d65a24ce6/transformed/material-1.8.0-alpha01/res/values-ca/values-ca.xml",
+                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/a811a11c805b5e78ccd9b5afe01e52b7/transformed/material-1.8.0-alpha01/res/values-ca/values-ca.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -91,7 +91,7 @@
                     }
                 },
                 {
-                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/4ec34cafdbbb33b020d0a96d0553b80c/transformed/appcompat-1.5.0/res/values-ca/values-ca.xml",
+                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/60e7ccf94c84273a01ea78eb736f58e6/transformed/appcompat-1.5.0/res/values-ca/values-ca.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

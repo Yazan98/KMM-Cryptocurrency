@@ -1,25 +1,25 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml:2:13-83
-INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml:2:13-83
-INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml:2:13-83
+ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml:2:13-83
+INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml:2:13-83
+INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml:2:13-83
 	package
-		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml
-		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml:2:13-83
-		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml
+		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml
+		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml:2:13-83
+		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml
 	xmlns:android
-		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml:2:23-81
+		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml:2:23-81
 uses-sdk
-INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml reason: use-sdk injection requested
-INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml
-INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml
-INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml
-INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml
+INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml reason: use-sdk injection requested
+INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml
+INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml
+INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml
+INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml
 	android:targetSdkVersion
-		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml
-		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml
-		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml
+		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml
+		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml
+		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml
 	android:minSdkVersion
-		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml
-		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml
-		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5406464006375947514.xml
+		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml
+		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml
+		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6062246647597502807.xml

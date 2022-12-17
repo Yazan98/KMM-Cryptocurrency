@@ -4,7 +4,7 @@
             "outputFile": "com.yazantarifi.coina.android.androidApp-mergeDebugResources-70:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/4ec34cafdbbb33b020d0a96d0553b80c/transformed/appcompat-1.5.0/res/values-port/values-port.xml",
+                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/60e7ccf94c84273a01ea78eb736f58e6/transformed/appcompat-1.5.0/res/values-port/values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
