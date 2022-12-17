@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.yazantarifi.coina.android.androidApp-mergeDebugResources-68:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "outputFile": "com.yazantarifi.coina.android.androidApp-mergeDebugResources-70:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/290df4fa45cb15f02f4091b542547e52/transformed/material-1.8.0-alpha01/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/9e66610ab58229fa8cfb19b3d402886e/transformed/material-1.8.0-alpha01/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

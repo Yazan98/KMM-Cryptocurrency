@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.yazantarifi.coina.android.androidApp-merged_res-72:/font_regular.ttf.flat",
+        "source": "com.yazantarifi.coina.android.androidApp-main-74:/font/regular.ttf"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-merged_res-72:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/yazantarifi/.gradle/daemon/7.5/com.yazantarifi.coina.android.androidApp-main-74:/mipmap-xxhdpi/ic_launcher.png"
+    }
+]

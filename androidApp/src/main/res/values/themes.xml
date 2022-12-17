@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.App" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+    <style name="Theme.Screen" parent="Base.Theme.App">
+
+    </style>
+
+    <style name="Theme.MainScreen" parent="Base.Theme.App">
+
+    </style>
+</resources>

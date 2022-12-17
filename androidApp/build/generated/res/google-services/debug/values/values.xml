@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">869675017188-c12oegadap00ul5lq3q0cm1do24v8jcl.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">869675017188</string>
+    <string name="google_api_key" translatable="false">AIzaSyC3uc-tyR4gv7MSmVtkyXCxHRi_7gl9nqk</string>
+    <string name="google_app_id" translatable="false">1:869675017188:android:c6bcfe90de2c989b175df1</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC3uc-tyR4gv7MSmVtkyXCxHRi_7gl9nqk</string>
+    <string name="google_storage_bucket" translatable="false">coina-69ec5.appspot.com</string>
+    <string name="project_id" translatable="false">coina-69ec5</string>
+</resources>

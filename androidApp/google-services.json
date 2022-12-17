@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "869675017188",
+    "project_id": "coina-69ec5",
+    "storage_bucket": "coina-69ec5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869675017188:android:c6bcfe90de2c989b175df1",
+        "android_client_info": {
+          "package_name": "com.yazantarifi.coina.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869675017188-c12oegadap00ul5lq3q0cm1do24v8jcl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3uc-tyR4gv7MSmVtkyXCxHRi_7gl9nqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869675017188-c12oegadap00ul5lq3q0cm1do24v8jcl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

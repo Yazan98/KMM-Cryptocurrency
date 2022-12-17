@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.yazantarifi.coina.android.androidApp-mergeDebugResources-70:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/res/values-v29/themes.xml",
+                    "from": {
+                        "startLines": "2,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,335",
+                        "endLines": "6,10",
+                        "endColumns": "12,12",
+                        "endOffsets": "329,404"
+                    },
+                    "to": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,284",
+                        "endLines": "6,9",
+                        "endColumns": "12,12",
+                        "endOffsets": "279,353"
+                    }
+                }
+            ]
+        }
+    ]
+}
