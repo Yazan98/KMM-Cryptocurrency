@@ -18,3 +18,5 @@ rootProject.name = "Coina"
 include(":androidApp")
 include(":shared")
 include(":androidCore")
+include(":androidHome")
+include(":androidAuth")

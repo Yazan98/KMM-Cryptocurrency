@@ -4,7 +4,7 @@
             "outputFile": "com.yazantarifi.coina.android.androidApp-mergeDebugResources-70:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/cc539926844c34f9b8df4f1c906c6a4a/transformed/appcompat-1.5.0/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "source": "/Users/yazantarifi/.gradle/caches/transforms-3/4ec34cafdbbb33b020d0a96d0553b80c/transformed/appcompat-1.5.0/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

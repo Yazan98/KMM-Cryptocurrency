@@ -51,6 +51,12 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.yazantarifi.android.auth.LoginScreen"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.yazantarifi.android.home.HomeScreen"
+            android:screenOrientation="fullSensor" />
+        <activity
             android:name="androidx.compose.ui.tooling.PreviewActivity"
             android:exported="true" />
 

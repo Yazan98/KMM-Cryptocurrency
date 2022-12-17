@@ -1,8 +1,11 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    kotlin("kapt")
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
+    id("com.google.dagger.hilt.android")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -22,12 +25,28 @@ android {
         }
     }
 
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "META-INF/DEPENDENCIES"
+            excludes += "META-INF/LICENSE"
+            excludes += "META-INF/LICENSE.txt"
+            excludes += "META-INF/license.txt"
+            excludes += "META-INF/NOTICE"
+            excludes += "META-INF/NOTICE.txt"
+            excludes += "META-INF/notice.txt"
+            excludes += "META-INF/ASL2.0"
+            excludes += "androidsupportmultidexversion.txt"
+            exclude("META-INF/*.kotlin_module")
+        }
+    }
+
     buildFeatures {
         compose = true
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.2.0-alpha08"
+        kotlinCompilerExtensionVersion = "1.3.2"
     }
 
     kotlinOptions {
@@ -43,26 +62,46 @@ android {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = true
+            isDebuggable = false
+            isShrinkResources = true
+            proguardFiles("proguard-android.txt", "proguard-rules.pro")
+            versionNameSuffix = ".production"
         }
 
         getByName("debug") {
             isMinifyEnabled = false
+            isDebuggable = true
+            isShrinkResources = false
+            isJniDebuggable = true
+            isRenderscriptDebuggable = true
+            renderscriptOptimLevel = 3
         }
     }
+
 }
 
 dependencies {
     implementation(project(":shared"))
     implementation(project(":androidCore"))
+    implementation(project(":androidHome"))
+    implementation(project(":androidAuth"))
     implementation(platform("com.google.firebase:firebase-bom:30.0.1"))
 
     addJetpackComposeDependencies(this)
     addMaterialConfiguration(this)
     addFirebaseConfiguration(this)
     addApplicationDependencies(this)
+    setupHiltConfigurations(this)
 
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.5.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+}
+
+
+fun setupHiltConfigurations(configurations: DependencyHandlerScope) {
+    configurations.implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+    configurations.implementation("com.google.dagger:hilt-android:2.44")
+    configurations.kapt("com.google.dagger:hilt-android-compiler:2.44")
 }
 
 fun addJetpackComposeDependencies(configuration: DependencyHandlerScope) {

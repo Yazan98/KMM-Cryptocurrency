@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="back">#FFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="gray">#888888</color>
+    <color name="gray_2">#DCDCDC</color>
+    <color name="green">#4CAF50</color>
+    <color name="purple_200">#FF5252</color>
+    <color name="purple_500">#FF5252</color>
+    <color name="purple_700">#FF5252</color>
+    <color name="teal_200">#FF5252</color>
+    <color name="teal_700">#FF5252</color>
+    <color name="title">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Coina</string>
+    <string name="com.google.firebase.crashlytics.mapping_file_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
+    <string name="default_web_client_id" translatable="false">869675017188-c12oegadap00ul5lq3q0cm1do24v8jcl.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">869675017188</string>
+    <string name="google_api_key" translatable="false">AIzaSyC3uc-tyR4gv7MSmVtkyXCxHRi_7gl9nqk</string>
+    <string name="google_app_id" translatable="false">1:869675017188:android:c6bcfe90de2c989b175df1</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC3uc-tyR4gv7MSmVtkyXCxHRi_7gl9nqk</string>
+    <string name="google_storage_bucket" translatable="false">coina-69ec5.appspot.com</string>
+    <string name="project_id" translatable="false">coina-69ec5</string>
+    <style name="Base.Theme.App" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+    <style name="Theme.MainScreen" parent="Base.Theme.App">
+
+    </style>
+    <style name="Theme.Screen" parent="Base.Theme.App">
+
+    </style>
+</resources>
