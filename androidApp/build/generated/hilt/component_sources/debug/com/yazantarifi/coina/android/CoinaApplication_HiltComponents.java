@@ -3,6 +3,10 @@ package com.yazantarifi.coina.android;
 import com.yazantarifi.android.auth.LoginScreen_GeneratedInjector;
 import com.yazantarifi.android.auth.viewModel.AuthViewModel_HiltModules;
 import com.yazantarifi.android.core.AuthModule;
+import com.yazantarifi.android.home.HomeModule;
+import com.yazantarifi.android.home.HomeScreen_GeneratedInjector;
+import com.yazantarifi.android.home.viewModels.CoinsViewModel_HiltModules;
+import com.yazantarifi.android.home.viewModels.ExchangesViewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -122,7 +126,8 @@ public final class CoinaApplication_HiltComponents {
           AuthModule.class,
           ActivityRetainedCBuilderModule.class,
           ServiceCBuilderModule.class,
-          HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule.class
+          HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule.class,
+          HomeModule.class
       }
   )
   @Singleton
@@ -148,6 +153,8 @@ public final class CoinaApplication_HiltComponents {
           AuthViewModel_HiltModules.KeyModule.class,
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
+          CoinsViewModel_HiltModules.KeyModule.class,
+          ExchangesViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class
       }
   )
@@ -171,6 +178,7 @@ public final class CoinaApplication_HiltComponents {
   )
   @ActivityScoped
   public abstract static class ActivityC implements LoginScreen_GeneratedInjector,
+      HomeScreen_GeneratedInjector,
       MainScreen_GeneratedInjector,
       ActivityComponent,
       DefaultViewModelFactories.ActivityEntryPoint,
@@ -186,6 +194,8 @@ public final class CoinaApplication_HiltComponents {
   @Subcomponent(
       modules = {
           AuthViewModel_HiltModules.BindsModule.class,
+          CoinsViewModel_HiltModules.BindsModule.class,
+          ExchangesViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class
       }
   )

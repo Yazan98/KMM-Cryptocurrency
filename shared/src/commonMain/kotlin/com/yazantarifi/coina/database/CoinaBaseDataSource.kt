@@ -11,6 +11,7 @@ abstract class CoinaBaseDataSource {
     private fun getRealmConfiguration(): RealmConfiguration {
         return RealmConfiguration.Builder(schema = getSchema())
             .deleteRealmIfMigrationNeeded()
+            .name(getDataSourceName())
             .build()
     }
 
@@ -25,5 +26,7 @@ abstract class CoinaBaseDataSource {
     }
 
     abstract fun getSchema(): Set<KClass<out BaseRealmObject>>
+
+    abstract fun getDataSourceName(): String
 
 }

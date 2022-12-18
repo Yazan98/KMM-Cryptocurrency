@@ -42,7 +42,7 @@ class AuthViewModel @Inject constructor(
         return !TextUtils.isEmpty(userPasswordState.value)
     }
 
-    fun onGetLoginInformation() {
+    private fun onGetLoginInformation() {
         viewModelScope.launch(Dispatchers.IO) {
             onAcceptLoadingState(true)
             apiManager.getCoinsImages(database) {

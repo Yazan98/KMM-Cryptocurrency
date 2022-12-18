@@ -74,6 +74,7 @@ fun addJetpackComposeDependencies(configuration: DependencyHandlerScope) {
     configuration.implementation("com.google.accompanist:accompanist-systemuicontroller:0.24.13-rc")
     configuration.implementation("com.google.android.material:material:1.8.0-alpha01")
     configuration.implementation("androidx.hilt:hilt-navigation-compose:1.0.0-alpha02")
+    configuration.implementation("androidx.navigation:navigation-compose:2.5.3")
 }
 
 fun setupHiltConfigurations(configurations: DependencyHandlerScope) {

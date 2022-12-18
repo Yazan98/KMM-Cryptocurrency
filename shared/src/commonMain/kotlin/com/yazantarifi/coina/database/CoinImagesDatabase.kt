@@ -35,6 +35,10 @@ class CoinImagesDatabase : CoinaBaseDataSource() {
         }
     }
 
+    override fun getDataSourceName(): String {
+        return "coins.realm"
+    }
+
     override fun getSchema(): Set<KClass<out BaseRealmObject>> {
         return setOf(RealmCoinImage::class)
     }

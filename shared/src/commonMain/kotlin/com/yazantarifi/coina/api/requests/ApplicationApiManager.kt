@@ -3,7 +3,9 @@ package com.yazantarifi.coina.api.requests
 import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.api.CoinaApiInfo
 import com.yazantarifi.coina.api.CoinaResponseCode
+import com.yazantarifi.coina.database.CoinExchangesDataSource
 import com.yazantarifi.coina.database.CoinImagesDatabase
+import com.yazantarifi.coina.models.CoinExchange
 import com.yazantarifi.coina.models.CoinImage
 import com.yazantarifi.coina.ofInnerClassParameter
 import io.ktor.client.HttpClient
@@ -45,6 +47,22 @@ class ApplicationApiManager constructor(private val httpClient: HttpClient): App
                 val request: ArrayList<CoinImage> = httpClient.get(CoinaApiInfo.BASE_URL + "assets/icons/200").body()
                 database.writeImages(request)
                 onNewStateTriggered(CoinaApplicationState.Success(request))
+            } catch (ex: Exception) {
+                onNewStateTriggered(CoinaApplicationState.Error(ex))
+                ex.printStackTrace()
+            }
+        }
+    }
+
+    override suspend fun getExchangesList(
+        database: CoinExchangesDataSource,
+        onNewStateTriggered: (CoinaApplicationState<ArrayList<CoinExchange>>) -> Unit
+    ) {
+        withContext(Dispatchers.Default) {
+            try {
+                val request: ArrayList<CoinExchange> = httpClient.get(CoinaApiInfo.BASE_URL + "exchanges").body()
+                onNewStateTriggered(CoinaApplicationState.Success(request))
+                database.writeExchanges(request)
             } catch (ex: Exception) {
                 onNewStateTriggered(CoinaApplicationState.Error(ex))
                 ex.printStackTrace()

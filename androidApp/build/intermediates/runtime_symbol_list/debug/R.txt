@@ -3384,6 +3384,7 @@ int string icon_content_description 0x7f110052
 int string in_progress 0x7f110053
 int string indeterminate 0x7f110054
 int string item_view_role_description 0x7f110055
+int string loading 0x7f1100c6
 int string loading_message 0x7f110056
 int string login 0x7f110057
 int string m3_sys_motion_easing_emphasized 0x7f110058

@@ -3385,6 +3385,7 @@ string icon_content_description
 string in_progress
 string indeterminate
 string item_view_role_description
+string loading
 string loading_message
 string login
 string m3_sys_motion_easing_emphasized
