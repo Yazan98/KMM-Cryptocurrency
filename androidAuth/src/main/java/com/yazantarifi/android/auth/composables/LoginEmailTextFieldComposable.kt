@@ -11,7 +11,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import com.yazantarifi.android.auth.AuthViewModel
+import com.yazantarifi.android.auth.viewModel.AuthViewModel
 import com.yazantarifi.android.auth.R
 import com.yazantarifi.android.core.ui.ApplicationColors
 

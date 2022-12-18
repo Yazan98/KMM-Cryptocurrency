@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import com.yazantarifi.android.auth.AuthViewModel;
-import com.yazantarifi.android.auth.AuthViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.yazantarifi.android.auth.LoginScreen;
+import com.yazantarifi.android.auth.viewModel.AuthViewModel;
+import com.yazantarifi.android.auth.viewModel.AuthViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.yazantarifi.android.core.AuthModule;
 import com.yazantarifi.android.core.AuthModule_GetApplicationApiManagerFactory;
 import com.yazantarifi.android.core.AuthModule_GetImagesDatabaseInstanceFactory;
@@ -440,7 +440,7 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return Collections.<String, Provider<ViewModel>>singletonMap("com.yazantarifi.android.auth.AuthViewModel", ((Provider) authViewModelProvider));
+      return Collections.<String, Provider<ViewModel>>singletonMap("com.yazantarifi.android.auth.viewModel.AuthViewModel", ((Provider) authViewModelProvider));
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -464,7 +464,7 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.yazantarifi.android.auth.AuthViewModel 
+          case 0: // com.yazantarifi.android.auth.viewModel.AuthViewModel 
           return (T) new AuthViewModel(singletonCImpl.getStorageProviderImplementationInstanceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get(), singletonCImpl.getImagesDatabaseInstanceProvider.get());
 
           default: throw new AssertionError(id);

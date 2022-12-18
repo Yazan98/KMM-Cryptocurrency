@@ -1,5 +1,6 @@
 package com.yazantarifi.coina.viewModels
 
+import com.yazantarifi.coina.viewModels.listeners.CoinaLoadingStateListener
 import com.yazantarifi.coina.viewModels.props.CoinaAction
 import com.yazantarifi.coina.viewModels.props.CoinaEither
 import com.yazantarifi.coina.viewModels.props.CoinaSideEffect
@@ -16,12 +17,15 @@ expect abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
     val state: MutableStateFlow<State>
     val loadingState: MutableSharedFlow<Boolean>
     var stateListener: CoinaStateListener<State>?
+    var loadingStateListener: CoinaLoadingStateListener?
 
     fun onAcceptLoadingState(newState: Boolean)
 
     fun onAcceptNewState(newState: State)
 
     fun registerStateListener(targetStateListener: CoinaStateListener<State>)
+
+    fun registerLoadingStateListener(targetStateListener: CoinaLoadingStateListener)
 
     fun registerSideEffect(sideEffect: CoinaSideEffect<Action, *>)
 

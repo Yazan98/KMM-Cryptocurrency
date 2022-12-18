@@ -1,5 +1,6 @@
 package com.yazantarifi.coina.viewModels
 
+import com.yazantarifi.coina.viewModels.listeners.CoinaLoadingStateListener
 import com.yazantarifi.coina.viewModels.listeners.CoinaStateListener
 import com.yazantarifi.coina.viewModels.props.CoinaAction
 import com.yazantarifi.coina.viewModels.props.CoinaEither
@@ -11,6 +12,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -22,8 +24,9 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
 
     actual val sideEffects: ArrayList<CoinaSideEffect<Action, *>> = ArrayList()
     actual val state: MutableStateFlow<State> by lazy { MutableStateFlow(getInitialState()) }
-    actual var stateListener: CoinaStateListener<State>? = null
     actual val loadingState: MutableSharedFlow<Boolean> by lazy { MutableSharedFlow() }
+    actual var stateListener: CoinaStateListener<State>? = null
+    actual var loadingStateListener: CoinaLoadingStateListener? = null
     actual val scope: CoroutineScope = object: CoroutineScope {
         override val coroutineContext: CoroutineContext
             get() = Job() + Dispatchers.Default
@@ -47,8 +50,9 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
         }
     }
 
+
     actual fun registerStateListener(targetStateListener: CoinaStateListener<State>) {
-        this.stateListener = stateListener
+        this.stateListener = targetStateListener
         scope.launch(Dispatchers.Default) {
             state.stateIn(scope).collect {
                 stateListener?.onUpdateState(it)
@@ -56,6 +60,14 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
         }
     }
 
+    actual fun registerLoadingStateListener(targetStateListener: CoinaLoadingStateListener) {
+        this.loadingStateListener = targetStateListener
+        scope.launch(Dispatchers.Default) {
+            loadingState.stateIn(scope).collectLatest {
+                loadingStateListener?.onLoadingStateChanged(it)
+            }
+        }
+    }
     actual fun onTriggerSideEffectAction(newAction: Action, sideEffectKey: String) {
         this.sideEffects.forEach {
             if (it.getSideEffectKey().equals(sideEffectKey)) {
@@ -76,6 +88,7 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
             scope.cancel()
             sideEffects.clear()
             stateListener = null
+            loadingStateListener = null
             CoinaEither(true, null)
         } catch (ex: Exception) {
             CoinaEither(null, ex)

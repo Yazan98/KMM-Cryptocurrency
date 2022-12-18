@@ -19,7 +19,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.yazantarifi.android.auth.AuthViewModel
+import com.yazantarifi.android.auth.viewModel.AuthViewModel
 import com.yazantarifi.android.auth.R
 import com.yazantarifi.android.core.ui.ApplicationColors
 

@@ -2,6 +2,7 @@ package com.yazantarifi.coina.viewModels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.yazantarifi.coina.viewModels.listeners.CoinaLoadingStateListener
 import com.yazantarifi.coina.viewModels.props.CoinaAction
 import com.yazantarifi.coina.viewModels.props.CoinaEither
 import com.yazantarifi.coina.viewModels.props.CoinaSideEffect
@@ -13,6 +14,7 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -22,8 +24,9 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState>: Vi
     actual val scope: CoroutineScope = viewModelScope
     actual val sideEffects: ArrayList<CoinaSideEffect<Action, *>> = ArrayList()
     actual val state: MutableStateFlow<State> by lazy { MutableStateFlow(getInitialState()) }
-    actual var stateListener: CoinaStateListener<State>? = null
     actual val loadingState: MutableSharedFlow<Boolean> by lazy { MutableSharedFlow() }
+    actual var stateListener: CoinaStateListener<State>? = null
+    actual var loadingStateListener: CoinaLoadingStateListener? = null
 
     actual abstract fun onNewAction(action: Action)
 
@@ -44,10 +47,19 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState>: Vi
     }
 
     actual fun registerStateListener(targetStateListener: CoinaStateListener<State>) {
-        this.stateListener = stateListener
+        this.stateListener = targetStateListener
         scope.launch(Dispatchers.IO) {
             state.stateIn(scope).collect {
                 stateListener?.onUpdateState(it)
+            }
+        }
+    }
+
+    actual fun registerLoadingStateListener(targetStateListener: CoinaLoadingStateListener) {
+        this.loadingStateListener = targetStateListener
+        scope.launch(Dispatchers.IO) {
+            loadingState.stateIn(scope).collectLatest {
+                loadingStateListener?.onLoadingStateChanged(it)
             }
         }
     }
@@ -69,6 +81,8 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState>: Vi
 
     actual fun clear(): CoinaEither<Boolean, Exception> {
         return try {
+            loadingStateListener = null
+            stateListener = null
             scope.cancel()
             sideEffects.clear()
             stateListener = null

@@ -1,7 +1,7 @@
 package com.yazantarifi.coina.android;
 
-import com.yazantarifi.android.auth.AuthViewModel_HiltModules;
 import com.yazantarifi.android.auth.LoginScreen_GeneratedInjector;
+import com.yazantarifi.android.auth.viewModel.AuthViewModel_HiltModules;
 import com.yazantarifi.android.core.AuthModule;
 import dagger.Binds;
 import dagger.Component;
