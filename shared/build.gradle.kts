@@ -51,6 +51,8 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
                 implementation("io.ktor:ktor-client-content-negotiation:2.2.1")
                 implementation("io.ktor:ktor-serialization-kotlinx-json:2.2.1")
+
+                api("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
             }
         }
 
