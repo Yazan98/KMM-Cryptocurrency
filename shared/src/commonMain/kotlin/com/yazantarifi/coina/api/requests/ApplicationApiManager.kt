@@ -3,7 +3,9 @@ package com.yazantarifi.coina.api.requests
 import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.api.CoinaApiInfo
 import com.yazantarifi.coina.api.CoinaResponseCode
+import com.yazantarifi.coina.database.CategoriesDataSource
 import com.yazantarifi.coina.database.CoinsDataSource
+import com.yazantarifi.coina.models.Category
 import com.yazantarifi.coina.models.CoinModel
 import com.yazantarifi.coina.ofInnerClassParameter
 import io.ktor.client.HttpClient
@@ -45,6 +47,26 @@ class ApplicationApiManager constructor(private val httpClient: HttpClient): App
                 val request: ArrayList<CoinModel> = httpClient.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_MARKETPLACE).body()
                 database.writeCoinsData(request)
                 onNewStateTriggered(CoinaApplicationState.Success(request))
+            } catch (ex: Exception) {
+                onNewStateTriggered(CoinaApplicationState.Error(ex))
+                ex.printStackTrace()
+            }
+        }
+    }
+
+    override suspend fun getCategories(
+        database: CategoriesDataSource,
+        onNewStateTriggered: (CoinaApplicationState<ArrayList<Category>>) -> Unit
+    ) {
+        withContext(Dispatchers.Default) {
+            try {
+                if (database.isDataSourceEmpty()) {
+                    val request: ArrayList<Category> = httpClient.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_LIST_CATEGORIES).body()
+                    database.writeCategoriesData(request)
+                    onNewStateTriggered(CoinaApplicationState.Success(request))
+                } else {
+                    onNewStateTriggered(CoinaApplicationState.Success(database.getCategories()))
+                }
             } catch (ex: Exception) {
                 onNewStateTriggered(CoinaApplicationState.Error(ex))
                 ex.printStackTrace()

@@ -36,16 +36,7 @@ class CoinsDataSource : CoinaBaseDataSource() {
     }
 
     fun isDataSourceEmpty(): Boolean {
-        return try {
-            val realmInstance = getRealmInstance()
-            val isDataSourceEmpty = realmInstance.query(RealmCoinModel::class).count().find() <= 0
-            closeRealmInstance(realmInstance)
-            isDataSourceEmpty
-        } catch (ex: Exception) {
-            println("Error : ${ex.message}")
-            ex.printStackTrace()
-            true
-        }
+        return isDataSourceEmpty(RealmCoinModel::class)
     }
 
     override fun getSchema(): Set<KClass<out BaseRealmObject>> {

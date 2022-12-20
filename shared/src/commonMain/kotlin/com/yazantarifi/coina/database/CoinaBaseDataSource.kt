@@ -24,6 +24,19 @@ abstract class CoinaBaseDataSource {
         }
     }
 
+    protected fun isDataSourceEmpty(model: KClass<out BaseRealmObject>): Boolean {
+        return try {
+            val realmInstance = getRealmInstance()
+            val isDataSourceEmpty = realmInstance.query(model).count().find() <= 0
+            closeRealmInstance(realmInstance)
+            isDataSourceEmpty
+        } catch (ex: Exception) {
+            println("Error : ${ex.message}")
+            ex.printStackTrace()
+            true
+        }
+    }
+
     abstract fun getSchema(): Set<KClass<out BaseRealmObject>>
 
     abstract fun getDataSourceName(): String
