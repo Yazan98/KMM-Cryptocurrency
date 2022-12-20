@@ -14,12 +14,16 @@ import com.yazantarifi.android.auth.viewModel.AuthViewModel_HiltModules_KeyModul
 import com.yazantarifi.android.core.AuthModule;
 import com.yazantarifi.android.core.AuthModule_GetApplicationApiManagerFactory;
 import com.yazantarifi.android.home.HomeModule;
+import com.yazantarifi.android.home.HomeModule_GetCategoriesDataSourceFactory;
 import com.yazantarifi.android.home.HomeModule_GetCoinsDataSourceFactory;
 import com.yazantarifi.android.home.HomeScreen;
+import com.yazantarifi.android.home.viewModels.CategoriesViewModel;
+import com.yazantarifi.android.home.viewModels.CategoriesViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.yazantarifi.android.home.viewModels.CoinsViewModel;
 import com.yazantarifi.android.home.viewModels.CoinsViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.yazantarifi.coina.api.requests.ApplicationApiManager;
 import com.yazantarifi.coina.context.CoinaStorageProvider;
+import com.yazantarifi.coina.database.CategoriesDataSource;
 import com.yazantarifi.coina.database.CoinsDataSource;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
@@ -407,7 +411,7 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return SetBuilder.<String>newSetBuilder(2).add(AuthViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CoinsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      return SetBuilder.<String>newSetBuilder(3).add(AuthViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CategoriesViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CoinsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -441,6 +445,8 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
     private Provider<AuthViewModel> authViewModelProvider;
 
+    private Provider<CategoriesViewModel> categoriesViewModelProvider;
+
     private Provider<CoinsViewModel> coinsViewModelProvider;
 
     private ViewModelCImpl(SingletonCImpl singletonCImpl,
@@ -457,12 +463,13 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
     private void initialize(final SavedStateHandle savedStateHandleParam,
         final ViewModelLifecycle viewModelLifecycleParam) {
       this.authViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
-      this.coinsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.categoriesViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.coinsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(2).put("com.yazantarifi.android.auth.viewModel.AuthViewModel", ((Provider) authViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CoinsViewModel", ((Provider) coinsViewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(3).put("com.yazantarifi.android.auth.viewModel.AuthViewModel", ((Provider) authViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CategoriesViewModel", ((Provider) categoriesViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CoinsViewModel", ((Provider) coinsViewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -489,7 +496,10 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
           case 0: // com.yazantarifi.android.auth.viewModel.AuthViewModel 
           return (T) new AuthViewModel(singletonCImpl.getStorageProviderImplementationInstanceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get(), singletonCImpl.getCoinsDataSourceProvider.get());
 
-          case 1: // com.yazantarifi.android.home.viewModels.CoinsViewModel 
+          case 1: // com.yazantarifi.android.home.viewModels.CategoriesViewModel 
+          return (T) new CategoriesViewModel(singletonCImpl.getCategoriesDataSourceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get());
+
+          case 2: // com.yazantarifi.android.home.viewModels.CoinsViewModel 
           return (T) new CoinsViewModel(singletonCImpl.getCoinsDataSourceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get());
 
           default: throw new AssertionError(id);
@@ -577,6 +587,8 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
     private Provider<CoinsDataSource> getCoinsDataSourceProvider;
 
+    private Provider<CategoriesDataSource> getCategoriesDataSourceProvider;
+
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
       this.applicationContextModule = applicationContextModuleParam;
       initialize(applicationContextModuleParam);
@@ -588,6 +600,7 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
       this.getStorageProviderImplementationInstanceProvider = DoubleCheck.provider(new SwitchingProvider<CoinaStorageProvider>(singletonCImpl, 0));
       this.getApplicationApiManagerProvider = DoubleCheck.provider(new SwitchingProvider<ApplicationApiManager>(singletonCImpl, 1));
       this.getCoinsDataSourceProvider = DoubleCheck.provider(new SwitchingProvider<CoinsDataSource>(singletonCImpl, 2));
+      this.getCategoriesDataSourceProvider = DoubleCheck.provider(new SwitchingProvider<CategoriesDataSource>(singletonCImpl, 3));
     }
 
     @Override
@@ -631,6 +644,9 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
           case 2: // com.yazantarifi.coina.database.CoinsDataSource 
           return (T) HomeModule_GetCoinsDataSourceFactory.getCoinsDataSource();
+
+          case 3: // com.yazantarifi.coina.database.CategoriesDataSource 
+          return (T) HomeModule_GetCategoriesDataSourceFactory.getCategoriesDataSource();
 
           default: throw new AssertionError(id);
         }

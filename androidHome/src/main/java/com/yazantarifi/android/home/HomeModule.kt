@@ -1,5 +1,6 @@
 package com.yazantarifi.android.home
 
+import com.yazantarifi.coina.database.CategoriesDataSource
 import com.yazantarifi.coina.database.CoinsDataSource
 import dagger.Module
 import dagger.Provides
@@ -15,6 +16,12 @@ object HomeModule {
     @Singleton
     fun getCoinsDataSource(): CoinsDataSource {
         return CoinsDataSource()
+    }
+
+    @Provides
+    @Singleton
+    fun getCategoriesDataSource(): CategoriesDataSource {
+        return CategoriesDataSource()
     }
 
 }

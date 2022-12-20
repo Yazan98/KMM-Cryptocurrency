@@ -15,6 +15,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -31,8 +32,10 @@ import java.util.Locale
 
 @Composable
 fun CoinsScreenComposable(viewModel: CoinsViewModel) {
-    if (viewModel.coinsStateListener.value.isEmpty()) {
-        viewModel.onNewAction(CoinsAction.GetCoins)
+    LaunchedEffect(true) {
+        if (viewModel.coinsStateListener.value.isEmpty()) {
+            viewModel.onNewAction(CoinsAction.GetCoins)
+        }
     }
 
     if (viewModel.coinsLoadingState.value) {
