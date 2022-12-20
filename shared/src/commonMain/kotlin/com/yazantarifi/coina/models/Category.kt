@@ -10,7 +10,7 @@ data class Category(
     @SerialName("id") var id: String? = "",
     @SerialName("name") var name: String? = "",
     @SerialName("content") var content: String? = "",
-    @SerialName("market_cap") var marketGap: Long? = 0L,
+    @SerialName("market_cap") var marketGap: Double? = 0.0,
     @SerialName("top_3_coins") var topCoins: ArrayList<String>? = null,
 ) {
     companion object {

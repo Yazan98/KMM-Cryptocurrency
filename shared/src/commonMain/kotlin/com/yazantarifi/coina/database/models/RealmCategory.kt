@@ -12,7 +12,7 @@ open class RealmCategory: RealmObject {
     var name: String? = ""
     var images: RealmList<String> = realmListOf()
     var content: String? = ""
-    var marketGap: Long? = 0L
+    var marketGap: Double? = 0.0
 
     companion object {
         fun toCategory(realmCategory: RealmCategory): Category {

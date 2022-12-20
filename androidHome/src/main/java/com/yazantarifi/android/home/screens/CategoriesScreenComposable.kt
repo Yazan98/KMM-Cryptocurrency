@@ -47,11 +47,11 @@ fun CategoriesScreenComposable(viewModel: CategoriesViewModel) {
             itemsIndexed(viewModel.screenContentState.value) { index, item ->
                 Row(modifier = Modifier.padding(10.dp), verticalAlignment = Alignment.CenterVertically) {
                     Text(text = "$index", color = ApplicationColors.getTextColor(), modifier = Modifier.width(20.dp))
-                    Spacer(modifier = Modifier.width(30.dp))
+                    Spacer(modifier = Modifier.width(20.dp))
 
                     Row {
                         item.topCoins?.forEach {
-                            AsyncImage(model = it, contentDescription = "Image", modifier = Modifier.size(10.dp))
+                            AsyncImage(model = it, contentDescription = "Image", modifier = Modifier.size(20.dp))
                             Spacer(modifier = Modifier.width(2.dp))
                         }
                     }
