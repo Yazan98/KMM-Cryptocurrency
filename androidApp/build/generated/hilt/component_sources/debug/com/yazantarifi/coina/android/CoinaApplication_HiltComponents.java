@@ -6,7 +6,6 @@ import com.yazantarifi.android.core.AuthModule;
 import com.yazantarifi.android.home.HomeModule;
 import com.yazantarifi.android.home.HomeScreen_GeneratedInjector;
 import com.yazantarifi.android.home.viewModels.CoinsViewModel_HiltModules;
-import com.yazantarifi.android.home.viewModels.ExchangesViewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -154,7 +153,6 @@ public final class CoinaApplication_HiltComponents {
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
           CoinsViewModel_HiltModules.KeyModule.class,
-          ExchangesViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class
       }
   )
@@ -195,7 +193,6 @@ public final class CoinaApplication_HiltComponents {
       modules = {
           AuthViewModel_HiltModules.BindsModule.class,
           CoinsViewModel_HiltModules.BindsModule.class,
-          ExchangesViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class
       }
   )

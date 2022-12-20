@@ -27,7 +27,7 @@ actual class HttpBaseClient {
 
     actual val httpClient: HttpClient = HttpClient {
         defaultRequest {
-            host = CoinaApiInfo.BASE_URL
+            host = CoinaApiInfo.COINS_BASE_URL
             contentType(ContentType.Application.Json)
             headers {
                 append("Content-Type", "application/json")

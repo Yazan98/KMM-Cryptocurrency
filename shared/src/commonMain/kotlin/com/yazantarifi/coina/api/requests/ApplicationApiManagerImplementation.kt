@@ -1,15 +1,11 @@
 package com.yazantarifi.coina.api.requests
 
 import com.yazantarifi.coina.CoinaApplicationState
-import com.yazantarifi.coina.database.CoinExchangesDataSource
-import com.yazantarifi.coina.database.CoinImagesDatabase
-import com.yazantarifi.coina.models.CoinExchange
-import com.yazantarifi.coina.models.CoinImage
+import com.yazantarifi.coina.database.CoinsDataSource
+import com.yazantarifi.coina.models.CoinModel
 
 interface ApplicationApiManagerImplementation {
 
-    suspend fun getCoinsImages(database: CoinImagesDatabase, onNewStateTriggered: (CoinaApplicationState<ArrayList<CoinImage>>) -> Unit)
-
-    suspend fun getExchangesList(database: CoinExchangesDataSource, onNewStateTriggered: (CoinaApplicationState<ArrayList<CoinExchange>>) -> Unit)
+    suspend fun getCoins(database: CoinsDataSource, onNewStateTriggered: (CoinaApplicationState<ArrayList<CoinModel>>) -> Unit)
 
 }

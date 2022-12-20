@@ -3,23 +3,18 @@ package com.yazantarifi.coina.api.requests
 import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.api.CoinaApiInfo
 import com.yazantarifi.coina.api.CoinaResponseCode
-import com.yazantarifi.coina.database.CoinExchangesDataSource
-import com.yazantarifi.coina.database.CoinImagesDatabase
-import com.yazantarifi.coina.models.CoinExchange
-import com.yazantarifi.coina.models.CoinImage
+import com.yazantarifi.coina.database.CoinsDataSource
+import com.yazantarifi.coina.models.CoinModel
 import com.yazantarifi.coina.ofInnerClassParameter
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
 import io.ktor.client.statement.HttpResponseContainer
 import io.ktor.client.statement.HttpResponsePipeline
-import io.ktor.client.statement.bodyAsText
 import io.ktor.serialization.kotlinx.KotlinxSerializationConverter
 import io.ktor.serialization.suitableCharset
 import io.ktor.utils.io.ByteReadChannel
-import io.ktor.utils.io.printStack
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 
@@ -41,28 +36,15 @@ class ApplicationApiManager constructor(private val httpClient: HttpClient): App
         }
     }
 
-    override suspend fun getCoinsImages(database: CoinImagesDatabase, onNewStateTriggered: (CoinaApplicationState<ArrayList<CoinImage>>) -> Unit) {
-        withContext(Dispatchers.Default) {
-            try {
-                val request: ArrayList<CoinImage> = httpClient.get(CoinaApiInfo.BASE_URL + "assets/icons/200").body()
-                database.writeImages(request)
-                onNewStateTriggered(CoinaApplicationState.Success(request))
-            } catch (ex: Exception) {
-                onNewStateTriggered(CoinaApplicationState.Error(ex))
-                ex.printStackTrace()
-            }
-        }
-    }
-
-    override suspend fun getExchangesList(
-        database: CoinExchangesDataSource,
-        onNewStateTriggered: (CoinaApplicationState<ArrayList<CoinExchange>>) -> Unit
+    override suspend fun getCoins(
+        database: CoinsDataSource,
+        onNewStateTriggered: (CoinaApplicationState<ArrayList<CoinModel>>) -> Unit
     ) {
         withContext(Dispatchers.Default) {
             try {
-                val request: ArrayList<CoinExchange> = httpClient.get(CoinaApiInfo.BASE_URL + "exchanges").body()
+                val request: ArrayList<CoinModel> = httpClient.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_MARKETPLACE).body()
+                database.writeCoinsData(request)
                 onNewStateTriggered(CoinaApplicationState.Success(request))
-                database.writeExchanges(request)
             } catch (ex: Exception) {
                 onNewStateTriggered(CoinaApplicationState.Error(ex))
                 ex.printStackTrace()

@@ -1,6 +1,5 @@
 package com.yazantarifi.coina.database
 
-import com.yazantarifi.coina.database.models.RealmCoinImage
 import io.realm.kotlin.Realm
 import io.realm.kotlin.RealmConfiguration
 import io.realm.kotlin.types.BaseRealmObject
