@@ -5,8 +5,10 @@ import com.yazantarifi.coina.api.CoinaApiInfo
 import com.yazantarifi.coina.api.CoinaResponseCode
 import com.yazantarifi.coina.database.CategoriesDataSource
 import com.yazantarifi.coina.database.CoinsDataSource
+import com.yazantarifi.coina.database.ExchangesDataSource
 import com.yazantarifi.coina.models.Category
 import com.yazantarifi.coina.models.CoinModel
+import com.yazantarifi.coina.models.ExchangeModel
 import com.yazantarifi.coina.ofInnerClassParameter
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -61,6 +63,22 @@ class ApplicationApiManager constructor(private val httpClient: HttpClient): App
         withContext(Dispatchers.Default) {
             try {
                 val request: ArrayList<CoinModel> = httpClient.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_MARKETPLACE + "&category=$categoryName").body()
+                onNewStateTriggered(CoinaApplicationState.Success(request))
+            } catch (ex: Exception) {
+                onNewStateTriggered(CoinaApplicationState.Error(ex))
+                ex.printStackTrace()
+            }
+        }
+    }
+
+    override suspend fun getExchanges(
+        database: ExchangesDataSource,
+        onNewStateTriggered: (CoinaApplicationState<ArrayList<ExchangeModel>>) -> Unit
+    ) {
+        withContext(Dispatchers.Default) {
+            try {
+                val request: ArrayList<ExchangeModel> = httpClient.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_LIST_EXCHANGES).body()
+                database.writeExchangesData(request)
                 onNewStateTriggered(CoinaApplicationState.Success(request))
             } catch (ex: Exception) {
                 onNewStateTriggered(CoinaApplicationState.Error(ex))

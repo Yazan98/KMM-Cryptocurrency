@@ -34,6 +34,7 @@ import com.yazantarifi.android.home.composables.CoinsScreenComposable
 import com.yazantarifi.android.home.composables.ExchangesScreenComposable
 import com.yazantarifi.android.home.viewModels.CategoriesViewModel
 import com.yazantarifi.android.home.viewModels.CoinsViewModel
+import com.yazantarifi.android.home.viewModels.ExchangesViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -50,6 +51,7 @@ class HomeScreen : BaseScreen() {
     override fun OnScreenContent(savedInstanceState: Bundle?) {
         val viewModel: CoinsViewModel = hiltViewModel()
         val categoriesViewModel: CategoriesViewModel = hiltViewModel()
+        val exchangesViewModel: ExchangesViewModel = hiltViewModel()
         val navController = rememberNavController()
         var selectedItem by remember { mutableStateOf(0) }
         Scaffold(
@@ -104,7 +106,7 @@ class HomeScreen : BaseScreen() {
             NavHost(navController = navController, startDestination = "home", modifier = Modifier.padding(it).background(ApplicationColors.getScreenBackgroundColor())) {
                 composable("home") { CoinsScreenComposable(viewModel = viewModel) }
                 composable("categories") { CategoriesScreenComposable(categoriesViewModel) }
-                composable("exchanges") { ExchangesScreenComposable() }
+                composable("exchanges") { ExchangesScreenComposable(exchangesViewModel) }
             }
         }
     }

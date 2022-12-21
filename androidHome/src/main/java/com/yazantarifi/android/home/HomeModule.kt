@@ -2,6 +2,7 @@ package com.yazantarifi.android.home
 
 import com.yazantarifi.coina.database.CategoriesDataSource
 import com.yazantarifi.coina.database.CoinsDataSource
+import com.yazantarifi.coina.database.ExchangesDataSource
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,6 +23,12 @@ object HomeModule {
     @Singleton
     fun getCategoriesDataSource(): CategoriesDataSource {
         return CategoriesDataSource()
+    }
+
+    @Provides
+    @Singleton
+    fun getExchangesDataSource(): ExchangesDataSource {
+        return ExchangesDataSource()
     }
 
 }

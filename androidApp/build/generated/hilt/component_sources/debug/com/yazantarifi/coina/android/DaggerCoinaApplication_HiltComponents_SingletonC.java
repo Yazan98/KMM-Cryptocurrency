@@ -16,6 +16,7 @@ import com.yazantarifi.android.core.AuthModule_GetApplicationApiManagerFactory;
 import com.yazantarifi.android.home.HomeModule;
 import com.yazantarifi.android.home.HomeModule_GetCategoriesDataSourceFactory;
 import com.yazantarifi.android.home.HomeModule_GetCoinsDataSourceFactory;
+import com.yazantarifi.android.home.HomeModule_GetExchangesDataSourceFactory;
 import com.yazantarifi.android.home.screens.CategoryCoinsScreen;
 import com.yazantarifi.android.home.screens.HomeScreen;
 import com.yazantarifi.android.home.viewModels.CategoriesCoinViewModel;
@@ -24,10 +25,13 @@ import com.yazantarifi.android.home.viewModels.CategoriesViewModel;
 import com.yazantarifi.android.home.viewModels.CategoriesViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.yazantarifi.android.home.viewModels.CoinsViewModel;
 import com.yazantarifi.android.home.viewModels.CoinsViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.yazantarifi.android.home.viewModels.ExchangesViewModel;
+import com.yazantarifi.android.home.viewModels.ExchangesViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.yazantarifi.coina.api.requests.ApplicationApiManager;
 import com.yazantarifi.coina.context.CoinaStorageProvider;
 import com.yazantarifi.coina.database.CategoriesDataSource;
 import com.yazantarifi.coina.database.CoinsDataSource;
+import com.yazantarifi.coina.database.ExchangesDataSource;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
 import dagger.hilt.android.flags.HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule;
@@ -418,7 +422,7 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return SetBuilder.<String>newSetBuilder(4).add(AuthViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CategoriesCoinViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CategoriesViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CoinsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      return SetBuilder.<String>newSetBuilder(5).add(AuthViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CategoriesCoinViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CategoriesViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CoinsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ExchangesViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -458,6 +462,8 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
     private Provider<CoinsViewModel> coinsViewModelProvider;
 
+    private Provider<ExchangesViewModel> exchangesViewModelProvider;
+
     private ViewModelCImpl(SingletonCImpl singletonCImpl,
         ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam,
         ViewModelLifecycle viewModelLifecycleParam) {
@@ -475,11 +481,12 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
       this.categoriesCoinViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
       this.categoriesViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
       this.coinsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
+      this.exchangesViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 4);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(4).put("com.yazantarifi.android.auth.viewModel.AuthViewModel", ((Provider) authViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CategoriesCoinViewModel", ((Provider) categoriesCoinViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CategoriesViewModel", ((Provider) categoriesViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CoinsViewModel", ((Provider) coinsViewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(5).put("com.yazantarifi.android.auth.viewModel.AuthViewModel", ((Provider) authViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CategoriesCoinViewModel", ((Provider) categoriesCoinViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CategoriesViewModel", ((Provider) categoriesViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CoinsViewModel", ((Provider) coinsViewModelProvider)).put("com.yazantarifi.android.home.viewModels.ExchangesViewModel", ((Provider) exchangesViewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -514,6 +521,9 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
           case 3: // com.yazantarifi.android.home.viewModels.CoinsViewModel 
           return (T) new CoinsViewModel(singletonCImpl.getCoinsDataSourceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get());
+
+          case 4: // com.yazantarifi.android.home.viewModels.ExchangesViewModel 
+          return (T) new ExchangesViewModel(singletonCImpl.getApplicationApiManagerProvider.get(), singletonCImpl.getExchangesDataSourceProvider.get());
 
           default: throw new AssertionError(id);
         }
@@ -602,6 +612,8 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
     private Provider<CategoriesDataSource> getCategoriesDataSourceProvider;
 
+    private Provider<ExchangesDataSource> getExchangesDataSourceProvider;
+
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
       this.applicationContextModule = applicationContextModuleParam;
       initialize(applicationContextModuleParam);
@@ -614,6 +626,7 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
       this.getApplicationApiManagerProvider = DoubleCheck.provider(new SwitchingProvider<ApplicationApiManager>(singletonCImpl, 1));
       this.getCoinsDataSourceProvider = DoubleCheck.provider(new SwitchingProvider<CoinsDataSource>(singletonCImpl, 2));
       this.getCategoriesDataSourceProvider = DoubleCheck.provider(new SwitchingProvider<CategoriesDataSource>(singletonCImpl, 3));
+      this.getExchangesDataSourceProvider = DoubleCheck.provider(new SwitchingProvider<ExchangesDataSource>(singletonCImpl, 4));
     }
 
     @Override
@@ -660,6 +673,9 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
           case 3: // com.yazantarifi.coina.database.CategoriesDataSource 
           return (T) HomeModule_GetCategoriesDataSourceFactory.getCategoriesDataSource();
+
+          case 4: // com.yazantarifi.coina.database.ExchangesDataSource 
+          return (T) HomeModule_GetExchangesDataSourceFactory.getExchangesDataSource();
 
           default: throw new AssertionError(id);
         }
