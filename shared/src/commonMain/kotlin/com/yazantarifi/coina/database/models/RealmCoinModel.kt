@@ -26,7 +26,6 @@ open class RealmCoinModel : RealmObject {
                 model.name,
                 model.image,
                 model.price,
-                model.marketGap,
                 model.marketGapRank,
                 model.percentChange
             )

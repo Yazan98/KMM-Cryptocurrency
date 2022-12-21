@@ -16,7 +16,10 @@ import com.yazantarifi.android.core.AuthModule_GetApplicationApiManagerFactory;
 import com.yazantarifi.android.home.HomeModule;
 import com.yazantarifi.android.home.HomeModule_GetCategoriesDataSourceFactory;
 import com.yazantarifi.android.home.HomeModule_GetCoinsDataSourceFactory;
-import com.yazantarifi.android.home.HomeScreen;
+import com.yazantarifi.android.home.screens.CategoryCoinsScreen;
+import com.yazantarifi.android.home.screens.HomeScreen;
+import com.yazantarifi.android.home.viewModels.CategoriesCoinViewModel;
+import com.yazantarifi.android.home.viewModels.CategoriesCoinViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.yazantarifi.android.home.viewModels.CategoriesViewModel;
 import com.yazantarifi.android.home.viewModels.CategoriesViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.yazantarifi.android.home.viewModels.CoinsViewModel;
@@ -396,6 +399,10 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
     }
 
     @Override
+    public void injectCategoryCoinsScreen(CategoryCoinsScreen arg0) {
+    }
+
+    @Override
     public void injectHomeScreen(HomeScreen arg0) {
     }
 
@@ -411,7 +418,7 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return SetBuilder.<String>newSetBuilder(3).add(AuthViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CategoriesViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CoinsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      return SetBuilder.<String>newSetBuilder(4).add(AuthViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CategoriesCoinViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CategoriesViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CoinsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -445,6 +452,8 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
     private Provider<AuthViewModel> authViewModelProvider;
 
+    private Provider<CategoriesCoinViewModel> categoriesCoinViewModelProvider;
+
     private Provider<CategoriesViewModel> categoriesViewModelProvider;
 
     private Provider<CoinsViewModel> coinsViewModelProvider;
@@ -463,13 +472,14 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
     private void initialize(final SavedStateHandle savedStateHandleParam,
         final ViewModelLifecycle viewModelLifecycleParam) {
       this.authViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
-      this.categoriesViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
-      this.coinsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.categoriesCoinViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.categoriesViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.coinsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(3).put("com.yazantarifi.android.auth.viewModel.AuthViewModel", ((Provider) authViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CategoriesViewModel", ((Provider) categoriesViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CoinsViewModel", ((Provider) coinsViewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(4).put("com.yazantarifi.android.auth.viewModel.AuthViewModel", ((Provider) authViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CategoriesCoinViewModel", ((Provider) categoriesCoinViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CategoriesViewModel", ((Provider) categoriesViewModelProvider)).put("com.yazantarifi.android.home.viewModels.CoinsViewModel", ((Provider) coinsViewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -496,10 +506,13 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
           case 0: // com.yazantarifi.android.auth.viewModel.AuthViewModel 
           return (T) new AuthViewModel(singletonCImpl.getStorageProviderImplementationInstanceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get(), singletonCImpl.getCoinsDataSourceProvider.get());
 
-          case 1: // com.yazantarifi.android.home.viewModels.CategoriesViewModel 
+          case 1: // com.yazantarifi.android.home.viewModels.CategoriesCoinViewModel 
+          return (T) new CategoriesCoinViewModel(singletonCImpl.getApplicationApiManagerProvider.get());
+
+          case 2: // com.yazantarifi.android.home.viewModels.CategoriesViewModel 
           return (T) new CategoriesViewModel(singletonCImpl.getCategoriesDataSourceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get());
 
-          case 2: // com.yazantarifi.android.home.viewModels.CoinsViewModel 
+          case 3: // com.yazantarifi.android.home.viewModels.CoinsViewModel 
           return (T) new CoinsViewModel(singletonCImpl.getCoinsDataSourceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get());
 
           default: throw new AssertionError(id);

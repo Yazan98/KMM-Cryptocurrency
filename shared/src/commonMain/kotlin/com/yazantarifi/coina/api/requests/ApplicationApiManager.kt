@@ -54,6 +54,21 @@ class ApplicationApiManager constructor(private val httpClient: HttpClient): App
         }
     }
 
+    override suspend fun getCoinsByCategoryName(
+        categoryName: String,
+        onNewStateTriggered: (CoinaApplicationState<ArrayList<CoinModel>>) -> Unit
+    ) {
+        withContext(Dispatchers.Default) {
+            try {
+                val request: ArrayList<CoinModel> = httpClient.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_MARKETPLACE + "&category=$categoryName").body()
+                onNewStateTriggered(CoinaApplicationState.Success(request))
+            } catch (ex: Exception) {
+                onNewStateTriggered(CoinaApplicationState.Error(ex))
+                ex.printStackTrace()
+            }
+        }
+    }
+
     override suspend fun getCategories(
         database: CategoriesDataSource,
         onNewStateTriggered: (CoinaApplicationState<ArrayList<Category>>) -> Unit

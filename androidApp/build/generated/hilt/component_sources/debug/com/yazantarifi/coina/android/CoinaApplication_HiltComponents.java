@@ -4,7 +4,9 @@ import com.yazantarifi.android.auth.LoginScreen_GeneratedInjector;
 import com.yazantarifi.android.auth.viewModel.AuthViewModel_HiltModules;
 import com.yazantarifi.android.core.AuthModule;
 import com.yazantarifi.android.home.HomeModule;
-import com.yazantarifi.android.home.HomeScreen_GeneratedInjector;
+import com.yazantarifi.android.home.screens.CategoryCoinsScreen_GeneratedInjector;
+import com.yazantarifi.android.home.screens.HomeScreen_GeneratedInjector;
+import com.yazantarifi.android.home.viewModels.CategoriesCoinViewModel_HiltModules;
 import com.yazantarifi.android.home.viewModels.CategoriesViewModel_HiltModules;
 import com.yazantarifi.android.home.viewModels.CoinsViewModel_HiltModules;
 import dagger.Binds;
@@ -151,6 +153,7 @@ public final class CoinaApplication_HiltComponents {
   @Subcomponent(
       modules = {
           AuthViewModel_HiltModules.KeyModule.class,
+          CategoriesCoinViewModel_HiltModules.KeyModule.class,
           CategoriesViewModel_HiltModules.KeyModule.class,
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
@@ -178,6 +181,7 @@ public final class CoinaApplication_HiltComponents {
   )
   @ActivityScoped
   public abstract static class ActivityC implements LoginScreen_GeneratedInjector,
+      CategoryCoinsScreen_GeneratedInjector,
       HomeScreen_GeneratedInjector,
       MainScreen_GeneratedInjector,
       ActivityComponent,
@@ -194,6 +198,7 @@ public final class CoinaApplication_HiltComponents {
   @Subcomponent(
       modules = {
           AuthViewModel_HiltModules.BindsModule.class,
+          CategoriesCoinViewModel_HiltModules.BindsModule.class,
           CategoriesViewModel_HiltModules.BindsModule.class,
           CoinsViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class

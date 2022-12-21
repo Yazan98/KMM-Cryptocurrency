@@ -12,7 +12,6 @@ data class CoinModel(
     @SerialName("name") val name: String? = "",
     @SerialName("image") val image: String? = "",
     @SerialName("current_price") val price: Double? = 0.0,
-    @SerialName("market_cap") val marketGap: Long? = 0,
     @SerialName("market_cap_rank") val marketGapRank: Int? = 0,
     @SerialName("price_change_percentage_24h") val percentChange: Double? = 0.0,
 ) {
@@ -24,7 +23,6 @@ data class CoinModel(
                 name = model.name ?: ""
                 image = model.image ?: ""
                 price = model.price ?: 0.0
-                marketGap = model.marketGap ?: 0
                 marketGapRank = model.marketGapRank ?: 0
                 percentChange = model.percentChange ?: 0.0
             }

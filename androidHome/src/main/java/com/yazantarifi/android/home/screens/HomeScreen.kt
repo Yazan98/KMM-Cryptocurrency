@@ -1,4 +1,4 @@
-package com.yazantarifi.android.home
+package com.yazantarifi.android.home.screens
 
 import android.content.Intent
 import android.os.Bundle
@@ -28,6 +28,7 @@ import androidx.navigation.compose.rememberNavController
 import com.yazantarifi.android.core.BaseScreen
 import com.yazantarifi.android.core.composables.ApplicationToolbar
 import com.yazantarifi.android.core.ui.ApplicationColors
+import com.yazantarifi.android.home.R
 import com.yazantarifi.android.home.composables.CategoriesScreenComposable
 import com.yazantarifi.android.home.composables.CoinsScreenComposable
 import com.yazantarifi.android.home.composables.ExchangesScreenComposable

@@ -1,6 +1,7 @@
 package com.yazantarifi.android.home.composables
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -38,6 +39,7 @@ import com.yazantarifi.android.home.R
 import com.yazantarifi.android.home.action.CoinsAction
 import com.yazantarifi.android.home.viewModels.CoinsViewModel
 import com.yazantarifi.coina.formatDecimalSeparator
+import com.yazantarifi.coina.models.CoinModel
 import java.util.Locale
 
 @Composable
@@ -71,39 +73,48 @@ fun CoinsScreenComposable(viewModel: CoinsViewModel) {
                 .padding(10.dp)
                 .background(ApplicationColors.getScreenBackgroundColor())) {
                 itemsIndexed(viewModel.coinsStateListener.value) { index, item ->
-                    Row(
-                        modifier = Modifier.padding(10.dp).fillMaxWidth(),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.SpaceBetween
-                    ) {
-                        Row {
-                            AsyncImage(model = item.image ?: "", contentDescription = "Image", modifier = Modifier.size(35.dp))
-                            Spacer(modifier = Modifier.width(20.dp))
-                            Column {
-                                Text(text = item.name ?: "", color = ApplicationColors.getTextColor())
-                                Spacer(modifier = Modifier.height(3.dp))
-                                Text(text = item.symbol?.toUpperCase(Locale.ROOT) ?: "", color = ApplicationColors.getSeconderyColor())
-                            }
-                        }
+                    CoinComposable(item) {
 
-                        Column(horizontalAlignment = Alignment.End) {
-                            Text(text = ("$" + item.price?.formatDecimalSeparator()), color = ApplicationColors.getTextColor())
-                            Spacer(modifier = Modifier.height(3.dp))
-
-                            Row {
-                                val price = item.percentChange ?: 0.0
-                                if (price > 0.0) {
-                                    Icon(Icons.Filled.KeyboardArrowUp, contentDescription = null, modifier = Modifier.size(24.dp), tint = Color.Green)
-                                    Spacer(modifier = Modifier.width(5.dp))
-                                    Text(text = item.getPriceChangeText() + "%", color = Color.Green)
-                                } else {
-                                    Icon(Icons.Filled.ArrowDropDown, contentDescription = null, modifier = Modifier.size(24.dp), tint = Color.Red)
-                                    Spacer(modifier = Modifier.width(5.dp))
-                                    Text(text = item.getPriceChangeText() + "%", color = Color.Red)
-                                }
-                            }
-                        }
                     }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun CoinComposable(item: CoinModel, onItemClickListener: () -> Unit) {
+    Row(
+        modifier = Modifier.padding(10.dp).fillMaxWidth().clickable {
+                                                                    onItemClickListener()
+        },
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+        Row {
+            AsyncImage(model = item.image ?: "", contentDescription = "Image", modifier = Modifier.size(35.dp))
+            Spacer(modifier = Modifier.width(20.dp))
+            Column {
+                Text(text = item.name ?: "", color = ApplicationColors.getTextColor())
+                Spacer(modifier = Modifier.height(3.dp))
+                Text(text = item.symbol?.toUpperCase(Locale.ROOT) ?: "", color = ApplicationColors.getSeconderyColor())
+            }
+        }
+
+        Column(horizontalAlignment = Alignment.End) {
+            Text(text = ("$" + item.price?.formatDecimalSeparator()), color = ApplicationColors.getTextColor())
+            Spacer(modifier = Modifier.height(3.dp))
+
+            Row {
+                val price = item.percentChange ?: 0.0
+                if (price > 0.0) {
+                    Icon(Icons.Filled.KeyboardArrowUp, contentDescription = null, modifier = Modifier.size(24.dp), tint = Color.Green)
+                    Spacer(modifier = Modifier.width(5.dp))
+                    Text(text = item.getPriceChangeText() + "%", color = Color.Green)
+                } else {
+                    Icon(Icons.Filled.ArrowDropDown, contentDescription = null, modifier = Modifier.size(24.dp), tint = Color.Red)
+                    Spacer(modifier = Modifier.width(5.dp))
+                    Text(text = item.getPriceChangeText() + "%", color = Color.Red)
                 }
             }
         }

@@ -10,6 +10,8 @@ interface ApplicationApiManagerImplementation {
 
     suspend fun getCoins(database: CoinsDataSource, onNewStateTriggered: (CoinaApplicationState<ArrayList<CoinModel>>) -> Unit)
 
+    suspend fun getCoinsByCategoryName(categoryName: String, onNewStateTriggered: (CoinaApplicationState<ArrayList<CoinModel>>) -> Unit)
+
     suspend fun getCategories(database: CategoriesDataSource, onNewStateTriggered: (CoinaApplicationState<ArrayList<Category>>) -> Unit)
 
 }

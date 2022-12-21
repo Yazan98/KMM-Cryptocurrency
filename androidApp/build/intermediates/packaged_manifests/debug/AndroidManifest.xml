@@ -54,7 +54,10 @@
             android:name="com.yazantarifi.android.auth.LoginScreen"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name="com.yazantarifi.android.home.HomeScreen"
+            android:name="com.yazantarifi.android.home.screens.HomeScreen"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.yazantarifi.android.home.screens.CategoryCoinsScreen"
             android:screenOrientation="fullSensor" />
         <activity
             android:name="androidx.compose.ui.tooling.PreviewActivity"
