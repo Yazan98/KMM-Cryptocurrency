@@ -31,7 +31,12 @@ class CoinsViewModel @Inject constructor(
     override fun onNewAction(action: CoinsAction) {
         when (action) {
             is CoinsAction.GetCoins -> getExchanges()
+            is CoinsAction.GetCoinsByQuery -> getCoinsByQuery(action.query)
         }
+    }
+
+    private fun getCoinsByQuery(query: String) {
+        coinsStateListener.value = dataSource.getCoinsBySearchQuery(query)
     }
 
     private fun getExchanges() {

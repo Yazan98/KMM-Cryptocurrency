@@ -14,6 +14,7 @@ open class RealmCoinModel : RealmObject {
     var price: Double? = 0.0
     var marketGap: Long? = 0
     var marketGapRank: Int? = 0
+    var percentChange: Double? = 0.0
 
     companion object {
         const val MARKET_GAP_RANK = "marketGapRank"
@@ -26,7 +27,8 @@ open class RealmCoinModel : RealmObject {
                 model.image,
                 model.price,
                 model.marketGap,
-                model.marketGapRank
+                model.marketGapRank,
+                model.percentChange
             )
         }
     }

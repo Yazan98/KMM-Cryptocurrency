@@ -3491,6 +3491,7 @@ string project_id
 string range_end
 string range_start
 string register_now
+string search_coin
 string search_menu_title
 string selected
 string status_bar_notification_info_overflow

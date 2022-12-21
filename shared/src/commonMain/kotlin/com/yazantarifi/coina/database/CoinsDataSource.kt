@@ -35,6 +35,26 @@ class CoinsDataSource : CoinaBaseDataSource() {
         return coins
     }
 
+    fun getCoinsBySearchQuery(query: String): ArrayList<CoinModel> {
+        if (query.isEmpty()) {
+            return getCoins()
+        }
+
+        val coins = ArrayList<CoinModel>()
+        val realmInstance = getRealmInstance()
+
+        realmInstance.query(RealmCoinModel::class)
+            .query("name CONTAINS[c] '${query}' OR symbol CONTAINS[c] '${query}'")
+            .sort(RealmCoinModel.MARKET_GAP_RANK, Sort.ASCENDING)
+            .find()
+            .forEach {
+            coins.add(RealmCoinModel.toCoinModel(it))
+        }
+
+        closeRealmInstance(realmInstance)
+        return coins
+    }
+
     fun isDataSourceEmpty(): Boolean {
         return isDataSourceEmpty(RealmCoinModel::class)
     }

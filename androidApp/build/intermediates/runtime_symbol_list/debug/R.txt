@@ -3490,6 +3490,7 @@ int string project_id 0x7f1100bb
 int string range_end 0x7f1100bc
 int string range_start 0x7f1100bd
 int string register_now 0x7f1100be
+int string search_coin 0x7f1100c7
 int string search_menu_title 0x7f1100bf
 int string selected 0x7f1100c0
 int string status_bar_notification_info_overflow 0x7f1100c1
