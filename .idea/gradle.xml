@@ -12,9 +12,9 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/androidApp" />
             <option value="$PROJECT_DIR$/androidFeatures" />
-            <option value="$PROJECT_DIR$/androidFeatures/androidAuth" />
-            <option value="$PROJECT_DIR$/androidFeatures/androidCore" />
-            <option value="$PROJECT_DIR$/androidFeatures/androidHome" />
+            <option value="$PROJECT_DIR$/androidFeatures/auth" />
+            <option value="$PROJECT_DIR$/androidFeatures/core" />
+            <option value="$PROJECT_DIR$/androidFeatures/home" />
             <option value="$PROJECT_DIR$/shared" />
           </set>
         </option>

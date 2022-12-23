@@ -82,9 +82,9 @@ android {
 
 dependencies {
     implementation(project(":shared"))
-    implementation(project(":androidFeatures:androidCore"))
-    implementation(project(":androidFeatures:androidHome"))
-    implementation(project(":androidFeatures:androidAuth"))
+    implementation(project(":androidFeatures:core"))
+    implementation(project(":androidFeatures:home"))
+    implementation(project(":androidFeatures:auth"))
     implementation(platform("com.google.firebase:firebase-bom:30.0.1"))
 
     addJetpackComposeDependencies(this)
