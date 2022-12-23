@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loading">Loading Coin Info, Please Wait ...</string>
+    <string name="app_name">Coin Information</string>
+    <string name="price_change">Price Changes</string>
+</resources>

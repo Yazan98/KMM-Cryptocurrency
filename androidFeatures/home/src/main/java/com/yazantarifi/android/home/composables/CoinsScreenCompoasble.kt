@@ -30,10 +30,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.yazantarifi.android.core.composables.ApplicationLoadingComposable
+import com.yazantarifi.android.core.navigation.CoinaNavigationsArgs
+import com.yazantarifi.android.core.navigation.CoinaScreenNavigation
 import com.yazantarifi.android.core.ui.ApplicationColors
 import com.yazantarifi.android.home.R
 import com.yazantarifi.android.home.action.CoinsAction
@@ -44,6 +47,7 @@ import java.util.Locale
 
 @Composable
 fun CoinsScreenComposable(viewModel: CoinsViewModel) {
+    val context = LocalContext.current
     LaunchedEffect(true) {
         if (viewModel.coinsStateListener.value.isEmpty()) {
             viewModel.onNewAction(CoinsAction.GetCoins)
@@ -74,7 +78,9 @@ fun CoinsScreenComposable(viewModel: CoinsViewModel) {
                 .background(ApplicationColors.getScreenBackgroundColor())) {
                 itemsIndexed(viewModel.coinsStateListener.value) { index, item ->
                     CoinComposable(item) {
-
+                        context.startActivity(CoinaScreenNavigation.getIntent(context, CoinaScreenNavigation.COIN_VIEW).apply {
+                            putExtra(CoinaNavigationsArgs.COIN_KEY, item.id ?: "")
+                        })
                     }
                 }
             }

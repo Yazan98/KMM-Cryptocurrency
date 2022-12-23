@@ -45,5 +45,8 @@
         <activity android:name="com.yazantarifi.android.home.screens.CategoryCoinsScreen"
             android:screenOrientation="fullSensor"/>
 
+        <activity android:name="com.yazantarifi.coin.CoinViewScreen"
+            android:screenOrientation="fullSensor"/>
+
     </application>
 </manifest> 

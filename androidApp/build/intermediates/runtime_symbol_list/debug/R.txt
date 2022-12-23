@@ -3486,6 +3486,7 @@ int string path_password_eye 0x7f1100b7
 int string path_password_eye_mask_strike_through 0x7f1100b8
 int string path_password_eye_mask_visible 0x7f1100b9
 int string path_password_strike_through 0x7f1100ba
+int string price_change 0x7f1100c8
 int string project_id 0x7f1100bb
 int string range_end 0x7f1100bc
 int string range_start 0x7f1100bd

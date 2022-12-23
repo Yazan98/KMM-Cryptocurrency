@@ -72,7 +72,8 @@ com.yazantarifi.coina.android.androidApp-packageDebugResources-70 /Users/yazanta
 com.yazantarifi.coina.android.androidApp-merged_res-71 /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/merged_res/debug
 com.yazantarifi.coina.android.androidApp-debug-72 /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/debug/res
 com.yazantarifi.coina.android.androidApp-main-73 /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/res
-com.yazantarifi.coina.android.androidApp-packaged_res-74 /Users/yazantarifi/DevelopmentProjects/Coina/androidAuth/build/intermediates/packaged_res/debug
-com.yazantarifi.coina.android.androidApp-packaged_res-75 /Users/yazantarifi/DevelopmentProjects/Coina/androidCore/build/intermediates/packaged_res/debug
-com.yazantarifi.coina.android.androidApp-packaged_res-76 /Users/yazantarifi/DevelopmentProjects/Coina/androidHome/build/intermediates/packaged_res/debug
-com.yazantarifi.coina.android.androidApp-packaged_res-77 /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/packaged_res/debug
+com.yazantarifi.coina.android.androidApp-packaged_res-74 /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/auth/build/intermediates/packaged_res/debug
+com.yazantarifi.coina.android.androidApp-packaged_res-75 /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/coin/build/intermediates/packaged_res/debug
+com.yazantarifi.coina.android.androidApp-packaged_res-76 /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/core/build/intermediates/packaged_res/debug
+com.yazantarifi.coina.android.androidApp-packaged_res-77 /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/home/build/intermediates/packaged_res/debug
+com.yazantarifi.coina.android.androidApp-packaged_res-78 /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/packaged_res/debug

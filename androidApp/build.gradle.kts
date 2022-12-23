@@ -85,6 +85,7 @@ dependencies {
     implementation(project(":androidFeatures:core"))
     implementation(project(":androidFeatures:home"))
     implementation(project(":androidFeatures:auth"))
+    implementation(project(":androidFeatures:coin"))
     implementation(platform("com.google.firebase:firebase-bom:30.0.1"))
 
     addJetpackComposeDependencies(this)

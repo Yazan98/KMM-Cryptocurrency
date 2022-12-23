@@ -3487,6 +3487,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string price_change
 string project_id
 string range_end
 string range_start

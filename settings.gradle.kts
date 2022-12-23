@@ -3,6 +3,9 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven {
+             url = uri("https://jitpack.io")
+        }
     }
 }
 
@@ -10,6 +13,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url = uri("https://jitpack.io")
+        }
     }
 }
 
@@ -20,3 +26,4 @@ include(":shared")
 include(":androidFeatures:core")
 include(":androidFeatures:home")
 include(":androidFeatures:auth")
+include(":androidFeatures:coin")

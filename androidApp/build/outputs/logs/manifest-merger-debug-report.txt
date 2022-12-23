@@ -1,12 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-49:12
-MERGED from [:androidHome] /Users/yazantarifi/DevelopmentProjects/Coina/androidHome/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:androidAuth] /Users/yazantarifi/DevelopmentProjects/Coina/androidAuth/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:androidCore] /Users/yazantarifi/DevelopmentProjects/Coina/androidCore/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-52:12
+INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-52:12
+INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-52:12
+INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-52:12
+MERGED from [:androidFeatures:home] /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/home/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:androidFeatures:auth] /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/auth/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:androidFeatures:coin] /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/coin/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:androidFeatures:core] /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/core/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:shared] /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-tooling:1.2.0] /Users/yazantarifi/.gradle/caches/transforms-3/129cc32547f4a40aa5b3d8c7fa2f7eb6/transformed/jetified-ui-tooling-1.2.0/AndroidManifest.xml:17:1-29:12
 MERGED from [androidx.hilt:hilt-navigation-compose:1.0.0] /Users/yazantarifi/.gradle/caches/transforms-3/caddff707199233778a43ba01a660c53/transformed/jetified-hilt-navigation-compose-1.0.0/AndroidManifest.xml:17:1-24:12
@@ -109,6 +110,7 @@ MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /Users/yazantarifi/.gradl
 MERGED from [androidx.compose.ui:ui-util:1.2.0] /Users/yazantarifi/.gradle/caches/transforms-3/ee71fde2ec437f8d1d7f776e49526ef7/transformed/jetified-ui-util-1.2.0/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/yazantarifi/.gradle/caches/transforms-3/0702de84f8368eb4d9d28e817400126a/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [io.github.aakira:napier-android-debug:1.4.1] /Users/yazantarifi/.gradle/caches/transforms-3/a204c0ffbd680cbd85cdd009227d60d4/transformed/jetified-napier-debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] /Users/yazantarifi/.gradle/caches/transforms-3/85c09d82839027ea0ff851df0273d374/transformed/jetified-MPAndroidChart-v3.1.0/AndroidManifest.xml:2:1-20:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/yazantarifi/.gradle/caches/transforms-3/4ee81fd8951ad1e47a001bb6a578d6e6/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:17:1-50:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yazantarifi/.gradle/caches/transforms-3/cfb9e9d071e5f299720d3f84b28c94f7/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/yazantarifi/.gradle/caches/transforms-3/bb9026c40eb33835124d258587c9b4e9/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
@@ -142,22 +144,22 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yazantarifi/.gradl
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/yazantarifi/.gradle/caches/transforms-3/5575294415beb894f4859314b341f434/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.44] /Users/yazantarifi/.gradle/caches/transforms-3/0c119b8566cc501a37f8d21f69ca8e0b/transformed/jetified-dagger-lint-aar-2.44/AndroidManifest.xml:16:1-19:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/yazantarifi/.gradle/caches/transforms-3/424719f5e5a8bfc0d9780d66b6feabf0/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
-INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-52:12
+INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-52:12
+INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-52:12
 	package
 		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml
-		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-49:12
+		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-52:12
 		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml
-		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-49:12
+		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-52:12
 		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml
-		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-49:12
+		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:1-52:12
 		INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:2:11-69
@@ -228,7 +230,7 @@ ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/Andr
 	android:name
 		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:10:22-77
 application
-ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:12:5-48:19
+ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:12:5-51:19
 MERGED from [androidx.compose.ui:ui-tooling:1.2.0] /Users/yazantarifi/.gradle/caches/transforms-3/129cc32547f4a40aa5b3d8c7fa2f7eb6/transformed/jetified-ui-tooling-1.2.0/AndroidManifest.xml:23:5-27:19
 MERGED from [androidx.compose.ui:ui-tooling:1.2.0] /Users/yazantarifi/.gradle/caches/transforms-3/129cc32547f4a40aa5b3d8c7fa2f7eb6/transformed/jetified-ui-tooling-1.2.0/AndroidManifest.xml:23:5-27:19
 MERGED from [androidx.window:window:1.1.0-alpha02] /Users/yazantarifi/.gradle/caches/transforms-3/e9457cbfa667b87fa738dd2efd363f1d/transformed/jetified-window-1.1.0-alpha02/AndroidManifest.xml:24:5-31:19
@@ -385,16 +387,24 @@ ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/Andr
 		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:46:13-51
 	android:name
 		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:45:19-90
+activity#com.yazantarifi.coin.CoinViewScreen
+ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:48:9-49:53
+	android:screenOrientation
+		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:49:13-51
+	android:name
+		ADDED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml:48:19-69
 uses-sdk
 INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml
 INJECTED from /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/main/AndroidManifest.xml
-MERGED from [:androidHome] /Users/yazantarifi/DevelopmentProjects/Coina/androidHome/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:androidHome] /Users/yazantarifi/DevelopmentProjects/Coina/androidHome/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:androidAuth] /Users/yazantarifi/DevelopmentProjects/Coina/androidAuth/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:androidAuth] /Users/yazantarifi/DevelopmentProjects/Coina/androidAuth/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:androidCore] /Users/yazantarifi/DevelopmentProjects/Coina/androidCore/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:androidCore] /Users/yazantarifi/DevelopmentProjects/Coina/androidCore/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:androidFeatures:home] /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/home/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:androidFeatures:home] /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/home/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:androidFeatures:auth] /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/auth/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:androidFeatures:auth] /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/auth/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:androidFeatures:coin] /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/coin/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:androidFeatures:coin] /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/coin/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:androidFeatures:core] /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/core/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:androidFeatures:core] /Users/yazantarifi/DevelopmentProjects/Coina/androidFeatures/core/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:shared] /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:shared] /Users/yazantarifi/DevelopmentProjects/Coina/shared/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-tooling:1.2.0] /Users/yazantarifi/.gradle/caches/transforms-3/129cc32547f4a40aa5b3d8c7fa2f7eb6/transformed/jetified-ui-tooling-1.2.0/AndroidManifest.xml:20:5-21:38
@@ -599,6 +609,8 @@ MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/yazantarifi/.gradle/ca
 MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/yazantarifi/.gradle/caches/transforms-3/0702de84f8368eb4d9d28e817400126a/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [io.github.aakira:napier-android-debug:1.4.1] /Users/yazantarifi/.gradle/caches/transforms-3/a204c0ffbd680cbd85cdd009227d60d4/transformed/jetified-napier-debug/AndroidManifest.xml:7:5-9:41
 MERGED from [io.github.aakira:napier-android-debug:1.4.1] /Users/yazantarifi/.gradle/caches/transforms-3/a204c0ffbd680cbd85cdd009227d60d4/transformed/jetified-napier-debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] /Users/yazantarifi/.gradle/caches/transforms-3/85c09d82839027ea0ff851df0273d374/transformed/jetified-MPAndroidChart-v3.1.0/AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] /Users/yazantarifi/.gradle/caches/transforms-3/85c09d82839027ea0ff851df0273d374/transformed/jetified-MPAndroidChart-v3.1.0/AndroidManifest.xml:16:5-18:41
 MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/yazantarifi/.gradle/caches/transforms-3/4ee81fd8951ad1e47a001bb6a578d6e6/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:21:5-22:38
 MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/yazantarifi/.gradle/caches/transforms-3/4ee81fd8951ad1e47a001bb6a578d6e6/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:21:5-22:38
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yazantarifi/.gradle/caches/transforms-3/cfb9e9d071e5f299720d3f84b28c94f7/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44

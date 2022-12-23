@@ -27,6 +27,8 @@ import coil.compose.AsyncImage
 import com.yazantarifi.android.core.BaseScreen
 import com.yazantarifi.android.core.composables.ApplicationLoadingComposable
 import com.yazantarifi.android.core.composables.ApplicationToolbar
+import com.yazantarifi.android.core.navigation.CoinaNavigationsArgs
+import com.yazantarifi.android.core.navigation.CoinaScreenNavigation
 import com.yazantarifi.android.core.ui.ApplicationColors
 import com.yazantarifi.android.home.R
 import com.yazantarifi.android.home.action.CategoriesCoinAction
@@ -76,7 +78,9 @@ class CategoryCoinsScreen : BaseScreen() {
                     .background(ApplicationColors.getScreenBackgroundColor())) {
                     itemsIndexed(viewModel.screenContentState.value) { index, item ->
                         CoinComposable(item) {
-
+                            startActivity(CoinaScreenNavigation.getIntent(this@CategoryCoinsScreen, CoinaScreenNavigation.COIN_VIEW).apply {
+                                putExtra(CoinaNavigationsArgs.COIN_KEY, item.id ?: "")
+                            })
                         }
                     }
                 }

@@ -9,6 +9,7 @@ buildscript {
         maven { url = uri("https://kotlin.bintray.com/kotlin-eap") }
         maven { url = uri("https://kotlin.bintray.com/kotlin-dev") }
         maven { url = uri("https://dl.bintray.com/sandwwraith/libs-preview/") }
+        maven { url = uri("https://jitpack.io") }
     }
 
     dependencies {
@@ -43,5 +44,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
     }
 }
