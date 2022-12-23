@@ -17,6 +17,6 @@ dependencyResolutionManagement {
 rootProject.name = "Coina"
 include(":androidApp")
 include(":shared")
-include(":androidCore")
-include(":androidHome")
-include(":androidAuth")
+include(":androidFeatures:androidCore")
+include(":androidFeatures:androidHome")
+include(":androidFeatures:androidAuth")

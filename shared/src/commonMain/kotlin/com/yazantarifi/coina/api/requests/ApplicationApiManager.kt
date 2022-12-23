@@ -7,6 +7,7 @@ import com.yazantarifi.coina.database.CategoriesDataSource
 import com.yazantarifi.coina.database.CoinsDataSource
 import com.yazantarifi.coina.database.ExchangesDataSource
 import com.yazantarifi.coina.models.Category
+import com.yazantarifi.coina.models.CoinInformation
 import com.yazantarifi.coina.models.CoinModel
 import com.yazantarifi.coina.models.ExchangeModel
 import com.yazantarifi.coina.ofInnerClassParameter
@@ -63,6 +64,21 @@ class ApplicationApiManager constructor(private val httpClient: HttpClient): App
         withContext(Dispatchers.Default) {
             try {
                 val request: ArrayList<CoinModel> = httpClient.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_MARKETPLACE + "&category=$categoryName").body()
+                onNewStateTriggered(CoinaApplicationState.Success(request))
+            } catch (ex: Exception) {
+                onNewStateTriggered(CoinaApplicationState.Error(ex))
+                ex.printStackTrace()
+            }
+        }
+    }
+
+    override suspend fun getCoinInformation(
+        key: String,
+        onNewStateTriggered: (CoinaApplicationState<CoinInformation>) -> Unit
+    ) {
+        withContext(Dispatchers.Default) {
+            try {
+                val request: CoinInformation = httpClient.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COIN_INFO.replace("{key}", key)).body()
                 onNewStateTriggered(CoinaApplicationState.Success(request))
             } catch (ex: Exception) {
                 onNewStateTriggered(CoinaApplicationState.Error(ex))
