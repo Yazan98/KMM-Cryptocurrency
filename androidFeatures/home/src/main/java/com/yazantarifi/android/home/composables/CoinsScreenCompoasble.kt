@@ -58,13 +58,21 @@ fun CoinsScreenComposable(viewModel: CoinsViewModel) {
     if (viewModel.coinsLoadingState.value) {
         ApplicationLoadingComposable(message = stringResource(id = R.string.loading))
     } else {
-        Column(modifier = Modifier.fillMaxSize().background(ApplicationColors.getScreenBackgroundColor())) {
+        Column(modifier = Modifier
+            .fillMaxSize()
+            .background(ApplicationColors.getScreenBackgroundColor())) {
             OutlinedTextField(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(10.dp),
                 value = text,
-                colors = TextFieldDefaults.outlinedTextFieldColors(focusedLabelColor = ApplicationColors.getApplicationColor(), focusedBorderColor = ApplicationColors.getApplicationColor()),
+                colors = TextFieldDefaults.outlinedTextFieldColors(
+                    focusedLabelColor = ApplicationColors.getApplicationColor(),
+                    focusedBorderColor = ApplicationColors.getApplicationColor(),
+                    textColor = ApplicationColors.getTextColor(),
+                    unfocusedLabelColor = ApplicationColors.getTextColor(),
+                    unfocusedBorderColor = ApplicationColors.getTextColor()
+                ),
                 placeholder = { androidx.compose.material.Text(text = stringResource(id = R.string.search_coin)) },
                 onValueChange = {
                     text = it
@@ -91,9 +99,12 @@ fun CoinsScreenComposable(viewModel: CoinsViewModel) {
 @Composable
 fun CoinComposable(item: CoinModel, onItemClickListener: () -> Unit) {
     Row(
-        modifier = Modifier.padding(10.dp).fillMaxWidth().clickable {
-                                                                    onItemClickListener()
-        },
+        modifier = Modifier
+            .padding(10.dp)
+            .fillMaxWidth()
+            .clickable {
+                onItemClickListener()
+            },
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {

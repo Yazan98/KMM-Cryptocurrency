@@ -69,11 +69,11 @@ class HomeScreen : BaseScreen() {
                             NavigationBarItem(
                                 icon = {
                                     if (index == 0) {
-                                        Icon(Icons.Filled.Home, contentDescription = null)
+                                        Icon(Icons.Filled.Home, contentDescription = null, tint = ApplicationColors.getTextColor())
                                     } else if (index == 1) {
-                                        Icon(Icons.Filled.List, contentDescription = null)
+                                        Icon(Icons.Filled.List, contentDescription = null, tint = ApplicationColors.getTextColor())
                                     } else {
-                                        Icon(Icons.Filled.Star, contentDescription = null)
+                                        Icon(Icons.Filled.Star, contentDescription = null, tint = ApplicationColors.getTextColor())
                                     }
                                 },
                                 label = {
@@ -103,7 +103,9 @@ class HomeScreen : BaseScreen() {
                 }
             }
         ) {
-            NavHost(navController = navController, startDestination = "home", modifier = Modifier.padding(it).background(ApplicationColors.getScreenBackgroundColor())) {
+            NavHost(navController = navController, startDestination = "home", modifier = Modifier
+                .padding(it)
+                .background(ApplicationColors.getScreenBackgroundColor())) {
                 composable("home") { CoinsScreenComposable(viewModel = viewModel) }
                 composable("categories") { CategoriesScreenComposable(categoriesViewModel) }
                 composable("exchanges") { ExchangesScreenComposable(exchangesViewModel) }

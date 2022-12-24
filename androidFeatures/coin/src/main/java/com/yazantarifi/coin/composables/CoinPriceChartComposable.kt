@@ -2,6 +2,7 @@ package com.yazantarifi.coin.composables
 
 import android.view.Gravity
 import android.view.ViewGroup
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -13,6 +14,7 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
@@ -44,7 +46,8 @@ fun CoinPriceChartComposable(item: CoinInfoItem) {
 
         Box(modifier = Modifier
             .fillMaxSize()
-            .wrapContentSize(Alignment.Center)) {
+            .wrapContentSize(Alignment.Center)
+            .background(Color.White)) {
             val barChart = BarChart(context)
             barChart.layoutParams = ViewGroup.LayoutParams( ViewGroup.LayoutParams.MATCH_PARENT, 850)
 
