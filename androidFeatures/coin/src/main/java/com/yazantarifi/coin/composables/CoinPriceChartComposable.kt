@@ -1,5 +1,6 @@
 package com.yazantarifi.coin.composables
 
+import android.view.Gravity
 import android.view.ViewGroup
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -9,36 +10,24 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
-import androidx.core.view.updateLayoutParams
 import com.github.mikephil.charting.charts.BarChart
-import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
-import com.github.mikephil.charting.data.Entry
-import com.github.mikephil.charting.data.LineData
-import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.utils.ColorTemplate
-import com.yazantarifi.android.coin.R
 import com.yazantarifi.coina.models.CoinInfoItem
 
 @Composable
 fun CoinPriceChartComposable(item: CoinInfoItem) {
     val context = LocalContext.current
-    val configuration = LocalConfiguration.current
-    val screenWidth = configuration.screenWidthDp
-
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -53,7 +42,6 @@ fun CoinPriceChartComposable(item: CoinInfoItem) {
             }
         }
 
-        Text(text = stringResource(id = R.string.price_change))
         Box(modifier = Modifier
             .fillMaxSize()
             .wrapContentSize(Alignment.Center)) {

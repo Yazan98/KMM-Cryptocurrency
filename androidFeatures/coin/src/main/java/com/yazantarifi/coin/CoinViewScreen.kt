@@ -1,6 +1,7 @@
 package com.yazantarifi.coin
 
 import android.os.Bundle
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -18,8 +19,12 @@ import com.yazantarifi.android.core.BaseScreen
 import com.yazantarifi.android.core.composables.ApplicationLoadingComposable
 import com.yazantarifi.android.core.composables.ApplicationToolbar
 import com.yazantarifi.android.core.navigation.CoinaNavigationsArgs
+import com.yazantarifi.android.core.ui.ApplicationColors
 import com.yazantarifi.coin.composables.CoinPriceChartComposable
 import com.yazantarifi.coin.composables.CoinTitleComposable
+import com.yazantarifi.coin.composables.DescriptionComposable
+import com.yazantarifi.coin.composables.SectionComposable
+import com.yazantarifi.coin.composables.SectionTitleComposable
 import com.yazantarifi.coin.viewModel.CoinAction
 import com.yazantarifi.coin.viewModel.CoinViewModel
 import com.yazantarifi.coina.models.CoinInfoItem
@@ -52,7 +57,8 @@ class CoinViewScreen : BaseScreen() {
             } else {
                 Box(modifier = Modifier
                     .fillMaxSize()
-                    .padding(it)) {
+                    .padding(it)
+                    .background(ApplicationColors.getScreenBackgroundColor())) {
                     LazyColumn(modifier = Modifier
                         .fillMaxSize()
                         .padding(10.dp)) {
@@ -60,6 +66,9 @@ class CoinViewScreen : BaseScreen() {
                             when (item.type) {
                                 CoinInfoItem.TYPE_TITLE -> CoinTitleComposable(item = item)
                                 CoinInfoItem.TYPE_CHART -> CoinPriceChartComposable(item)
+                                CoinInfoItem.TYPE_SECTION_TITLE -> SectionTitleComposable(item)
+                                CoinInfoItem.TYPE_SECTION -> SectionComposable(item)
+                                CoinInfoItem.TYPE_DESCRIPTION -> DescriptionComposable(item)
                             }
                         }
                     }
