@@ -9,25 +9,42 @@
 import Foundation
 import shared
 
-class AuthViewModelImplementation : CoinaViewModel<AuthAction, AuthState> {
+@MainActor class AuthViewModelImplementation : CoinaViewModel<AuthAction, AuthState> {
+    
+    private var stateListener: CoinaStateListener? = nil
+    private var authUseCase: AuthUseCase = AuthUseCase().addDependencies(apiManager: CoinaSingletonUtils.getApiManagerInstance(), database: CoinaSingletonUtils.getCoinsDataSourceInstance())
     
     override init() {
         super.init()
         self.initializeViewModel()
     }
     
+    func addStateListener(listener: CoinaStateListener) {
+        self.stateListener = listener
+    }
+    
     override func executeAction(action: AuthAction) {
-        if (action is AuthAction.LoginAction) {
-            onLoginUserAction(email: "", password: "")
+        if (action is LoginAction) {
+            onLoginUserAction(action: action)
         }
     }
     
-    private func onLoginUserAction(email: String, password: String) {
-        
+    private func onLoginUserAction(action: AuthAction) {
+        let loginAction = action as! LoginAction
+        self.authUseCase.run(args: AuthUseCase.Args(email: loginAction.getArguments().email, password: loginAction.getArguments().password))
     }
     
     override func onListenerTriggered(key: String, value: CoinaApplicationState<AnyObject>) {
-        
+        if key == self.authUseCase.getUseCaseKey() {
+            value.handleResult(onSuccess: { payload in
+                print("Items Success")
+                self.stateListener?.onStatetriggered(state: AuthState.SuccessState())
+            }, onError: { exception in
+                print("Items Exception : \(String(describing: exception.exception?.message))")
+            }, onLoading: { loadingState in
+                self.stateListener?.onLoadingState(isLoading: loadingState as! Bool)
+            })
+        }
     }
     
     override func onExceptionListenerTriggered(key: String, value: KotlinThrowable) {
@@ -35,9 +52,12 @@ class AuthViewModelImplementation : CoinaViewModel<AuthAction, AuthState> {
     }
     
     override func getSupportedUseCases() -> NSMutableArray {
-        return [AuthUseCase().addDependencies(apiManager: ApplicationApiManager().addHttpClient(httpClient: HttpBaseClient().httpClient), database: CoinsDataSource())]
+        return [authUseCase]
     }
     
-    
+    deinit {
+        clear_()
+        self.stateListener = nil
+    }
     
 }

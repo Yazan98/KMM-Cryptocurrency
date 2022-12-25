@@ -7,17 +7,31 @@
 //
 
 import Foundation
+import shared
 
-@MainActor class AuthViewModel : ObservableObject {
+@MainActor class AuthViewModel : ObservableObject, CoinaStateListener {
     
     @Published var isUserLoggedIn: Bool = false
+    @Published var loadingState: Bool = false
     @Published var email: String = ""
     @Published var password: String = ""
     
     var viewModelImplementation: AuthViewModelImplementation? = nil
     
-    init(viewModelImplementation: AuthViewModelImplementation? = nil) {
-        self.viewModelImplementation = viewModelImplementation
+    func addViewModelImplementatio(impl: AuthViewModelImplementation) {
+        self.viewModelImplementation = impl
+        self.viewModelImplementation?.addStateListener(listener: self)
+    }
+    
+    func onStatetriggered(state: CoinaState) {
+        if state is AuthState.SuccessState {
+            isUserLoggedIn = true
+            CoinaApplicationUtils.updateUserLoggedInStatus(newStatus: true)
+        }
+    }
+    
+    func onLoadingState(isLoading: Bool) {
+        loadingState = isLoading
     }
     
 }

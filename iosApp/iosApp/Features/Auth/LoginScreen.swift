@@ -13,20 +13,33 @@ struct LoginScreen: View {
     @StateObject private var viewModel = AuthViewModel()
 
     var body: some View {
-        VStack {
-            TextField("Email", text: $viewModel.email)
-                .padding()
-            
-            SecureField("Password", text: $viewModel.password)
-                .padding()
+        NavigationView {
+            VStack {
+                if (viewModel.loadingState) {
+                    ProgressView().progressViewStyle(CircularProgressViewStyle())
+                } else {
+                    TextField("Email", text: $viewModel.email)
+                        .padding()
+                    
+                    SecureField("Password", text: $viewModel.password)
+                        .padding()
 
-            Button(action: {
-                viewModel.viewModelImplementation?.executeAction(action: AuthAction.LoginAction(arguments: AuthAction.LoginArgs(email: viewModel.email, password: viewModel.password)))
-            }) {
-                Text("Log In")
-            }
-            .padding()
-        }   
+                    Button(action: {
+                        if viewModel.viewModelImplementation == nil {
+                            viewModel.addViewModelImplementatio(impl: AuthViewModelImplementation())
+                        }
+                        
+                        viewModel.viewModelImplementation?.executeAction(action: LoginAction(arguments: LoginArgs(email: viewModel.email, password: viewModel.password)))
+                    }) {
+                        Text("Log In")
+                    }
+                    .padding()
+                }
+            }   
+        }
+        .navigationTitle("Coina")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigate(to: HomeScreen(), when: $viewModel.isUserLoggedIn)
     }
 }
 

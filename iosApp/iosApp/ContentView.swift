@@ -6,8 +6,7 @@ struct ContentView: View {
 
 	var body: some View {
         if CoinaApplicationUtils.isUserLoggedIn() {
-            Text(greet)
-            Text("Is User Logged In ? \(CoinaApplicationUtils.isUserLoggedIn())" as String)
+            HomeScreen()
         } else {
             LoginScreen()
         }

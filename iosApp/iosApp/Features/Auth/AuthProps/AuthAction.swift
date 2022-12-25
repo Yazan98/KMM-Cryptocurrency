@@ -9,21 +9,22 @@
 import Foundation
 import shared
 
-class AuthAction : NSObject, CoinaAction {
-    class LoginAction: AuthAction {
-        private var arguments: LoginArgs? = nil
-        
-        init(arguments: LoginArgs) {
-            self.arguments = arguments
-        }
-        
-        public func getArguments() -> LoginArgs {
-            return self.arguments ?? LoginArgs(email: "", password: "")
-        }
+public class AuthAction : NSObject, CoinaAction {}
+
+public class LoginAction: AuthAction {
+
+    public var arguments: LoginArgs? = nil
+    
+    init(arguments: LoginArgs) {
+        self.arguments = arguments
     }
     
-    struct LoginArgs {
-        var email: String
-        var password: String
+    public func getArguments() -> LoginArgs {
+        return self.arguments ?? LoginArgs(email: "", password: "")
     }
+}
+
+public struct LoginArgs {
+    public var email: String
+    public var password: String
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		8A075C8929583F3A00FEFF23 /* CoinaSingletonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A075C8829583F3A00FEFF23 /* CoinaSingletonUtils.swift */; };
+		8A075C8B2958499C00FEFF23 /* CoinaStateListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A075C8A2958499C00FEFF23 /* CoinaStateListener.swift */; };
+		8A075C8D2958502000FEFF23 /* AppExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A075C8C2958502000FEFF23 /* AppExtentions.swift */; };
+		8A075C8F2958507600FEFF23 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A075C8E2958507600FEFF23 /* HomeScreen.swift */; };
 		8A64E1FE295763B800CDE592 /* CoinaApplicationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E1FD295763B800CDE592 /* CoinaApplicationUtils.swift */; };
 		8A64E204295766B800CDE592 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E203295766B800CDE592 /* LoginScreen.swift */; };
 		8A64E206295766C100CDE592 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E205295766C100CDE592 /* AuthViewModel.swift */; };
@@ -28,6 +32,10 @@
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A075C8829583F3A00FEFF23 /* CoinaSingletonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinaSingletonUtils.swift; sourceTree = "<group>"; };
+		8A075C8A2958499C00FEFF23 /* CoinaStateListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinaStateListener.swift; sourceTree = "<group>"; };
+		8A075C8C2958502000FEFF23 /* AppExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtentions.swift; sourceTree = "<group>"; };
+		8A075C8E2958507600FEFF23 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		8A64E1FD295763B800CDE592 /* CoinaApplicationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinaApplicationUtils.swift; sourceTree = "<group>"; };
 		8A64E203295766B800CDE592 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		8A64E205295766C100CDE592 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -102,6 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				8A64E1FD295763B800CDE592 /* CoinaApplicationUtils.swift */,
+				8A075C8829583F3A00FEFF23 /* CoinaSingletonUtils.swift */,
+				8A075C8A2958499C00FEFF23 /* CoinaStateListener.swift */,
+				8A075C8C2958502000FEFF23 /* AppExtentions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -130,6 +141,7 @@
 		8A64E2002957665E00CDE592 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8A075C8E2958507600FEFF23 /* HomeScreen.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -290,12 +302,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A64E206295766C100CDE592 /* AuthViewModel.swift in Sources */,
+				8A075C8D2958502000FEFF23 /* AppExtentions.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				8A64E2092957670C00CDE592 /* AuthViewModelImplementation.swift in Sources */,
 				8A64E20E2957673F00CDE592 /* AuthAction.swift in Sources */,
 				8A64E204295766B800CDE592 /* LoginScreen.swift in Sources */,
+				8A075C8929583F3A00FEFF23 /* CoinaSingletonUtils.swift in Sources */,
 				8A64E1FE295763B800CDE592 /* CoinaApplicationUtils.swift in Sources */,
+				8A075C8F2958507600FEFF23 /* HomeScreen.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				8A075C8B2958499C00FEFF23 /* CoinaStateListener.swift in Sources */,
 				8A64E20C2957673A00CDE592 /* AuthState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
