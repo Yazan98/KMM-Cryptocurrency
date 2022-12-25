@@ -26,12 +26,12 @@ class AuthUseCase: CoinaUseCase<AuthUseCase.Args, Boolean>() {
     override fun run(args: Args) {
         launch(Dispatchers.Default) {
             if (args.email.isEmpty()) {
-                onSendErrorState(CoinaValidationException("Email Can't Be Empty !!"))
+                onSendState(CoinaApplicationState.Error(CoinaValidationException("Email Can't Be Empty !!")))
                 return@launch
             }
 
             if (args.password.isEmpty()) {
-                onSendErrorState(CoinaValidationException("Password Can't Be Empty !!"))
+                onSendState(CoinaApplicationState.Error(CoinaValidationException("Password Can't Be Empty !!")))
                 return@launch
             }
 

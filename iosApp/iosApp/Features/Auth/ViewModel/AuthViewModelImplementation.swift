@@ -47,6 +47,7 @@ import shared
     }
     
     override func onExceptionListenerTriggered(key: String, value: KotlinThrowable) {
+        print("Exception Triggered")
         self.stateListener?.onStatetriggered(state: AuthState.ErrorState(message: value.message ?? ""))
     }
     
