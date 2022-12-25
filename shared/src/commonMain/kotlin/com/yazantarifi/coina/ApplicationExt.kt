@@ -26,3 +26,14 @@ fun Double.formatDecimalSeparator(): String {
         .reversed()
         .replace(".", "")
 }
+
+object PriceExt {
+    fun formatDecimalSeparator(price: Double): String {
+        return price.toString()
+            .reversed()
+            .chunked(3)
+            .joinToString(",")
+            .reversed()
+            .replace(".", "")
+    }
+}

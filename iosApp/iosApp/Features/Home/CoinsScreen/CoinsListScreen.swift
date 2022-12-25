@@ -28,7 +28,7 @@ struct CoinsListScreen: View {
                     ScrollView {
                         LazyVStack {
                             ForEach(viewModel.coinsList, id: \.self) { item in
-                                Text(item.name ?? "")
+                                CoinRowView(coin: item)
                             }
                         }
                     }

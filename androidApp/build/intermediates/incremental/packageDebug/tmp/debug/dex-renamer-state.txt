@@ -1,4 +1,4 @@
-#Sun Dec 25 16:08:42 EET 2022
+#Sun Dec 25 17:04:34 EET 2022
 base.0=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/dex/debug/mergeLibDexDebug/10/classes.dex
 base.10=/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/dex/debug/mergeLibDexDebug/5/classes.dex
