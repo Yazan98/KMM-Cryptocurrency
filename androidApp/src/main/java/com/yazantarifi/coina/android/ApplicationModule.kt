@@ -66,7 +66,7 @@ object ApplicationModule {
     @Provides
     @Singleton
     fun getGetCoinsUseCase(apiManager: ApplicationApiManager, database: CoinsDataSource): GetCoinsUseCase {
-        return GetCoinsUseCase(apiManager, database)
+        return GetCoinsUseCase().addDependencies(apiManager, database)
     }
 
 }

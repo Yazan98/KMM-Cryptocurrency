@@ -138,7 +138,6 @@ struct LoginScreen: View {
                         HStack {
                             Spacer()
                             Text("Not a Member ?")
-                                .padding(.trailing, 20)
                                 .padding(.leading, 20)
                                 .foregroundColor(CoinaTheme.textColor)
                                 .font(.system(size: 15))
@@ -149,6 +148,8 @@ struct LoginScreen: View {
                             
                            Spacer()
                         }
+                        .padding()
+                        .padding(.top, 10)
                         
                         Spacer()
                     }

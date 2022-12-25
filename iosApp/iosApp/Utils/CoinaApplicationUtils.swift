@@ -8,6 +8,7 @@
 
 import Foundation
 import shared
+import MaterialComponents.MaterialSnackbar
 
 class CoinaApplicationUtils {
     
@@ -19,6 +20,18 @@ class CoinaApplicationUtils {
     static func updateUserLoggedInStatus(newStatus: Bool) {
         let storageProvider = CoinaStorageProvider(provider: CoinaStorageKeyValue(context: UserDefaults()))
         storageProvider.updateLoggedInUser(newState: newStatus)
+    }
+    
+    static func showMessage(errorMessage: String) {
+        let action = MDCSnackbarMessageAction()
+        let message = MDCSnackbarMessage()
+        message.text = errorMessage
+        let actionHandler = {() in
+            
+        }
+        action.handler = actionHandler
+        action.title = "OK"
+        MDCSnackbarManager.default.show(message)
     }
     
 }

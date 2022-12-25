@@ -10,7 +10,28 @@ import SwiftUI
 
 struct HomeScreen: View {
     var body: some View {
-        Text("Home Screen")
+        NavigationView {
+            TabView {
+                CoinsListScreen()
+                    .clipped()
+                    .tabItem {
+                        Image(systemName: "house")
+                        Text("Coins")
+                    }
+                CategoriesScreen()
+                    .tabItem {
+                        Image(systemName: "list.bullet")
+                        Text("Categories")
+                    }
+                ExchangesScreen()
+                    .tabItem {
+                        Image(systemName: "star.fill")
+                        Text("Exchanges")
+                    }
+            }
+            .navigationBarTitle("Coina")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 

@@ -8,10 +8,16 @@ import com.yazantarifi.coina.viewModels.useCases.CoinaUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class GetCoinsUseCase constructor(
-    private val apiManager: ApplicationApiManager,
-    private val database: CoinsDataSource
-): CoinaUseCase<Unit, ArrayList<CoinModel>>() {
+class GetCoinsUseCase: CoinaUseCase<Unit, ArrayList<CoinModel>>() {
+
+    private var apiManager: ApplicationApiManager? = null
+    private var database: CoinsDataSource? = null
+
+    fun addDependencies(apiManager: ApplicationApiManager, database: CoinsDataSource): GetCoinsUseCase {
+        this.apiManager = apiManager
+        this.database = database
+        return this
+    }
 
     companion object {
         const val KEY = "GetCoinsUseCase"
@@ -19,21 +25,21 @@ class GetCoinsUseCase constructor(
 
     override fun run(args: Unit) {
         launch(Dispatchers.Default) {
-            val isDataSourceEmpty = database.isDataSourceEmpty()
+            val isDataSourceEmpty = database?.isDataSourceEmpty() ?: false
             if (!isDataSourceEmpty) {
-                onSendState(CoinaApplicationState.Success(database.getCoins()))
+                onSendState(CoinaApplicationState.Success(database?.getCoins()))
             }
 
             if (isDataSourceEmpty) {
                 onSendLoadingState(true)
             }
 
-            apiManager.getCoins(database) {
+            apiManager?.getCoins(database ?: return@launch) {
                 it.handleResult({
                     onSendLoadingState(false)
                     onSendState(CoinaApplicationState.Success(it))
                     launch {
-                        it?.let { it1 -> database.writeCoinsData(it1) }
+                        it?.let { it1 -> database?.writeCoinsData(it1) }
                     }
                 }, {
                     onSendLoadingState(false)

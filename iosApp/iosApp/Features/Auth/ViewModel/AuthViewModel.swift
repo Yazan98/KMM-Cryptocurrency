@@ -8,7 +8,6 @@
 
 import Foundation
 import shared
-import MaterialComponents.MaterialSnackbar
 
 @MainActor class AuthViewModel : ObservableObject, CoinaStateListener {
     
@@ -32,17 +31,7 @@ import MaterialComponents.MaterialSnackbar
         
         if state is AuthState.ErrorState {
             let errorMessage = (state as! AuthState.ErrorState).message
-            let action = MDCSnackbarMessageAction()
-            let message = MDCSnackbarMessage()
-            message.text = errorMessage
-            let actionHandler = {() in
-//              let answerMessage = MDCSnackbarMessage()
-//              answerMessage.text = "Fascinating"
-//              MDCSnackbarManager.show(answerMessage)
-            }
-            action.handler = actionHandler
-            action.title = "OK"
-            MDCSnackbarManager.default.show(message)
+            CoinaApplicationUtils.showMessage(errorMessage: errorMessage)
         }
     }
     
