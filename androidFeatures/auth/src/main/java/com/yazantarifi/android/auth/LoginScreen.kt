@@ -20,7 +20,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Divider
 import androidx.compose.material.FloatingActionButton
-import androidx.compose.material.ScaffoldState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -33,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Scaffold
 import androidx.compose.material.rememberScaffoldState
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
@@ -51,7 +51,6 @@ import com.yazantarifi.android.core.composables.ApplicationToolbar
 import com.yazantarifi.android.core.navigation.CoinaScreenNavigation
 import com.yazantarifi.android.core.ui.ApplicationColors
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.Dispatchers
 
 @AndroidEntryPoint
 class LoginScreen : BaseScreen() {
@@ -83,6 +82,12 @@ class LoginScreen : BaseScreen() {
                 if (viewModel.loginStateListener.value) {
                     CoinaScreenNavigation.startScreen(this@LoginScreen, CoinaScreenNavigation.HOME_SCREEN)
                     finish()
+                }
+
+                LaunchedEffect(viewModel.loginErrorMessageListener.value.isNotEmpty()) {
+                    coroutineScope.launch {
+                        scaffoldState.snackbarHostState.showSnackbar(viewModel.loginErrorMessageListener.value)
+                    }
                 }
 
                 if (viewModel.loginLoadingState.value) {
@@ -128,7 +133,11 @@ class LoginScreen : BaseScreen() {
                                 modifier = Modifier
                                     .height(50.dp)
                                     .fillMaxWidth(),
-                                onClick = { onLoginButtonClicked(scaffoldState, viewModel, this@LoginScreen, coroutineScope) },
+                                onClick = { onLoginButtonClicked(
+                                    viewModel,
+                                    this@LoginScreen,
+                                    coroutineScope
+                                ) },
                                 shape = RoundedCornerShape(15),
                                 colors = ButtonDefaults.outlinedButtonColors(
                                     contentColor = Color.White,
@@ -225,20 +234,10 @@ class LoginScreen : BaseScreen() {
     }
 }
 
-private fun onLoginButtonClicked(scaffoldState: ScaffoldState, viewModel: AuthViewModel, context: ComponentActivity, coroutineScope: CoroutineScope) {
-    if (!viewModel.isEmailValid()) {
-        coroutineScope.launch {
-            scaffoldState.snackbarHostState.showSnackbar(context.getString(R.string.email_not_valid))
-        }
-        return
-    }
-
-    if (!viewModel.isPasswordValid()) {
-        coroutineScope.launch {
-            scaffoldState.snackbarHostState.showSnackbar(context.getString(R.string.password_req))
-        }
-        return
-    }
-
-    viewModel.onNewAction(AuthAction.LoginAction)
+private fun onLoginButtonClicked(
+    viewModel: AuthViewModel,
+    context: ComponentActivity,
+    coroutineScope: CoroutineScope
+) {
+    viewModel.executeAction(AuthAction.LoginAction)
 }

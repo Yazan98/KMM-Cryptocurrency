@@ -4,6 +4,7 @@ import android.text.TextUtils
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.viewModelScope
+import com.yazantarifi.android.auth.useCases.AuthUseCase
 import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.api.requests.ApplicationApiManager
 import com.yazantarifi.coina.context.CoinaStorageProvider
@@ -21,41 +22,21 @@ import javax.inject.Inject
 @HiltViewModel
 class AuthViewModel @Inject constructor(
     private val provider: CoinaStorageProvider,
-    private val apiManager: ApplicationApiManager,
-    private val database: CoinsDataSource
+    private val getAuthUseCase: AuthUseCase
 ): CoinaViewModel<AuthAction, AuthState>() {
 
     val userEmailState: MutableState<String> by lazy { mutableStateOf("") }
     val userPasswordState: MutableState<String> by lazy { mutableStateOf("") }
     val loginLoadingState: MutableState<Boolean> by lazy { mutableStateOf(false) }
     val loginStateListener: MutableState<Boolean> by lazy { mutableStateOf(false) }
+    val loginErrorMessageListener: MutableState<String> by lazy { mutableStateOf("") }
 
     init {
         initViewModel()
     }
 
-    fun isEmailValid(): Boolean {
-        return !TextUtils.isEmpty(userEmailState.value)
-    }
-
-    fun isPasswordValid(): Boolean {
-        return !TextUtils.isEmpty(userPasswordState.value)
-    }
-
     private fun onGetLoginInformation() {
-        viewModelScope.launch(Dispatchers.IO) {
-            onAcceptNewState(AuthState.LoadingState(true))
-            apiManager.getCoins(database) {
-                it.handleResult({
-                    provider.updateLoggedInUser(true)
-                    onAcceptNewState(AuthState.SuccessState)
-                }, {
-
-                }, {
-                    onAcceptNewState(AuthState.LoadingState(it))
-                })
-            }
-        }
+        getAuthUseCase(AuthUseCase.Args(userEmailState.value, userPasswordState.value))
     }
 
     override fun executeAction(action: AuthAction) {
@@ -68,16 +49,32 @@ class AuthViewModel @Inject constructor(
         return AuthState.EmptyState
     }
 
-    override fun getListeners(): HashMap<String, ReceiveChannel<CoinaApplicationState<Any>>> {
-        TODO("Not yet implemented")
+    override fun onExceptionListenerTriggered(key: String, value: Throwable) {
+        loginErrorMessageListener.value = value.message ?: ""
     }
 
     override fun onListenerTriggered(key: String, value: CoinaApplicationState<Any>) {
-        TODO("Not yet implemented")
+        if (key == AuthUseCase.KEY) {
+            value.handleResult({
+                it?.let {
+                    if (it is Boolean) {
+                        provider.updateLoggedInUser(true)
+                        loginStateListener.value = true
+                    }
+                }
+            }, {
+                loginErrorMessageListener.value = it.exception?.message ?: ""
+                loginErrorMessageListener.value = ""
+            }, {
+                loginLoadingState.value = it
+            })
+        }
     }
 
     override fun getSupportedUseCases(): ArrayList<CoinaUseCaseType<Any>> {
-        TODO("Not yet implemented")
+        return ArrayList<CoinaUseCaseType<Any>>().apply {
+            add(getAuthUseCase as CoinaUseCaseType<Any>)
+        }
     }
 
 }
