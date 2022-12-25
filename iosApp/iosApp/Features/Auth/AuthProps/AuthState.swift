@@ -12,4 +12,10 @@ import shared
 class AuthState : NSObject, CoinaState {
     class LoadingState: AuthState {}
     class SuccessState: AuthState {}
+    class ErrorState: AuthState {
+        var message: String = ""
+        init(message: String) {
+            self.message = message
+        }
+    }
 }

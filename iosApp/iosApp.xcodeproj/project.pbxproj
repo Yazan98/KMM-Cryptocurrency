@@ -15,6 +15,7 @@
 		8A075C8B2958499C00FEFF23 /* CoinaStateListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A075C8A2958499C00FEFF23 /* CoinaStateListener.swift */; };
 		8A075C8D2958502000FEFF23 /* AppExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A075C8C2958502000FEFF23 /* AppExtentions.swift */; };
 		8A075C8F2958507600FEFF23 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A075C8E2958507600FEFF23 /* HomeScreen.swift */; };
+		8A075C91295872C000FEFF23 /* CoinaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A075C90295872C000FEFF23 /* CoinaTheme.swift */; };
 		8A64E1FE295763B800CDE592 /* CoinaApplicationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E1FD295763B800CDE592 /* CoinaApplicationUtils.swift */; };
 		8A64E204295766B800CDE592 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E203295766B800CDE592 /* LoginScreen.swift */; };
 		8A64E206295766C100CDE592 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E205295766C100CDE592 /* AuthViewModel.swift */; };
@@ -36,6 +37,7 @@
 		8A075C8A2958499C00FEFF23 /* CoinaStateListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinaStateListener.swift; sourceTree = "<group>"; };
 		8A075C8C2958502000FEFF23 /* AppExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtentions.swift; sourceTree = "<group>"; };
 		8A075C8E2958507600FEFF23 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		8A075C90295872C000FEFF23 /* CoinaTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinaTheme.swift; sourceTree = "<group>"; };
 		8A64E1FD295763B800CDE592 /* CoinaApplicationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinaApplicationUtils.swift; sourceTree = "<group>"; };
 		8A64E203295766B800CDE592 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		8A64E205295766C100CDE592 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				8A075C8829583F3A00FEFF23 /* CoinaSingletonUtils.swift */,
 				8A075C8A2958499C00FEFF23 /* CoinaStateListener.swift */,
 				8A075C8C2958502000FEFF23 /* AppExtentions.swift */,
+				8A075C90295872C000FEFF23 /* CoinaTheme.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A64E206295766C100CDE592 /* AuthViewModel.swift in Sources */,
+				8A075C91295872C000FEFF23 /* CoinaTheme.swift in Sources */,
 				8A075C8D2958502000FEFF23 /* AppExtentions.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				8A64E2092957670C00CDE592 /* AuthViewModelImplementation.swift in Sources */,

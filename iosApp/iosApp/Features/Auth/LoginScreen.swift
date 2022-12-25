@@ -14,31 +14,149 @@ struct LoginScreen: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                if (viewModel.loadingState) {
-                    ProgressView().progressViewStyle(CircularProgressViewStyle())
-                } else {
-                    TextField("Email", text: $viewModel.email)
-                        .padding()
-                    
-                    SecureField("Password", text: $viewModel.password)
-                        .padding()
-
-                    Button(action: {
-                        if viewModel.viewModelImplementation == nil {
-                            viewModel.addViewModelImplementatio(impl: AuthViewModelImplementation())
+            ZStack {
+                CoinaTheme.backgroundColor.ignoresSafeArea()
+                VStack {
+                    if (viewModel.loadingState) {
+                        ProgressView().progressViewStyle(CircularProgressViewStyle())
+                    } else {
+                        Spacer()
+                        
+                        Group {
+                            Text("Welcome Back!")
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(CoinaTheme.textColor)
+                                .font(.system(size: 25))
+                                .padding(.bottom, 5)
+                            
+                            Text("We Missed You")
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(CoinaTheme.textColor)
+                                .padding(.bottom, 25)
                         }
                         
-                        viewModel.viewModelImplementation?.executeAction(action: LoginAction(arguments: LoginArgs(email: viewModel.email, password: viewModel.password)))
-                    }) {
-                        Text("Log In")
+                        Group {
+                            TextField("Email", text: $viewModel.email)
+                                .padding()
+                                .overlay(RoundedRectangle(cornerRadius: 8.0).strokeBorder(CoinaTheme.textColor, style: StrokeStyle(lineWidth: 1.0)))
+                                .foregroundColor(CoinaTheme.textColor)
+                                .padding(.trailing, 20)
+                                .padding(.leading, 20)
+                            
+                            SecureField("Password", text: $viewModel.password)
+                                .padding()
+                                .overlay(RoundedRectangle(cornerRadius: 8.0).strokeBorder(CoinaTheme.textColor, style: StrokeStyle(lineWidth: 1.0)))
+                                .foregroundColor(CoinaTheme.textColor)
+                                .padding(.trailing, 20)
+                                .padding(.leading, 20)
+                            
+                            HStack {
+                                Spacer()
+                                Text("Forget Password ?")
+                                    .padding(.trailing, 20)
+                                    .padding(.leading, 20)
+                                    .foregroundColor(CoinaTheme.textColor)
+                                    .font(.system(size: 15))
+                            }
+                            
+                            Button(action: {
+                                if viewModel.viewModelImplementation == nil {
+                                    viewModel.addViewModelImplementatio(impl: AuthViewModelImplementation())
+                                }
+                                
+                                viewModel.viewModelImplementation?.executeAction(action: LoginAction(arguments: LoginArgs(email: viewModel.email, password: viewModel.password)))
+                            }) {
+                                Text("Login")
+                                    .multilineTextAlignment(.center)
+                                    .padding()
+                                    .foregroundColor(Color.white)
+                                    .frame(maxWidth: .infinity)
+                                
+                            }
+                            .frame(maxWidth: .infinity)
+                            .background(CoinaTheme.applicationColor)
+                            .cornerRadius(8.0)
+                            .padding(.trailing, 20)
+                            .padding(.leading, 20)
+                            .padding(.top, 10)
+                        }
+                        
+                        HStack {
+                            Spacer()
+                            Rectangle().fill(CoinaTheme.textColor).frame(width: 55, height: 1, alignment: .center)
+                            
+                            Text("Continue With")
+                                .foregroundColor(CoinaTheme.textColor)
+                                .font(.system(size: 15))
+                                .padding(.leading, 10)
+                                .padding(.trailing, 10)
+                            
+                            Rectangle().fill(CoinaTheme.textColor).frame(width: 55, height: 1, alignment: .center)
+                            Spacer()
+                        }
+                        .padding()
+                        .padding(.top, 10)
+                        
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                //Place your action here
+                            }) {
+                                Image("apple_logo")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .foregroundColor(.white)
+                                    .padding(10)
+                                    .background(Color.white)
+                                    .clipShape(Circle())
+                                
+                            }
+                            .padding()
+                            .clipShape(Circle())
+                            .shadow(color: Color.black.opacity(0.2), radius: 10.0)
+                            
+                            Button(action: {
+                                //Place your action here
+                            }) {
+                                Image("facebook_image")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .foregroundColor(.white)
+                                    .padding(10)
+                                    .background(Color.white)
+                                    .clipShape(Circle())
+                                
+                            }
+                            .padding()
+                            .clipShape(Circle())
+                            .shadow(color: Color.black.opacity(0.2), radius: 10.0)
+                            
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Spacer()
+                            Text("Not a Member ?")
+                                .padding(.trailing, 20)
+                                .padding(.leading, 20)
+                                .foregroundColor(CoinaTheme.textColor)
+                                .font(.system(size: 15))
+                            
+                            Text("Register Now")
+                                .foregroundColor(Color.blue)
+                                .font(.system(size: 15))
+                            
+                           Spacer()
+                        }
+                        
+                        Spacer()
                     }
-                    .padding()
                 }
-            }   
+            }
+            .navigationTitle("Coina")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle("Coina")
-        .navigationBarTitleDisplayMode(.inline)
         .navigate(to: HomeScreen(), when: $viewModel.isUserLoggedIn)
     }
 }

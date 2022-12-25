@@ -78,8 +78,8 @@
             filePath = "iosApp/Features/Auth/ViewModel/AuthViewModelImplementation.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "onListenerTriggered(key:value:)"
             landmarkType = "7">
          </BreakpointContent>

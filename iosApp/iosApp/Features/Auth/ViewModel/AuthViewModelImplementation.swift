@@ -37,10 +37,9 @@ import shared
     override func onListenerTriggered(key: String, value: CoinaApplicationState<AnyObject>) {
         if key == self.authUseCase.getUseCaseKey() {
             value.handleResult(onSuccess: { payload in
-                print("Items Success")
                 self.stateListener?.onStatetriggered(state: AuthState.SuccessState())
             }, onError: { exception in
-                print("Items Exception : \(String(describing: exception.exception?.message))")
+                self.stateListener?.onStatetriggered(state: AuthState.ErrorState(message: exception.exception?.message ?? ""))
             }, onLoading: { loadingState in
                 self.stateListener?.onLoadingState(isLoading: loadingState as! Bool)
             })
@@ -48,7 +47,7 @@ import shared
     }
     
     override func onExceptionListenerTriggered(key: String, value: KotlinThrowable) {
-        print("Exception : \(String(describing: value.message))")
+        self.stateListener?.onStatetriggered(state: AuthState.ErrorState(message: value.message ?? ""))
     }
     
     override func getSupportedUseCases() -> NSMutableArray {
