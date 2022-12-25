@@ -3,9 +3,7 @@ package com.yazantarifi.coin.viewModel
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import com.yazantarifi.coina.CoinaApplicationState
-import com.yazantarifi.coina.api.requests.ApplicationApiManager
 import com.yazantarifi.coina.models.CoinInformation
-import com.yazantarifi.coina.models.CoinModel
 import com.yazantarifi.coina.useCases.CoinInfoUseCase
 import com.yazantarifi.coina.viewModels.CoinaViewModel
 import com.yazantarifi.coina.viewModels.useCases.CoinaUseCaseType
@@ -22,7 +20,7 @@ class CoinViewModel @Inject constructor(
     val screenLoadingState: MutableState<Boolean> by lazy { mutableStateOf(false) }
     val screenContentState: MutableState<CoinInformation?> by lazy { mutableStateOf(null) }
     init {
-        initViewModel()
+        initializeViewModel()
     }
 
     override fun executeAction(action: CoinAction) {

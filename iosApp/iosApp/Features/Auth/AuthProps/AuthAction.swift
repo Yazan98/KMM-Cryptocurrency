@@ -10,5 +10,20 @@ import Foundation
 import shared
 
 class AuthAction : NSObject, CoinaAction {
-    class LoginAction: AuthAction {}
+    class LoginAction: AuthAction {
+        private var arguments: LoginArgs? = nil
+        
+        init(arguments: LoginArgs) {
+            self.arguments = arguments
+        }
+        
+        public func getArguments() -> LoginArgs {
+            return self.arguments ?? LoginArgs(email: "", password: "")
+        }
+    }
+    
+    struct LoginArgs {
+        var email: String
+        var password: String
+    }
 }

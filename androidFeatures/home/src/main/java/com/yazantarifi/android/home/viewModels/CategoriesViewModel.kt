@@ -6,7 +6,6 @@ import androidx.lifecycle.viewModelScope
 import com.yazantarifi.android.home.action.CategoriesAction
 import com.yazantarifi.android.home.state.CategoriesState
 import com.yazantarifi.coina.CoinaApplicationState
-import com.yazantarifi.coina.api.requests.ApplicationApiManager
 import com.yazantarifi.coina.database.CategoriesDataSource
 import com.yazantarifi.coina.models.Category
 import com.yazantarifi.coina.useCases.GetCategoriesUseCase
@@ -26,7 +25,7 @@ class CategoriesViewModel @Inject constructor(
     val screenLoadingState: MutableState<Boolean> by lazy { mutableStateOf(false) }
     val screenContentState: MutableState<ArrayList<Category>> by lazy { mutableStateOf(arrayListOf()) }
     init {
-        initViewModel()
+        initializeViewModel()
     }
 
     override fun executeAction(action: CategoriesAction) {

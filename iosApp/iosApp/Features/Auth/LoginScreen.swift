@@ -9,8 +9,24 @@
 import SwiftUI
 
 struct LoginScreen: View {
+    
+    @StateObject private var viewModel = AuthViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TextField("Email", text: $viewModel.email)
+                .padding()
+            
+            SecureField("Password", text: $viewModel.password)
+                .padding()
+
+            Button(action: {
+                viewModel.viewModelImplementation?.executeAction(action: AuthAction.LoginAction(arguments: AuthAction.LoginArgs(email: viewModel.email, password: viewModel.password)))
+            }) {
+                Text("Log In")
+            }
+            .padding()
+        }   
     }
 }
 

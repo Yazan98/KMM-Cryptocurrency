@@ -12,7 +12,6 @@ class GetExchangesUseCase constructor(
     private val apiManager: ApplicationApiManager,
     private val database: ExchangesDataSource
 ): CoinaUseCase<Unit, ArrayList<ExchangeModel>>() {
-    data class Args(val categoryName: String)
     companion object {
         const val KEY = "GetExchangesUseCase"
     }

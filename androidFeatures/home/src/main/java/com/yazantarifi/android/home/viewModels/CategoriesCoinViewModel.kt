@@ -22,7 +22,7 @@ class CategoriesCoinViewModel @Inject constructor(
     val screenLoadingState: MutableState<Boolean> by lazy { mutableStateOf(false) }
     val screenContentState: MutableState<ArrayList<CoinModel>> by lazy { mutableStateOf(arrayListOf()) }
     init {
-        initViewModel()
+        initializeViewModel()
     }
 
     override fun executeAction(action: CategoriesCoinAction) {

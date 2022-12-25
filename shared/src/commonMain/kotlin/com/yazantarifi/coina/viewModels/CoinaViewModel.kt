@@ -7,8 +7,6 @@ import com.yazantarifi.coina.viewModels.props.CoinaSideEffect
 import com.yazantarifi.coina.viewModels.props.CoinaState
 import com.yazantarifi.coina.viewModels.useCases.CoinaUseCaseType
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.channels.ReceiveChannel
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 
 expect abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
@@ -27,7 +25,7 @@ expect abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
      * Initialize the ViewModel Streaming Listeners for Each UseCase
      * Now We Run Consumers to Collect the Data From Each Channel and Return it to Sub ViewModel
      */
-    fun initViewModel()
+    fun initializeViewModel()
 
     fun registerSideEffect(sideEffect: CoinaSideEffect<Action, *>)
 

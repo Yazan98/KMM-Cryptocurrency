@@ -22,7 +22,7 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState>: Vi
     actual val sideEffects: ArrayList<CoinaSideEffect<Action, *>> = ArrayList()
     actual val state: MutableStateFlow<State> by lazy { MutableStateFlow(getInitialState()) }
 
-    actual fun initViewModel() {
+    actual fun initializeViewModel() {
         getSupportedUseCases().forEach { useCase ->
             scope.launch(Dispatchers.IO) {
                 useCase.getChannelListener().consumeEach {

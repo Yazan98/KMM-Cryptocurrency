@@ -8,10 +8,16 @@ import com.yazantarifi.coina.viewModels.useCases.CoinaUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class AuthUseCase constructor(
-    private val apiManager: ApplicationApiManager,
-    private val database: CoinsDataSource
-): CoinaUseCase<AuthUseCase.Args, Boolean>() {
+class AuthUseCase: CoinaUseCase<AuthUseCase.Args, Boolean>() {
+
+    private var apiManager: ApplicationApiManager? = null
+    private var database: CoinsDataSource? = null
+
+    fun addDependencies(apiManager: ApplicationApiManager, database: CoinsDataSource): AuthUseCase {
+        this.apiManager = apiManager
+        this.database = database
+        return this
+    }
 
     companion object {
         const val KEY = "AuthUseCase"
@@ -29,13 +35,13 @@ class AuthUseCase constructor(
                 return@launch
             }
 
-            if (!database.isDataSourceEmpty()) {
+            if (!(database?.isDataSourceEmpty() == true)) {
                 onSendState(CoinaApplicationState.Success(true))
                 return@launch
             }
 
             onSendLoadingState(true)
-            apiManager.getCoins(database) {
+            apiManager?.getCoins(database!!) {
                 it.handleResult({
                     onSendLoadingState(false)
                     onSendState(CoinaApplicationState.Success(true))

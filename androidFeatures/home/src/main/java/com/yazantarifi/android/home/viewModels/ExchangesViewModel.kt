@@ -25,7 +25,7 @@ class ExchangesViewModel @Inject constructor(
     val screenLoadingState: MutableState<Boolean> by lazy { mutableStateOf(false) }
     val screenContentState: MutableState<ArrayList<ExchangeModel>> by lazy { mutableStateOf(arrayListOf()) }
     init {
-        initViewModel()
+        initializeViewModel()
     }
 
     override fun executeAction(action: ExchangeAction) {

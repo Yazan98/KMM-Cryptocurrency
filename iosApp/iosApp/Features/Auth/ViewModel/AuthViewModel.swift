@@ -8,8 +8,16 @@
 
 import Foundation
 
-class AuthViewModel : ObservableObject {
+@MainActor class AuthViewModel : ObservableObject {
     
-    var viewModelImplementation:
+    @Published var isUserLoggedIn: Bool = false
+    @Published var email: String = ""
+    @Published var password: String = ""
+    
+    var viewModelImplementation: AuthViewModelImplementation? = nil
+    
+    init(viewModelImplementation: AuthViewModelImplementation? = nil) {
+        self.viewModelImplementation = viewModelImplementation
+    }
     
 }

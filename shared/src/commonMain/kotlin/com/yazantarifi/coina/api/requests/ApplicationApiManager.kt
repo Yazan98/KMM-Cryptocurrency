@@ -23,11 +23,18 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 
-class ApplicationApiManager constructor(private val httpClient: HttpClient): ApplicationApiManagerImplementation {
+class ApplicationApiManager: ApplicationApiManagerImplementation {
+
+    private var httpClient: HttpClient? = null
+
+    fun addHttpClient(httpClient: HttpClient): ApplicationApiManager {
+        this.httpClient = httpClient
+        return this
+    }
 
     init {
         val converter = getSerializable()
-        httpClient.responsePipeline.intercept(HttpResponsePipeline.Transform) { (info, body) ->
+        httpClient?.responsePipeline?.intercept(HttpResponsePipeline.Transform) { (info, body) ->
             if (body !is ByteReadChannel) return@intercept
 
             val response = context.response
@@ -47,7 +54,7 @@ class ApplicationApiManager constructor(private val httpClient: HttpClient): App
     ) {
         withContext(Dispatchers.Default) {
             try {
-                val request: ArrayList<CoinModel> = httpClient.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_MARKETPLACE).body()
+                val request: ArrayList<CoinModel> = httpClient?.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_MARKETPLACE)?.body() ?: ArrayList()
                 database.writeCoinsData(request)
                 onNewStateTriggered(CoinaApplicationState.Success(request))
             } catch (ex: Exception) {
@@ -63,7 +70,7 @@ class ApplicationApiManager constructor(private val httpClient: HttpClient): App
     ) {
         withContext(Dispatchers.Default) {
             try {
-                val request: ArrayList<CoinModel> = httpClient.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_MARKETPLACE + "&category=$categoryName").body()
+                val request: ArrayList<CoinModel> = httpClient?.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_MARKETPLACE + "&category=$categoryName")?.body() ?: ArrayList()
                 onNewStateTriggered(CoinaApplicationState.Success(request))
             } catch (ex: Exception) {
                 onNewStateTriggered(CoinaApplicationState.Error(ex))
@@ -78,7 +85,7 @@ class ApplicationApiManager constructor(private val httpClient: HttpClient): App
     ) {
         withContext(Dispatchers.Default) {
             try {
-                val request: CoinInformation = httpClient.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COIN_INFO.replace("{key}", key)).body()
+                val request: CoinInformation = httpClient?.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COIN_INFO.replace("{key}", key))?.body() ?: CoinInformation()
                 onNewStateTriggered(CoinaApplicationState.Success(request))
             } catch (ex: Exception) {
                 onNewStateTriggered(CoinaApplicationState.Error(ex))
@@ -93,7 +100,7 @@ class ApplicationApiManager constructor(private val httpClient: HttpClient): App
     ) {
         withContext(Dispatchers.Default) {
             try {
-                val request: ArrayList<ExchangeModel> = httpClient.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_LIST_EXCHANGES).body()
+                val request: ArrayList<ExchangeModel> = httpClient?.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_LIST_EXCHANGES)?.body() ?: ArrayList()
                 database.writeExchangesData(request)
                 onNewStateTriggered(CoinaApplicationState.Success(request))
             } catch (ex: Exception) {
@@ -110,7 +117,7 @@ class ApplicationApiManager constructor(private val httpClient: HttpClient): App
         withContext(Dispatchers.Default) {
             try {
                 if (database.isDataSourceEmpty()) {
-                    val request: ArrayList<Category> = httpClient.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_LIST_CATEGORIES).body()
+                    val request: ArrayList<Category> = httpClient?.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_LIST_CATEGORIES)?.body() ?: ArrayList()
                     database.writeCategoriesData(request)
                     onNewStateTriggered(CoinaApplicationState.Success(request))
                 } else {

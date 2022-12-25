@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedCoinaApplicationStateError, SharedCoinaApplicationState<__covariant T>, SharedKotlinThrowable, SharedKotlinNothing, SharedCoinaApplicationStateSuccess<__covariant T>, SharedCoinaApiInfo, SharedCoinaResponseCode, SharedKtor_client_coreHttpClient, SharedKotlinArray<T>, SharedKotlinException, SharedCategoriesDataSource, SharedCategory, SharedCoinInformation, SharedCoinsDataSource, SharedCoinModel, SharedExchangesDataSource, SharedExchangeModel, SharedCoinaApiLinks, NSObject, SharedCoinaStorageKeys, SharedCoinaStorageKeyValue, SharedCoinaBaseDataSource, SharedRealmCategoryCompanion, SharedRealmCategory, SharedRealmCoinModelCompanion, SharedRealmCoinModel, SharedRealmExchangeModelCompanion, SharedRealmExchangeModel, SharedCoinaEither<State, SecondState>, SharedCoinaSideEffect<Action, Result>, SharedCategoryCompanion, SharedCoinCommunityCompanion, SharedCoinCommunity, SharedCoinDescriptionCompanion, SharedCoinDescription, SharedCoinDeveloperCompanion, SharedCoinDeveloper, SharedCoinIconCompanion, SharedCoinIcon, SharedCoinInfoItemCompanion, SharedCoinInfoItem, SharedCoinLinks, SharedCoinMarketPriceInfo, SharedCoinInformationCompanion, SharedCoinRepository, SharedCoinLinksCompanion, SharedCoinMarketPriceCompanion, SharedCoinMarketPrice, SharedCoinMarketPriceInfoCompanion, SharedCoinModelCompanion, SharedCoinRepositoryCompanion, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedCoinaFragmentsNavigation, SharedExchangeModelCompanion, SharedKtor_utilsTypeInfo, SharedKtor_client_coreHttpClientEngineConfig, SharedKtor_client_coreHttpClientConfig<T>, SharedKtor_eventsEvents, SharedKtor_client_coreHttpReceivePipeline, SharedKtor_client_coreHttpRequestPipeline, SharedKtor_client_coreHttpResponsePipeline, SharedKtor_client_coreHttpSendPipeline, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedLibrary_baseVersionId, SharedKotlinKTypeProjection, SharedKtor_client_coreHttpRequestData, SharedKtor_client_coreHttpResponseData, SharedKotlinx_coroutines_coreCoroutineDispatcher, SharedKtor_client_coreProxyConfig, SharedKtor_utilsAttributeKey<T>, SharedKtor_eventsEventDefinition<T>, SharedKtor_utilsPipelinePhase, SharedKtor_utilsPipeline<TSubject, TContext>, SharedKtor_client_coreHttpReceivePipelinePhases, SharedKtor_client_coreHttpResponse, SharedKotlinUnit, SharedKtor_client_coreHttpRequestPipelinePhases, SharedKtor_client_coreHttpRequestBuilder, SharedKtor_client_coreHttpResponsePipelinePhases, SharedKtor_client_coreHttpResponseContainer, SharedKtor_client_coreHttpClientCall, SharedKtor_client_coreHttpSendPipelinePhases, SharedLibrary_baseUpdatePolicy, SharedKotlinByteArray, SharedLibrary_baseLogConfiguration, SharedLibrary_baseSort, SharedKotlinPair<__covariant A, __covariant B>, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinKVariance, SharedKotlinKTypeProjectionCompanion, SharedKtor_httpUrl, SharedKtor_httpHttpMethod, SharedKtor_httpOutgoingContent, SharedKtor_httpHttpStatusCode, SharedKtor_utilsGMTDate, SharedKtor_httpHttpProtocolVersion, SharedKotlinAbstractCoroutineContextElement, SharedKotlinx_coroutines_coreCoroutineDispatcherKey, SharedKtor_httpHeadersBuilder, SharedKtor_client_coreHttpRequestBuilderCompanion, SharedKtor_httpURLBuilder, SharedKtor_client_coreHttpClientCallCompanion, SharedKotlinByteIterator, SharedLibrary_baseLogLevel, SharedKtor_httpUrlCompanion, SharedKtor_httpURLProtocol, SharedKtor_httpHttpMethodCompanion, SharedKtor_httpContentType, SharedKotlinCancellationException, SharedKtor_httpHttpStatusCodeCompanion, SharedKtor_utilsGMTDateCompanion, SharedKtor_utilsWeekDay, SharedKtor_utilsMonth, SharedKtor_httpHttpProtocolVersionCompanion, SharedKotlinAbstractCoroutineContextKey<B, E>, SharedKtor_ioMemory, SharedKtor_ioChunkBuffer, SharedKtor_ioBuffer, SharedKtor_ioByteReadPacket, SharedKtor_utilsStringValuesBuilderImpl, SharedKtor_httpURLBuilderCompanion, SharedLibrary_baseLogLevelCompanion, SharedKtor_httpURLProtocolCompanion, SharedKtor_httpHeaderValueParam, SharedKtor_httpHeaderValueWithParametersCompanion, SharedKtor_httpHeaderValueWithParameters, SharedKtor_httpContentTypeCompanion, SharedKtor_utilsWeekDayCompanion, SharedKtor_utilsMonthCompanion, SharedKtor_ioMemoryCompanion, SharedKtor_ioBufferCompanion, SharedKtor_ioChunkBufferCompanion, SharedKtor_ioInputCompanion, SharedKtor_ioInput, SharedKtor_ioByteReadPacketCompanion, SharedCinteropCoreLogLevel, SharedLibrary_baseRealmStorageType, SharedKotlinx_coroutines_coreAtomicDesc, SharedKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, SharedCinteropCoreLogLevelCompanion, SharedKotlinx_coroutines_coreAtomicOp<__contravariant T>, SharedKotlinx_coroutines_coreOpDescriptor, SharedKotlinx_coroutines_coreLockFreeLinkedListNode, SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, SharedKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>;
+@class SharedCoinaApplicationStateError, SharedCoinaApplicationState<__covariant T>, SharedKotlinThrowable, SharedKotlinNothing, SharedCoinaApplicationStateLoaded, SharedCoinaApplicationStateLoading, SharedCoinaApplicationStateSuccess<__covariant T>, SharedCoinaApiInfo, SharedCoinaResponseCode, SharedKtor_client_coreHttpClient, SharedKotlinArray<T>, SharedKotlinException, SharedCategoriesDataSource, SharedCategory, SharedCoinInformation, SharedCoinsDataSource, SharedCoinModel, SharedExchangesDataSource, SharedExchangeModel, SharedApplicationApiManager, SharedCoinaApiLinks, SharedCoinaUseCase<Arguments, Result>, SharedAuthUseCaseCompanion, SharedAuthUseCase, SharedAuthUseCaseArgs, SharedCoinInfoUseCaseCompanion, SharedCoinInfoUseCaseArgs, SharedGetCategoriesUseCaseCompanion, SharedKotlinUnit, SharedGetCategoryCoinsUseCaseCompanion, SharedGetCategoryCoinsUseCaseArgs, SharedGetCoinsUseCaseCompanion, SharedGetExchangesUseCaseCompanion, NSObject, SharedCoinaStorageKeys, SharedCoinaStorageKeyValue, SharedCoinaBaseDataSource, SharedRealmCategoryCompanion, SharedRealmCategory, SharedRealmCoinModelCompanion, SharedRealmCoinModel, SharedRealmExchangeModelCompanion, SharedRealmExchangeModel, SharedCoinaEither<State, SecondState>, SharedCoinaSideEffect<Action, Result>, SharedCategoryCompanion, SharedCoinCommunityCompanion, SharedCoinCommunity, SharedCoinDescriptionCompanion, SharedCoinDescription, SharedCoinDeveloperCompanion, SharedCoinDeveloper, SharedCoinIconCompanion, SharedCoinIcon, SharedCoinInfoItemCompanion, SharedCoinInfoItem, SharedCoinLinks, SharedCoinMarketPriceInfo, SharedCoinInformationCompanion, SharedCoinRepository, SharedCoinLinksCompanion, SharedCoinMarketPriceCompanion, SharedCoinMarketPrice, SharedCoinMarketPriceInfoCompanion, SharedCoinModelCompanion, SharedCoinRepositoryCompanion, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedCoinaFragmentsNavigation, SharedExchangeModelCompanion, SharedKtor_utilsTypeInfo, SharedKtor_client_coreHttpClientEngineConfig, SharedKtor_client_coreHttpClientConfig<T>, SharedKtor_eventsEvents, SharedKtor_client_coreHttpReceivePipeline, SharedKtor_client_coreHttpRequestPipeline, SharedKtor_client_coreHttpResponsePipeline, SharedKtor_client_coreHttpSendPipeline, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinCancellationException, SharedLibrary_baseVersionId, SharedKotlinKTypeProjection, SharedKtor_client_coreHttpRequestData, SharedKtor_client_coreHttpResponseData, SharedKotlinx_coroutines_coreCoroutineDispatcher, SharedKtor_client_coreProxyConfig, SharedKtor_utilsAttributeKey<T>, SharedKtor_eventsEventDefinition<T>, SharedKtor_utilsPipelinePhase, SharedKtor_utilsPipeline<TSubject, TContext>, SharedKtor_client_coreHttpReceivePipelinePhases, SharedKtor_client_coreHttpResponse, SharedKtor_client_coreHttpRequestPipelinePhases, SharedKtor_client_coreHttpRequestBuilder, SharedKtor_client_coreHttpResponsePipelinePhases, SharedKtor_client_coreHttpResponseContainer, SharedKtor_client_coreHttpClientCall, SharedKtor_client_coreHttpSendPipelinePhases, SharedLibrary_baseUpdatePolicy, SharedKotlinByteArray, SharedLibrary_baseLogConfiguration, SharedLibrary_baseSort, SharedKotlinPair<__covariant A, __covariant B>, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinKVariance, SharedKotlinKTypeProjectionCompanion, SharedKtor_httpUrl, SharedKtor_httpHttpMethod, SharedKtor_httpOutgoingContent, SharedKtor_httpHttpStatusCode, SharedKtor_utilsGMTDate, SharedKtor_httpHttpProtocolVersion, SharedKotlinAbstractCoroutineContextElement, SharedKotlinx_coroutines_coreCoroutineDispatcherKey, SharedKtor_httpHeadersBuilder, SharedKtor_client_coreHttpRequestBuilderCompanion, SharedKtor_httpURLBuilder, SharedKtor_client_coreHttpClientCallCompanion, SharedKotlinx_coroutines_coreAtomicDesc, SharedKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, SharedKotlinByteIterator, SharedLibrary_baseLogLevel, SharedKtor_httpUrlCompanion, SharedKtor_httpURLProtocol, SharedKtor_httpHttpMethodCompanion, SharedKtor_httpContentType, SharedKtor_httpHttpStatusCodeCompanion, SharedKtor_utilsGMTDateCompanion, SharedKtor_utilsWeekDay, SharedKtor_utilsMonth, SharedKtor_httpHttpProtocolVersionCompanion, SharedKotlinAbstractCoroutineContextKey<B, E>, SharedKtor_ioMemory, SharedKtor_ioChunkBuffer, SharedKtor_ioBuffer, SharedKtor_ioByteReadPacket, SharedKtor_utilsStringValuesBuilderImpl, SharedKtor_httpURLBuilderCompanion, SharedKotlinx_coroutines_coreAtomicOp<__contravariant T>, SharedKotlinx_coroutines_coreOpDescriptor, SharedKotlinx_coroutines_coreLockFreeLinkedListNode, SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, SharedLibrary_baseLogLevelCompanion, SharedKtor_httpURLProtocolCompanion, SharedKtor_httpHeaderValueParam, SharedKtor_httpHeaderValueWithParametersCompanion, SharedKtor_httpHeaderValueWithParameters, SharedKtor_httpContentTypeCompanion, SharedKtor_utilsWeekDayCompanion, SharedKtor_utilsMonthCompanion, SharedKtor_ioMemoryCompanion, SharedKtor_ioBufferCompanion, SharedKtor_ioChunkBufferCompanion, SharedKtor_ioInputCompanion, SharedKtor_ioInput, SharedKtor_ioByteReadPacketCompanion, SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, SharedKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>, SharedCinteropCoreLogLevel, SharedLibrary_baseRealmStorageType, SharedCinteropCoreLogLevelCompanion;
 
-@protocol SharedPlatform, SharedApplicationApiManagerImplementation, SharedCoinaStorageProviderImplementation, SharedLibrary_baseRealm, SharedKotlinKClass, SharedLibrary_baseDeleteable, SharedLibrary_baseBaseRealmObject, SharedLibrary_baseRealmObject, SharedCoinaLoadingStateListener, SharedCoinaStateListener, SharedKotlinx_coroutines_coreMutableSharedFlow, SharedKotlinx_coroutines_coreCoroutineScope, SharedKotlinx_coroutines_coreMutableStateFlow, SharedCoinaState, SharedKotlinx_serialization_coreKSerializer, SharedKotlinComparable, SharedKotlinKType, SharedKotlinCoroutineContext, SharedKtor_ioCloseable, SharedKtor_client_coreHttpClientEngine, SharedKtor_client_coreHttpClientEngineCapability, SharedKtor_utilsAttributes, SharedKotlinIterator, SharedKotlinx_coroutines_coreFlow, SharedLibrary_baseMutableRealm, SharedLibrary_baseConfiguration, SharedLibrary_baseRealmQuery, SharedLibrary_baseRealmSchema, SharedLibrary_baseVersioned, SharedLibrary_baseBaseRealm, SharedLibrary_baseTypedRealm, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier, SharedKotlinx_coroutines_coreStateFlow, SharedKotlinx_coroutines_coreFlowCollector, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKotlinCoroutineContextElement, SharedKotlinCoroutineContextKey, SharedKtor_client_coreHttpClientPlugin, SharedKotlinx_coroutines_coreDisposableHandle, SharedKotlinSuspendFunction2, SharedLibrary_baseCompactOnLaunchCallback, SharedLibrary_baseInitialDataCallback, SharedLibrary_baseRealmScalarQuery, SharedLibrary_baseRealmSingleQuery, SharedLibrary_baseRealmScalarNullableQuery, SharedLibrary_baseRealmElementQuery, SharedLibrary_baseRealmClass, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKtor_httpHeaders, SharedKotlinx_coroutines_coreJob, SharedKotlinContinuation, SharedKotlinContinuationInterceptor, SharedKotlinx_coroutines_coreRunnable, SharedKotlinFunction, SharedKtor_httpHttpMessage, SharedKtor_ioByteReadChannel, SharedKtor_httpHttpMessageBuilder, SharedKtor_client_coreHttpRequest, SharedLibrary_baseRealmLogger, SharedLibrary_baseRealmProperty, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKtor_httpParameters, SharedKotlinMapEntry, SharedKtor_utilsStringValues, SharedKotlinx_coroutines_coreChildHandle, SharedKotlinx_coroutines_coreChildJob, SharedKotlinSequence, SharedKotlinx_coroutines_coreSelectClause0, SharedKtor_ioReadSession, SharedKotlinSuspendFunction1, SharedKotlinAppendable, SharedKtor_utilsStringValuesBuilder, SharedKtor_httpParametersBuilder, SharedLibrary_baseRealmPropertyType, SharedKotlinx_coroutines_coreParentJob, SharedKotlinx_coroutines_coreSelectInstance, SharedKotlinSuspendFunction0, SharedKtor_ioObjectPool;
+@protocol SharedPlatform, SharedApplicationApiManagerImplementation, SharedKotlinCoroutineContext, SharedKotlinx_coroutines_coreCoroutineScope, SharedKotlinx_coroutines_coreReceiveChannel, SharedCoinaUseCaseType, SharedKotlinx_coroutines_coreDeferred, SharedKotlinSuspendFunction0, SharedCoinaStorageProviderImplementation, SharedLibrary_baseRealm, SharedKotlinKClass, SharedLibrary_baseDeleteable, SharedLibrary_baseBaseRealmObject, SharedLibrary_baseRealmObject, SharedKotlinx_coroutines_coreMutableStateFlow, SharedKotlinx_serialization_coreKSerializer, SharedKotlinComparable, SharedKotlinKType, SharedKtor_ioCloseable, SharedKtor_client_coreHttpClientEngine, SharedKtor_client_coreHttpClientEngineCapability, SharedKtor_utilsAttributes, SharedKotlinIterator, SharedKotlinCoroutineContextElement, SharedKotlinCoroutineContextKey, SharedKotlinx_coroutines_coreChannelIterator, SharedKotlinx_coroutines_coreSelectClause1, SharedKotlinx_coroutines_coreChildHandle, SharedKotlinx_coroutines_coreChildJob, SharedKotlinx_coroutines_coreDisposableHandle, SharedKotlinx_coroutines_coreJob, SharedKotlinSequence, SharedKotlinx_coroutines_coreSelectClause0, SharedKotlinFunction, SharedKotlinx_coroutines_coreFlow, SharedLibrary_baseMutableRealm, SharedLibrary_baseConfiguration, SharedLibrary_baseRealmQuery, SharedLibrary_baseRealmSchema, SharedLibrary_baseVersioned, SharedLibrary_baseBaseRealm, SharedLibrary_baseTypedRealm, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier, SharedKotlinx_coroutines_coreFlowCollector, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_coroutines_coreStateFlow, SharedKotlinx_coroutines_coreMutableSharedFlow, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKtor_client_coreHttpClientPlugin, SharedKotlinSuspendFunction2, SharedKotlinx_coroutines_coreSelectInstance, SharedKotlinSuspendFunction1, SharedKotlinx_coroutines_coreParentJob, SharedLibrary_baseCompactOnLaunchCallback, SharedLibrary_baseInitialDataCallback, SharedLibrary_baseRealmScalarQuery, SharedLibrary_baseRealmSingleQuery, SharedLibrary_baseRealmScalarNullableQuery, SharedLibrary_baseRealmElementQuery, SharedLibrary_baseRealmClass, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKtor_httpHeaders, SharedKotlinContinuation, SharedKotlinContinuationInterceptor, SharedKotlinx_coroutines_coreRunnable, SharedKtor_httpHttpMessage, SharedKtor_ioByteReadChannel, SharedKtor_httpHttpMessageBuilder, SharedKtor_client_coreHttpRequest, SharedLibrary_baseRealmLogger, SharedLibrary_baseRealmProperty, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKtor_httpParameters, SharedKotlinMapEntry, SharedKtor_utilsStringValues, SharedKtor_ioReadSession, SharedKotlinAppendable, SharedKtor_utilsStringValuesBuilder, SharedKtor_httpParametersBuilder, SharedLibrary_baseRealmPropertyType, SharedKtor_ioObjectPool;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -146,7 +146,7 @@ __attribute__((swift_name("KotlinBoolean")))
 
 __attribute__((swift_name("CoinaApplicationState")))
 @interface SharedCoinaApplicationState<__covariant T> : SharedBase
-- (void)handleResultOnSuccess:(void (^ _Nullable)(T _Nullable))onSuccess onError:(void (^ _Nullable)(SharedCoinaApplicationStateError *))onError __attribute__((swift_name("handleResult(onSuccess:onError:)")));
+- (void)handleResultOnSuccess:(void (^ _Nullable)(T _Nullable))onSuccess onError:(void (^ _Nullable)(SharedCoinaApplicationStateError *))onError onLoading:(void (^ _Nullable)(SharedBoolean *))onLoading __attribute__((swift_name("handleResult(onSuccess:onError:onLoading:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -161,6 +161,24 @@ __attribute__((swift_name("CoinaApplicationStateError")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) SharedKotlinThrowable * _Nullable exception __attribute__((swift_name("exception")));
 @property (readonly) int32_t responseCode __attribute__((swift_name("responseCode")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CoinaApplicationStateLoaded")))
+@interface SharedCoinaApplicationStateLoaded : SharedCoinaApplicationState<SharedKotlinNothing *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)loaded __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedCoinaApplicationStateLoaded *shared __attribute__((swift_name("shared")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CoinaApplicationStateLoading")))
+@interface SharedCoinaApplicationStateLoading : SharedCoinaApplicationState<SharedKotlinNothing *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)loading __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedCoinaApplicationStateLoading *shared __attribute__((swift_name("shared")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -316,7 +334,9 @@ __attribute__((swift_name("ApplicationApiManagerImplementation")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ApplicationApiManager")))
 @interface SharedApplicationApiManager : SharedBase <SharedApplicationApiManagerImplementation>
-- (instancetype)initWithHttpClient:(SharedKtor_client_coreHttpClient *)httpClient __attribute__((swift_name("init(httpClient:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (SharedApplicationApiManager *)addHttpClientHttpClient:(SharedKtor_client_coreHttpClient *)httpClient __attribute__((swift_name("addHttpClient(httpClient:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
@@ -360,6 +380,245 @@ __attribute__((swift_name("CoinaApiLinks")))
 @property (readonly) NSString *COINS_LIST_EXCHANGES __attribute__((swift_name("COINS_LIST_EXCHANGES")));
 @property (readonly) NSString *COINS_MARKETPLACE __attribute__((swift_name("COINS_MARKETPLACE")));
 @property (readonly) NSString *COIN_INFO __attribute__((swift_name("COIN_INFO")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreCoroutineScope")))
+@protocol SharedKotlinx_coroutines_coreCoroutineScope
+@required
+@property (readonly) id<SharedKotlinCoroutineContext> coroutineContext __attribute__((swift_name("coroutineContext")));
+@end
+
+__attribute__((swift_name("CoinaUseCaseType")))
+@protocol SharedCoinaUseCaseType
+@required
+- (void)clear __attribute__((swift_name("clear()")));
+- (id<SharedKotlinx_coroutines_coreReceiveChannel>)getChannelListener __attribute__((swift_name("getChannelListener()")));
+- (id<SharedKotlinx_coroutines_coreReceiveChannel>)getErrorChannelListener __attribute__((swift_name("getErrorChannelListener()")));
+- (NSString *)getUseCaseKey __attribute__((swift_name("getUseCaseKey()")));
+@end
+
+__attribute__((swift_name("CoinaUseCase")))
+@interface SharedCoinaUseCase<Arguments, Result> : SharedBase <SharedKotlinx_coroutines_coreCoroutineScope, SharedCoinaUseCaseType>
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (void)clear __attribute__((swift_name("clear()")));
+- (id<SharedKotlinx_coroutines_coreReceiveChannel>)getChannelListener __attribute__((swift_name("getChannelListener()")));
+- (id<SharedKotlinx_coroutines_coreReceiveChannel>)getErrorChannelListener __attribute__((swift_name("getErrorChannelListener()")));
+- (void)invokeParams:(Arguments _Nullable)params __attribute__((swift_name("invoke(params:)")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (void)onSendErrorStateException:(SharedKotlinThrowable *)exception __attribute__((swift_name("onSendErrorState(exception:)")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (void)onSendLoadingStateIsLoading:(BOOL)isLoading __attribute__((swift_name("onSendLoadingState(isLoading:)")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (void)onSendStateState:(SharedCoinaApplicationState<Result> *)state __attribute__((swift_name("onSendState(state:)")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (void)runArgs:(Arguments _Nullable)args __attribute__((swift_name("run(args:)")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (id<SharedKotlinx_coroutines_coreDeferred>)startAsyncBlock:(id<SharedKotlinSuspendFunction0>)block __attribute__((swift_name("startAsync(block:)")));
+@property (readonly) id<SharedKotlinCoroutineContext> coroutineContext __attribute__((swift_name("coroutineContext")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AuthUseCase")))
+@interface SharedAuthUseCase : SharedCoinaUseCase<SharedAuthUseCaseArgs *, SharedBoolean *>
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) SharedAuthUseCaseCompanion *companion __attribute__((swift_name("companion")));
+- (SharedAuthUseCase *)addDependenciesApiManager:(SharedApplicationApiManager *)apiManager database:(SharedCoinsDataSource *)database __attribute__((swift_name("addDependencies(apiManager:database:)")));
+- (NSString *)getUseCaseKey __attribute__((swift_name("getUseCaseKey()")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (void)runArgs:(SharedAuthUseCaseArgs *)args __attribute__((swift_name("run(args:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AuthUseCase.Args")))
+@interface SharedAuthUseCaseArgs : SharedBase
+- (instancetype)initWithEmail:(NSString *)email password:(NSString *)password __attribute__((swift_name("init(email:password:)"))) __attribute__((objc_designated_initializer));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSString *)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
+- (SharedAuthUseCaseArgs *)doCopyEmail:(NSString *)email password:(NSString *)password __attribute__((swift_name("doCopy(email:password:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *email __attribute__((swift_name("email")));
+@property (readonly) NSString *password __attribute__((swift_name("password")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AuthUseCase.Companion")))
+@interface SharedAuthUseCaseCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedAuthUseCaseCompanion *shared __attribute__((swift_name("shared")));
+@property (readonly) NSString *KEY __attribute__((swift_name("KEY")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CoinInfoUseCase")))
+@interface SharedCoinInfoUseCase : SharedCoinaUseCase<SharedCoinInfoUseCaseArgs *, SharedCoinInformation *>
+- (instancetype)initWithApiManager:(SharedApplicationApiManager *)apiManager __attribute__((swift_name("init(apiManager:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) SharedCoinInfoUseCaseCompanion *companion __attribute__((swift_name("companion")));
+- (NSString *)getUseCaseKey __attribute__((swift_name("getUseCaseKey()")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (void)runArgs:(SharedCoinInfoUseCaseArgs *)args __attribute__((swift_name("run(args:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CoinInfoUseCase.Args")))
+@interface SharedCoinInfoUseCaseArgs : SharedBase
+- (instancetype)initWithKey:(NSString *)key __attribute__((swift_name("init(key:)"))) __attribute__((objc_designated_initializer));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (SharedCoinInfoUseCaseArgs *)doCopyKey:(NSString *)key __attribute__((swift_name("doCopy(key:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *key __attribute__((swift_name("key")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CoinInfoUseCase.Companion")))
+@interface SharedCoinInfoUseCaseCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedCoinInfoUseCaseCompanion *shared __attribute__((swift_name("shared")));
+@property (readonly) NSString *KEY __attribute__((swift_name("KEY")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetCategoriesUseCase")))
+@interface SharedGetCategoriesUseCase : SharedCoinaUseCase<SharedKotlinUnit *, NSMutableArray<SharedCategory *> *>
+- (instancetype)initWithApiManager:(SharedApplicationApiManager *)apiManager dataSource:(SharedCategoriesDataSource *)dataSource __attribute__((swift_name("init(apiManager:dataSource:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) SharedGetCategoriesUseCaseCompanion *companion __attribute__((swift_name("companion")));
+- (NSString *)getUseCaseKey __attribute__((swift_name("getUseCaseKey()")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (void)runArgs:(SharedKotlinUnit *)args __attribute__((swift_name("run(args:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetCategoriesUseCase.Companion")))
+@interface SharedGetCategoriesUseCaseCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedGetCategoriesUseCaseCompanion *shared __attribute__((swift_name("shared")));
+@property (readonly) NSString *KEY __attribute__((swift_name("KEY")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetCategoryCoinsUseCase")))
+@interface SharedGetCategoryCoinsUseCase : SharedCoinaUseCase<SharedGetCategoryCoinsUseCaseArgs *, NSMutableArray<SharedCoinModel *> *>
+- (instancetype)initWithApiManager:(SharedApplicationApiManager *)apiManager __attribute__((swift_name("init(apiManager:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) SharedGetCategoryCoinsUseCaseCompanion *companion __attribute__((swift_name("companion")));
+- (NSString *)getUseCaseKey __attribute__((swift_name("getUseCaseKey()")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (void)runArgs:(SharedGetCategoryCoinsUseCaseArgs *)args __attribute__((swift_name("run(args:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetCategoryCoinsUseCase.Args")))
+@interface SharedGetCategoryCoinsUseCaseArgs : SharedBase
+- (instancetype)initWithCategoryName:(NSString *)categoryName __attribute__((swift_name("init(categoryName:)"))) __attribute__((objc_designated_initializer));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (SharedGetCategoryCoinsUseCaseArgs *)doCopyCategoryName:(NSString *)categoryName __attribute__((swift_name("doCopy(categoryName:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *categoryName __attribute__((swift_name("categoryName")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetCategoryCoinsUseCase.Companion")))
+@interface SharedGetCategoryCoinsUseCaseCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedGetCategoryCoinsUseCaseCompanion *shared __attribute__((swift_name("shared")));
+@property (readonly) NSString *KEY __attribute__((swift_name("KEY")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetCoinsUseCase")))
+@interface SharedGetCoinsUseCase : SharedCoinaUseCase<SharedKotlinUnit *, NSMutableArray<SharedCoinModel *> *>
+- (instancetype)initWithApiManager:(SharedApplicationApiManager *)apiManager database:(SharedCoinsDataSource *)database __attribute__((swift_name("init(apiManager:database:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) SharedGetCoinsUseCaseCompanion *companion __attribute__((swift_name("companion")));
+- (NSString *)getUseCaseKey __attribute__((swift_name("getUseCaseKey()")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (void)runArgs:(SharedKotlinUnit *)args __attribute__((swift_name("run(args:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetCoinsUseCase.Companion")))
+@interface SharedGetCoinsUseCaseCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedGetCoinsUseCaseCompanion *shared __attribute__((swift_name("shared")));
+@property (readonly) NSString *KEY __attribute__((swift_name("KEY")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetExchangesUseCase")))
+@interface SharedGetExchangesUseCase : SharedCoinaUseCase<SharedKotlinUnit *, NSMutableArray<SharedExchangeModel *> *>
+- (instancetype)initWithApiManager:(SharedApplicationApiManager *)apiManager database:(SharedExchangesDataSource *)database __attribute__((swift_name("init(apiManager:database:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) SharedGetExchangesUseCaseCompanion *companion __attribute__((swift_name("companion")));
+- (NSString *)getUseCaseKey __attribute__((swift_name("getUseCaseKey()")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (void)runArgs:(SharedKotlinUnit *)args __attribute__((swift_name("run(args:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetExchangesUseCase.Companion")))
+@interface SharedGetExchangesUseCaseCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedGetExchangesUseCaseCompanion *shared __attribute__((swift_name("shared")));
+@property (readonly) NSString *KEY __attribute__((swift_name("KEY")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -569,32 +828,23 @@ __attribute__((swift_name("RealmExchangeModel.Companion")))
 - (SharedExchangeModel *)toExchangeModelModel:(SharedRealmExchangeModel *)model __attribute__((swift_name("toExchangeModel(model:)")));
 @end
 
-__attribute__((swift_name("CoinaUseCase")))
-@interface SharedCoinaUseCase<Arguments, Result> : SharedBase
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (Result _Nullable)executeArguments:(Arguments _Nullable)arguments __attribute__((swift_name("execute(arguments:)")));
-@end
-
 __attribute__((swift_name("CoinaViewModel")))
 @interface SharedCoinaViewModel<Action, State> : SharedBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (SharedCoinaEither<SharedBoolean *, SharedKotlinException *> *)clear __attribute__((swift_name("clear()")));
+- (SharedCoinaEither<SharedBoolean *, SharedKotlinException *> *)clear_ __attribute__((swift_name("clear_()")));
+- (void)executeActionAction:(Action)action __attribute__((swift_name("executeAction(action:)")));
 - (State)getInitialState __attribute__((swift_name("getInitialState()")));
-- (void)onAcceptLoadingStateNewState:(BOOL)newState __attribute__((swift_name("onAcceptLoadingState(newState:)")));
+- (NSMutableArray<id<SharedCoinaUseCaseType>> *)getSupportedUseCases __attribute__((swift_name("getSupportedUseCases()")));
+- (void)initializeViewModel __attribute__((swift_name("initializeViewModel()")));
 - (void)onAcceptNewStateNewState:(State)newState __attribute__((swift_name("onAcceptNewState(newState:)")));
-- (void)onNewActionAction:(Action)action __attribute__((swift_name("onNewAction(action:)")));
+- (void)onExceptionListenerTriggeredKey:(NSString *)key value:(SharedKotlinThrowable *)value __attribute__((swift_name("onExceptionListenerTriggered(key:value:)")));
+- (void)onListenerTriggeredKey:(NSString *)key value:(SharedCoinaApplicationState<id> *)value __attribute__((swift_name("onListenerTriggered(key:value:)")));
 - (void)onTriggerSideEffectActionNewAction:(Action)newAction sideEffectKey:(NSString *)sideEffectKey __attribute__((swift_name("onTriggerSideEffectAction(newAction:sideEffectKey:)")));
-- (void)registerLoadingStateListenerTargetStateListener:(id<SharedCoinaLoadingStateListener>)targetStateListener __attribute__((swift_name("registerLoadingStateListener(targetStateListener:)")));
 - (void)registerSideEffectSideEffect:(SharedCoinaSideEffect<Action, id> *)sideEffect __attribute__((swift_name("registerSideEffect(sideEffect:)")));
-- (void)registerStateListenerTargetStateListener:(id<SharedCoinaStateListener>)targetStateListener __attribute__((swift_name("registerStateListener(targetStateListener:)")));
-@property (readonly) id<SharedKotlinx_coroutines_coreMutableSharedFlow> loadingState __attribute__((swift_name("loadingState")));
-@property id<SharedCoinaLoadingStateListener> _Nullable loadingStateListener __attribute__((swift_name("loadingStateListener")));
 @property (readonly) id<SharedKotlinx_coroutines_coreCoroutineScope> scope __attribute__((swift_name("scope")));
 @property (readonly) NSMutableArray<SharedCoinaSideEffect<Action, id> *> *sideEffects __attribute__((swift_name("sideEffects")));
 @property (readonly) id<SharedKotlinx_coroutines_coreMutableStateFlow> state __attribute__((swift_name("state")));
-@property id<SharedCoinaStateListener> _Nullable stateListener __attribute__((swift_name("stateListener")));
 @end
 
 __attribute__((swift_name("CoinaAction")))
@@ -629,18 +879,6 @@ __attribute__((swift_name("CoinaSideEffect")))
 __attribute__((swift_name("CoinaState")))
 @protocol SharedCoinaState
 @required
-@end
-
-__attribute__((swift_name("CoinaLoadingStateListener")))
-@protocol SharedCoinaLoadingStateListener
-@required
-- (void)onLoadingStateChangedNewState:(BOOL)newState __attribute__((swift_name("onLoadingStateChanged(newState:)")));
-@end
-
-__attribute__((swift_name("CoinaStateListener")))
-@protocol SharedCoinaStateListener
-@required
-- (void)onUpdateStateNewState:(id<SharedCoinaState>)newState __attribute__((swift_name("onUpdateState(newState:)")));
 @end
 
 
@@ -1166,6 +1404,17 @@ __attribute__((swift_name("ExchangeModel.Companion")))
 @end
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CoinaValidationException")))
+@interface SharedCoinaValidationException : SharedKotlinThrowable
+- (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithCause:(SharedKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(SharedKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (readonly) NSString * _Nullable message __attribute__((swift_name("message")));
+@end
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_utilsTypeInfo")))
 @interface SharedKtor_utilsTypeInfo : SharedBase
 - (instancetype)initWithType:(id<SharedKotlinKClass>)type reifiedType:(id<SharedKotlinKType>)reifiedType kotlinType:(id<SharedKotlinKType> _Nullable)kotlinType __attribute__((swift_name("init(type:reifiedType:kotlinType:)"))) __attribute__((objc_designated_initializer));
@@ -1213,12 +1462,6 @@ __attribute__((swift_name("CoinaContextImplementationProviderKt")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinNothing")))
 @interface SharedKotlinNothing : SharedBase
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreCoroutineScope")))
-@protocol SharedKotlinx_coroutines_coreCoroutineScope
-@required
-@property (readonly) id<SharedKotlinCoroutineContext> coroutineContext __attribute__((swift_name("coroutineContext")));
 @end
 
 __attribute__((swift_name("Ktor_ioCloseable")))
@@ -1288,6 +1531,141 @@ __attribute__((swift_name("KotlinCancellationException")))
 - (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(SharedKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithCause:(SharedKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlin.SinceKotlin(version="1.3")
+*/
+__attribute__((swift_name("KotlinCoroutineContext")))
+@protocol SharedKotlinCoroutineContext
+@required
+- (id _Nullable)foldInitial:(id _Nullable)initial operation:(id _Nullable (^)(id _Nullable, id<SharedKotlinCoroutineContextElement>))operation __attribute__((swift_name("fold(initial:operation:)")));
+- (id<SharedKotlinCoroutineContextElement> _Nullable)getKey:(id<SharedKotlinCoroutineContextKey>)key __attribute__((swift_name("get(key:)")));
+- (id<SharedKotlinCoroutineContext>)minusKeyKey:(id<SharedKotlinCoroutineContextKey>)key __attribute__((swift_name("minusKey(key:)")));
+- (id<SharedKotlinCoroutineContext>)plusContext:(id<SharedKotlinCoroutineContext>)context __attribute__((swift_name("plus(context:)")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreReceiveChannel")))
+@protocol SharedKotlinx_coroutines_coreReceiveChannel
+@required
+- (void)cancelCause:(SharedKotlinCancellationException * _Nullable)cause __attribute__((swift_name("cancel(cause:)")));
+- (id<SharedKotlinx_coroutines_coreChannelIterator>)iterator __attribute__((swift_name("iterator()")));
+- (id _Nullable)poll __attribute__((swift_name("poll()"))) __attribute__((unavailable("Deprecated in the favour of 'tryReceive'. Please note that the provided replacement does not rethrow channel's close cause as 'poll' did, for the precise replacement please refer to the 'poll' documentation")));
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)receiveWithCompletionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("receive(completionHandler:)")));
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)receiveCatchingWithCompletionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("receiveCatching(completionHandler:)")));
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)receiveOrNullWithCompletionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("receiveOrNull(completionHandler:)"))) __attribute__((unavailable("Deprecated in favor of 'receiveCatching'. Please note that the provided replacement does not rethrow channel's close cause as 'receiveOrNull' did, for the detailed replacement please refer to the 'receiveOrNull' documentation")));
+- (id _Nullable)tryReceive __attribute__((swift_name("tryReceive()")));
+
+/**
+ * @note annotations
+ *   kotlinx.coroutines.ExperimentalCoroutinesApi
+*/
+@property (readonly) BOOL isClosedForReceive __attribute__((swift_name("isClosedForReceive")));
+
+/**
+ * @note annotations
+ *   kotlinx.coroutines.ExperimentalCoroutinesApi
+*/
+@property (readonly) BOOL isEmpty __attribute__((swift_name("isEmpty")));
+@property (readonly) id<SharedKotlinx_coroutines_coreSelectClause1> onReceive __attribute__((swift_name("onReceive")));
+@property (readonly) id<SharedKotlinx_coroutines_coreSelectClause1> onReceiveCatching __attribute__((swift_name("onReceiveCatching")));
+@property (readonly) id<SharedKotlinx_coroutines_coreSelectClause1> onReceiveOrNull __attribute__((swift_name("onReceiveOrNull"))) __attribute__((unavailable("Deprecated in favor of onReceiveCatching extension")));
+@end
+
+__attribute__((swift_name("KotlinCoroutineContextElement")))
+@protocol SharedKotlinCoroutineContextElement <SharedKotlinCoroutineContext>
+@required
+@property (readonly) id<SharedKotlinCoroutineContextKey> key __attribute__((swift_name("key")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreJob")))
+@protocol SharedKotlinx_coroutines_coreJob <SharedKotlinCoroutineContextElement>
+@required
+- (id<SharedKotlinx_coroutines_coreChildHandle>)attachChildChild:(id<SharedKotlinx_coroutines_coreChildJob>)child __attribute__((swift_name("attachChild(child:)")));
+- (void)cancelCause:(SharedKotlinCancellationException * _Nullable)cause __attribute__((swift_name("cancel(cause:)")));
+- (SharedKotlinCancellationException *)getCancellationException __attribute__((swift_name("getCancellationException()")));
+- (id<SharedKotlinx_coroutines_coreDisposableHandle>)invokeOnCompletionOnCancelling:(BOOL)onCancelling invokeImmediately:(BOOL)invokeImmediately handler:(void (^)(SharedKotlinThrowable * _Nullable))handler __attribute__((swift_name("invokeOnCompletion(onCancelling:invokeImmediately:handler:)")));
+- (id<SharedKotlinx_coroutines_coreDisposableHandle>)invokeOnCompletionHandler:(void (^)(SharedKotlinThrowable * _Nullable))handler __attribute__((swift_name("invokeOnCompletion(handler:)")));
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)joinWithCompletionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("join(completionHandler:)")));
+- (id<SharedKotlinx_coroutines_coreJob>)plusOther:(id<SharedKotlinx_coroutines_coreJob>)other __attribute__((swift_name("plus(other:)"))) __attribute__((unavailable("Operator '+' on two Job objects is meaningless. Job is a coroutine context element and `+` is a set-sum operator for coroutine contexts. The job to the right of `+` just replaces the job the left of `+`.")));
+- (BOOL)start __attribute__((swift_name("start()")));
+@property (readonly) id<SharedKotlinSequence> children __attribute__((swift_name("children")));
+@property (readonly) BOOL isActive __attribute__((swift_name("isActive")));
+@property (readonly) BOOL isCancelled __attribute__((swift_name("isCancelled")));
+@property (readonly) BOOL isCompleted __attribute__((swift_name("isCompleted")));
+@property (readonly) id<SharedKotlinx_coroutines_coreSelectClause0> onJoin __attribute__((swift_name("onJoin")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreDeferred")))
+@protocol SharedKotlinx_coroutines_coreDeferred <SharedKotlinx_coroutines_coreJob>
+@required
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)awaitWithCompletionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("await(completionHandler:)")));
+
+/**
+ * @note annotations
+ *   kotlinx.coroutines.ExperimentalCoroutinesApi
+*/
+- (id _Nullable)getCompleted __attribute__((swift_name("getCompleted()")));
+
+/**
+ * @note annotations
+ *   kotlinx.coroutines.ExperimentalCoroutinesApi
+*/
+- (SharedKotlinThrowable * _Nullable)getCompletionExceptionOrNull __attribute__((swift_name("getCompletionExceptionOrNull()")));
+@property (readonly) id<SharedKotlinx_coroutines_coreSelectClause1> onAwait __attribute__((swift_name("onAwait")));
+@end
+
+__attribute__((swift_name("KotlinFunction")))
+@protocol SharedKotlinFunction
+@required
+@end
+
+__attribute__((swift_name("KotlinSuspendFunction0")))
+@protocol SharedKotlinSuspendFunction0 <SharedKotlinFunction>
+@required
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)invokeWithCompletionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("invoke(completionHandler:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("KotlinUnit")))
+@interface SharedKotlinUnit : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)unit __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedKotlinUnit *shared __attribute__((swift_name("shared")));
+- (NSString *)description __attribute__((swift_name("description()")));
 @end
 
 __attribute__((swift_name("Library_baseVersioned")))
@@ -1377,6 +1755,12 @@ __attribute__((swift_name("Kotlinx_coroutines_coreSharedFlow")))
 @property (readonly) NSArray<id> *replayCache __attribute__((swift_name("replayCache")));
 @end
 
+__attribute__((swift_name("Kotlinx_coroutines_coreStateFlow")))
+@protocol SharedKotlinx_coroutines_coreStateFlow <SharedKotlinx_coroutines_coreSharedFlow>
+@required
+@property (readonly) id _Nullable value __attribute__((swift_name("value")));
+@end
+
 __attribute__((swift_name("Kotlinx_coroutines_coreFlowCollector")))
 @protocol SharedKotlinx_coroutines_coreFlowCollector
 @required
@@ -1399,12 +1783,6 @@ __attribute__((swift_name("Kotlinx_coroutines_coreMutableSharedFlow")))
 - (void)resetReplayCache __attribute__((swift_name("resetReplayCache()")));
 - (BOOL)tryEmitValue:(id _Nullable)value __attribute__((swift_name("tryEmit(value:)")));
 @property (readonly) id<SharedKotlinx_coroutines_coreStateFlow> subscriptionCount __attribute__((swift_name("subscriptionCount")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreStateFlow")))
-@protocol SharedKotlinx_coroutines_coreStateFlow <SharedKotlinx_coroutines_coreSharedFlow>
-@required
-@property (readonly) id _Nullable value __attribute__((swift_name("value")));
 @end
 
 __attribute__((swift_name("Kotlinx_coroutines_coreMutableStateFlow")))
@@ -1458,20 +1836,6 @@ __attribute__((swift_name("KotlinKType")))
 */
 @property (readonly) id<SharedKotlinKClassifier> _Nullable classifier __attribute__((swift_name("classifier")));
 @property (readonly) BOOL isMarkedNullable __attribute__((swift_name("isMarkedNullable")));
-@end
-
-
-/**
- * @note annotations
- *   kotlin.SinceKotlin(version="1.3")
-*/
-__attribute__((swift_name("KotlinCoroutineContext")))
-@protocol SharedKotlinCoroutineContext
-@required
-- (id _Nullable)foldInitial:(id _Nullable)initial operation:(id _Nullable (^)(id _Nullable, id<SharedKotlinCoroutineContextElement>))operation __attribute__((swift_name("fold(initial:operation:)")));
-- (id<SharedKotlinCoroutineContextElement> _Nullable)getKey:(id<SharedKotlinCoroutineContextKey>)key __attribute__((swift_name("get(key:)")));
-- (id<SharedKotlinCoroutineContext>)minusKeyKey:(id<SharedKotlinCoroutineContextKey>)key __attribute__((swift_name("minusKey(key:)")));
-- (id<SharedKotlinCoroutineContext>)plusContext:(id<SharedKotlinCoroutineContext>)context __attribute__((swift_name("plus(context:)")));
 @end
 
 __attribute__((swift_name("Ktor_client_coreHttpClientEngine")))
@@ -1614,6 +1978,60 @@ __attribute__((swift_name("KotlinIterator")))
 @required
 - (BOOL)hasNext __attribute__((swift_name("hasNext()")));
 - (id _Nullable)next __attribute__((swift_name("next()")));
+@end
+
+__attribute__((swift_name("KotlinCoroutineContextKey")))
+@protocol SharedKotlinCoroutineContextKey
+@required
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreChannelIterator")))
+@protocol SharedKotlinx_coroutines_coreChannelIterator
+@required
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)hasNextWithCompletionHandler:(void (^)(SharedBoolean * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("hasNext(completionHandler:)")));
+- (id _Nullable)next __attribute__((swift_name("next()")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreSelectClause1")))
+@protocol SharedKotlinx_coroutines_coreSelectClause1
+@required
+- (void)registerSelectClause1Select:(id<SharedKotlinx_coroutines_coreSelectInstance>)select block:(id<SharedKotlinSuspendFunction1>)block __attribute__((swift_name("registerSelectClause1(select:block:)")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreDisposableHandle")))
+@protocol SharedKotlinx_coroutines_coreDisposableHandle
+@required
+- (void)dispose __attribute__((swift_name("dispose()")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreChildHandle")))
+@protocol SharedKotlinx_coroutines_coreChildHandle <SharedKotlinx_coroutines_coreDisposableHandle>
+@required
+- (BOOL)childCancelledCause:(SharedKotlinThrowable *)cause __attribute__((swift_name("childCancelled(cause:)")));
+@property (readonly) id<SharedKotlinx_coroutines_coreJob> _Nullable parent __attribute__((swift_name("parent")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreChildJob")))
+@protocol SharedKotlinx_coroutines_coreChildJob <SharedKotlinx_coroutines_coreJob>
+@required
+- (void)parentCancelledParentJob:(id<SharedKotlinx_coroutines_coreParentJob>)parentJob __attribute__((swift_name("parentCancelled(parentJob:)")));
+@end
+
+__attribute__((swift_name("KotlinSequence")))
+@protocol SharedKotlinSequence
+@required
+- (id<SharedKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreSelectClause0")))
+@protocol SharedKotlinx_coroutines_coreSelectClause0
+@required
+- (void)registerSelectClause0Select:(id<SharedKotlinx_coroutines_coreSelectInstance>)select block:(id<SharedKotlinSuspendFunction0>)block __attribute__((swift_name("registerSelectClause0(select:block:)")));
 @end
 
 __attribute__((swift_name("Library_baseMutableRealm")))
@@ -1845,17 +2263,6 @@ __attribute__((swift_name("KotlinKTypeProjection")))
 @property (readonly) SharedKotlinKVariance * _Nullable variance __attribute__((swift_name("variance")));
 @end
 
-__attribute__((swift_name("KotlinCoroutineContextElement")))
-@protocol SharedKotlinCoroutineContextElement <SharedKotlinCoroutineContext>
-@required
-@property (readonly) id<SharedKotlinCoroutineContextKey> key __attribute__((swift_name("key")));
-@end
-
-__attribute__((swift_name("KotlinCoroutineContextKey")))
-@protocol SharedKotlinCoroutineContextKey
-@required
-@end
-
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_client_coreHttpRequestData")))
 @interface SharedKtor_client_coreHttpRequestData : SharedBase
@@ -1923,7 +2330,7 @@ __attribute__((swift_name("Kotlinx_coroutines_coreCoroutineDispatcher")))
  *   kotlinx.coroutines.ExperimentalCoroutinesApi
 */
 - (SharedKotlinx_coroutines_coreCoroutineDispatcher *)limitedParallelismParallelism:(int32_t)parallelism __attribute__((swift_name("limitedParallelism(parallelism:)")));
-- (SharedKotlinx_coroutines_coreCoroutineDispatcher *)plusOther:(SharedKotlinx_coroutines_coreCoroutineDispatcher *)other __attribute__((swift_name("plus(other:)"))) __attribute__((unavailable("Operator '+' on two CoroutineDispatcher objects is meaningless. CoroutineDispatcher is a coroutine context element and `+` is a set-sum operator for coroutine contexts. The dispatcher to the right of `+` just replaces the dispatcher to the left.")));
+- (SharedKotlinx_coroutines_coreCoroutineDispatcher *)plusOther_:(SharedKotlinx_coroutines_coreCoroutineDispatcher *)other __attribute__((swift_name("plus(other_:)"))) __attribute__((unavailable("Operator '+' on two CoroutineDispatcher objects is meaningless. CoroutineDispatcher is a coroutine context element and `+` is a set-sum operator for coroutine contexts. The dispatcher to the right of `+` just replaces the dispatcher to the left.")));
 - (void)releaseInterceptedContinuationContinuation:(id<SharedKotlinContinuation>)continuation __attribute__((swift_name("releaseInterceptedContinuation(continuation:)")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @end
@@ -1960,23 +2367,12 @@ __attribute__((swift_name("Ktor_eventsEventDefinition")))
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @end
 
-__attribute__((swift_name("Kotlinx_coroutines_coreDisposableHandle")))
-@protocol SharedKotlinx_coroutines_coreDisposableHandle
-@required
-- (void)dispose __attribute__((swift_name("dispose()")));
-@end
-
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_utilsPipelinePhase")))
 @interface SharedKtor_utilsPipelinePhase : SharedBase
 - (instancetype)initWithName:(NSString *)name __attribute__((swift_name("init(name:)"))) __attribute__((objc_designated_initializer));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *name __attribute__((swift_name("name")));
-@end
-
-__attribute__((swift_name("KotlinFunction")))
-@protocol SharedKotlinFunction
-@required
 @end
 
 __attribute__((swift_name("KotlinSuspendFunction2")))
@@ -2019,16 +2415,6 @@ __attribute__((swift_name("Ktor_client_coreHttpResponse")))
 @property (readonly) SharedKtor_utilsGMTDate *responseTime __attribute__((swift_name("responseTime")));
 @property (readonly) SharedKtor_httpHttpStatusCode *status __attribute__((swift_name("status")));
 @property (readonly, getter=version_) SharedKtor_httpHttpProtocolVersion *version __attribute__((swift_name("version")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinUnit")))
-@interface SharedKotlinUnit : SharedBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)unit __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) SharedKotlinUnit *shared __attribute__((swift_name("shared")));
-- (NSString *)description __attribute__((swift_name("description()")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -2146,6 +2532,35 @@ __attribute__((swift_name("Ktor_client_coreHttpSendPipeline.Phases")))
 @property (readonly) SharedKtor_utilsPipelinePhase *Monitoring __attribute__((swift_name("Monitoring")));
 @property (readonly) SharedKtor_utilsPipelinePhase *Receive __attribute__((swift_name("Receive")));
 @property (readonly) SharedKtor_utilsPipelinePhase *State __attribute__((swift_name("State")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreSelectInstance")))
+@protocol SharedKotlinx_coroutines_coreSelectInstance
+@required
+- (void)disposeOnSelectHandle:(id<SharedKotlinx_coroutines_coreDisposableHandle>)handle __attribute__((swift_name("disposeOnSelect(handle:)")));
+- (id _Nullable)performAtomicTrySelectDesc:(SharedKotlinx_coroutines_coreAtomicDesc *)desc __attribute__((swift_name("performAtomicTrySelect(desc:)")));
+- (void)resumeSelectWithExceptionException:(SharedKotlinThrowable *)exception __attribute__((swift_name("resumeSelectWithException(exception:)")));
+- (BOOL)trySelect __attribute__((swift_name("trySelect()")));
+- (id _Nullable)trySelectOtherOtherOp:(SharedKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp * _Nullable)otherOp __attribute__((swift_name("trySelectOther(otherOp:)")));
+@property (readonly) id<SharedKotlinContinuation> completion __attribute__((swift_name("completion")));
+@property (readonly) BOOL isSelected __attribute__((swift_name("isSelected")));
+@end
+
+__attribute__((swift_name("KotlinSuspendFunction1")))
+@protocol SharedKotlinSuspendFunction1 <SharedKotlinFunction>
+@required
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)invokeP1:(id _Nullable)p1 completionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("invoke(p1:completionHandler:)")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreParentJob")))
+@protocol SharedKotlinx_coroutines_coreParentJob <SharedKotlinx_coroutines_coreJob>
+@required
+- (SharedKotlinCancellationException *)getChildJobCancellationCause __attribute__((swift_name("getChildJobCancellationCause()")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -2471,29 +2886,6 @@ __attribute__((swift_name("Ktor_httpOutgoingContent")))
 @property (readonly) SharedKtor_httpHttpStatusCode * _Nullable status __attribute__((swift_name("status")));
 @end
 
-__attribute__((swift_name("Kotlinx_coroutines_coreJob")))
-@protocol SharedKotlinx_coroutines_coreJob <SharedKotlinCoroutineContextElement>
-@required
-- (id<SharedKotlinx_coroutines_coreChildHandle>)attachChildChild:(id<SharedKotlinx_coroutines_coreChildJob>)child __attribute__((swift_name("attachChild(child:)")));
-- (void)cancelCause:(SharedKotlinCancellationException * _Nullable)cause __attribute__((swift_name("cancel(cause:)")));
-- (SharedKotlinCancellationException *)getCancellationException __attribute__((swift_name("getCancellationException()")));
-- (id<SharedKotlinx_coroutines_coreDisposableHandle>)invokeOnCompletionOnCancelling:(BOOL)onCancelling invokeImmediately:(BOOL)invokeImmediately handler:(void (^)(SharedKotlinThrowable * _Nullable))handler __attribute__((swift_name("invokeOnCompletion(onCancelling:invokeImmediately:handler:)")));
-- (id<SharedKotlinx_coroutines_coreDisposableHandle>)invokeOnCompletionHandler:(void (^)(SharedKotlinThrowable * _Nullable))handler __attribute__((swift_name("invokeOnCompletion(handler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)joinWithCompletionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("join(completionHandler:)")));
-- (id<SharedKotlinx_coroutines_coreJob>)plusOther_:(id<SharedKotlinx_coroutines_coreJob>)other __attribute__((swift_name("plus(other_:)"))) __attribute__((unavailable("Operator '+' on two Job objects is meaningless. Job is a coroutine context element and `+` is a set-sum operator for coroutine contexts. The job to the right of `+` just replaces the job the left of `+`.")));
-- (BOOL)start __attribute__((swift_name("start()")));
-@property (readonly) id<SharedKotlinSequence> children __attribute__((swift_name("children")));
-@property (readonly) BOOL isActive __attribute__((swift_name("isActive")));
-@property (readonly) BOOL isCancelled __attribute__((swift_name("isCancelled")));
-@property (readonly) BOOL isCompleted __attribute__((swift_name("isCompleted")));
-@property (readonly) id<SharedKotlinx_coroutines_coreSelectClause0> onJoin __attribute__((swift_name("onJoin")));
-@end
-
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_httpHttpStatusCode")))
 @interface SharedKtor_httpHttpStatusCode : SharedBase
@@ -2760,7 +3152,7 @@ __attribute__((swift_name("Ktor_utilsStringValuesBuilder")))
 - (void)appendMissingStringValues:(id<SharedKtor_utilsStringValues>)stringValues __attribute__((swift_name("appendMissing(stringValues:)")));
 - (void)appendMissingName:(NSString *)name values:(id)values __attribute__((swift_name("appendMissing(name:values:)")));
 - (id<SharedKtor_utilsStringValues>)build __attribute__((swift_name("build()")));
-- (void)clear_ __attribute__((swift_name("clear_()")));
+- (void)clear __attribute__((swift_name("clear()")));
 - (BOOL)containsName:(NSString *)name __attribute__((swift_name("contains(name:)")));
 - (BOOL)containsName:(NSString *)name value:(NSString *)value __attribute__((swift_name("contains(name:value:)")));
 - (NSSet<id<SharedKotlinMapEntry>> *)entries __attribute__((swift_name("entries()")));
@@ -2784,7 +3176,7 @@ __attribute__((swift_name("Ktor_utilsStringValuesBuilderImpl")))
 - (void)appendMissingStringValues:(id<SharedKtor_utilsStringValues>)stringValues __attribute__((swift_name("appendMissing(stringValues:)")));
 - (void)appendMissingName:(NSString *)name values:(id)values __attribute__((swift_name("appendMissing(name:values:)")));
 - (id<SharedKtor_utilsStringValues>)build __attribute__((swift_name("build()")));
-- (void)clear_ __attribute__((swift_name("clear_()")));
+- (void)clear __attribute__((swift_name("clear()")));
 - (BOOL)containsName:(NSString *)name __attribute__((swift_name("contains(name:)")));
 - (BOOL)containsName:(NSString *)name value:(NSString *)value __attribute__((swift_name("contains(name:value:)")));
 - (NSSet<id<SharedKotlinMapEntry>> *)entries __attribute__((swift_name("entries()")));
@@ -2878,6 +3270,40 @@ __attribute__((swift_name("Ktor_client_coreHttpRequest")))
 @property (readonly) SharedKtor_httpOutgoingContent *content __attribute__((swift_name("content")));
 @property (readonly) SharedKtor_httpHttpMethod *method __attribute__((swift_name("method")));
 @property (readonly) SharedKtor_httpUrl *url __attribute__((swift_name("url")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreAtomicDesc")))
+@interface SharedKotlinx_coroutines_coreAtomicDesc : SharedBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (void)completeOp:(SharedKotlinx_coroutines_coreAtomicOp<id> *)op failure:(id _Nullable)failure __attribute__((swift_name("complete(op:failure:)")));
+- (id _Nullable)prepareOp:(SharedKotlinx_coroutines_coreAtomicOp<id> *)op __attribute__((swift_name("prepare(op:)")));
+@property SharedKotlinx_coroutines_coreAtomicOp<id> *atomicOp __attribute__((swift_name("atomicOp")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreOpDescriptor")))
+@interface SharedKotlinx_coroutines_coreOpDescriptor : SharedBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (BOOL)isEarlierThanThat:(SharedKotlinx_coroutines_coreOpDescriptor *)that __attribute__((swift_name("isEarlierThan(that:)")));
+- (id _Nullable)performAffected:(id _Nullable)affected __attribute__((swift_name("perform(affected:)")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) SharedKotlinx_coroutines_coreAtomicOp<id> * _Nullable atomicOp __attribute__((swift_name("atomicOp")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNode.PrepareOp")))
+@interface SharedKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp : SharedKotlinx_coroutines_coreOpDescriptor
+- (instancetype)initWithAffected:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)affected next:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)next desc:(SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc *)desc __attribute__((swift_name("init(affected:next:desc:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+- (void)finishPrepare __attribute__((swift_name("finishPrepare()")));
+- (id _Nullable)performAffected:(id _Nullable)affected __attribute__((swift_name("perform(affected:)")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode *affected __attribute__((swift_name("affected")));
+@property (readonly) SharedKotlinx_coroutines_coreAtomicOp<id> *atomicOp __attribute__((swift_name("atomicOp")));
+@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc *desc __attribute__((swift_name("desc")));
+@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode *next __attribute__((swift_name("next")));
 @end
 
 __attribute__((swift_name("KotlinByteIterator")))
@@ -3028,31 +3454,6 @@ __attribute__((swift_name("Ktor_httpContentType")))
 - (SharedKtor_httpContentType *)withoutParameters __attribute__((swift_name("withoutParameters()")));
 @property (readonly) NSString *contentSubtype __attribute__((swift_name("contentSubtype")));
 @property (readonly) NSString *contentType __attribute__((swift_name("contentType")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreChildHandle")))
-@protocol SharedKotlinx_coroutines_coreChildHandle <SharedKotlinx_coroutines_coreDisposableHandle>
-@required
-- (BOOL)childCancelledCause:(SharedKotlinThrowable *)cause __attribute__((swift_name("childCancelled(cause:)")));
-@property (readonly) id<SharedKotlinx_coroutines_coreJob> _Nullable parent __attribute__((swift_name("parent")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreChildJob")))
-@protocol SharedKotlinx_coroutines_coreChildJob <SharedKotlinx_coroutines_coreJob>
-@required
-- (void)parentCancelledParentJob:(id<SharedKotlinx_coroutines_coreParentJob>)parentJob __attribute__((swift_name("parentCancelled(parentJob:)")));
-@end
-
-__attribute__((swift_name("KotlinSequence")))
-@protocol SharedKotlinSequence
-@required
-- (id<SharedKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreSelectClause0")))
-@protocol SharedKotlinx_coroutines_coreSelectClause0
-@required
-- (void)registerSelectClause0Select:(id<SharedKotlinx_coroutines_coreSelectInstance>)select block:(id<SharedKotlinSuspendFunction0>)block __attribute__((swift_name("registerSelectClause0(select:block:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -3329,17 +3730,6 @@ __attribute__((swift_name("Ktor_ioReadSession")))
 @property (readonly) int32_t availableForRead __attribute__((swift_name("availableForRead")));
 @end
 
-__attribute__((swift_name("KotlinSuspendFunction1")))
-@protocol SharedKotlinSuspendFunction1 <SharedKotlinFunction>
-@required
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)invokeP1:(id _Nullable)p1 completionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("invoke(p1:completionHandler:)")));
-@end
-
 __attribute__((swift_name("KotlinAppendable")))
 @protocol SharedKotlinAppendable
 @required
@@ -3360,6 +3750,81 @@ __attribute__((swift_name("Ktor_httpURLBuilder.Companion")))
 __attribute__((swift_name("Ktor_httpParametersBuilder")))
 @protocol SharedKtor_httpParametersBuilder <SharedKtor_utilsStringValuesBuilder>
 @required
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreAtomicOp")))
+@interface SharedKotlinx_coroutines_coreAtomicOp<__contravariant T> : SharedKotlinx_coroutines_coreOpDescriptor
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (void)completeAffected:(T _Nullable)affected failure:(id _Nullable)failure __attribute__((swift_name("complete(affected:failure:)")));
+- (id _Nullable)decideDecision:(id _Nullable)decision __attribute__((swift_name("decide(decision:)")));
+- (id _Nullable)performAffected:(id _Nullable)affected __attribute__((swift_name("perform(affected:)")));
+- (id _Nullable)prepareAffected:(T _Nullable)affected __attribute__((swift_name("prepare(affected:)")));
+@property (readonly) SharedKotlinx_coroutines_coreAtomicOp<id> *atomicOp __attribute__((swift_name("atomicOp")));
+@property (readonly) id _Nullable consensus __attribute__((swift_name("consensus")));
+@property (readonly) BOOL isDecided __attribute__((swift_name("isDecided")));
+@property (readonly) int64_t opSequence __attribute__((swift_name("opSequence")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNode")))
+@interface SharedKotlinx_coroutines_coreLockFreeLinkedListNode : SharedBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (void)addLastNode:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)node __attribute__((swift_name("addLast(node:)")));
+- (BOOL)addLastIfNode:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)node condition:(SharedBoolean *(^)(void))condition __attribute__((swift_name("addLastIf(node:condition:)")));
+- (BOOL)addLastIfPrevNode:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)node predicate:(SharedBoolean *(^)(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *))predicate __attribute__((swift_name("addLastIfPrev(node:predicate:)")));
+- (BOOL)addLastIfPrevAndIfNode:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)node predicate:(SharedBoolean *(^)(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *))predicate condition:(SharedBoolean *(^)(void))condition __attribute__((swift_name("addLastIfPrevAndIf(node:predicate:condition:)")));
+- (BOOL)addOneIfEmptyNode:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)node __attribute__((swift_name("addOneIfEmpty(node:)")));
+- (SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<SharedKotlinx_coroutines_coreLockFreeLinkedListNode *> *)describeAddLastNode:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)node __attribute__((swift_name("describeAddLast(node:)")));
+- (SharedKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<SharedKotlinx_coroutines_coreLockFreeLinkedListNode *> *)describeRemoveFirst __attribute__((swift_name("describeRemoveFirst()")));
+- (void)helpRemove __attribute__((swift_name("helpRemove()")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (SharedKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable)nextIfRemoved __attribute__((swift_name("nextIfRemoved()")));
+- (BOOL)remove __attribute__((swift_name("remove()")));
+- (id _Nullable)removeFirstIfIsInstanceOfOrPeekIfPredicate:(SharedBoolean *(^)(id _Nullable))predicate __attribute__((swift_name("removeFirstIfIsInstanceOfOrPeekIf(predicate:)")));
+- (SharedKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable)removeFirstOrNull __attribute__((swift_name("removeFirstOrNull()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) BOOL isRemoved __attribute__((swift_name("isRemoved")));
+@property (readonly, getter=next_) id next __attribute__((swift_name("next")));
+@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode *nextNode __attribute__((swift_name("nextNode")));
+@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode *prevNode __attribute__((swift_name("prevNode")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNode.AbstractAtomicDesc")))
+@interface SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc : SharedKotlinx_coroutines_coreAtomicDesc
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (void)completeOp:(SharedKotlinx_coroutines_coreAtomicOp<id> *)op failure:(id _Nullable)failure __attribute__((swift_name("complete(op:failure:)")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (id _Nullable)failureAffected:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)affected __attribute__((swift_name("failure(affected:)")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (void)finishOnSuccessAffected:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)affected next:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)next __attribute__((swift_name("finishOnSuccess(affected:next:)")));
+- (void)finishPreparePrepareOp:(SharedKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp *)prepareOp __attribute__((swift_name("finishPrepare(prepareOp:)")));
+- (id _Nullable)onPreparePrepareOp:(SharedKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp *)prepareOp __attribute__((swift_name("onPrepare(prepareOp:)")));
+- (void)onRemovedAffected:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)affected __attribute__((swift_name("onRemoved(affected:)")));
+- (id _Nullable)prepareOp:(SharedKotlinx_coroutines_coreAtomicOp<id> *)op __attribute__((swift_name("prepare(op:)")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (BOOL)retryAffected:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)affected next:(id)next __attribute__((swift_name("retry(affected:next:)")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (SharedKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable)takeAffectedNodeOp:(SharedKotlinx_coroutines_coreOpDescriptor *)op __attribute__((swift_name("takeAffectedNode(op:)")));
+- (id)updatedNextAffected:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)affected next:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)next __attribute__((swift_name("updatedNext(affected:next:)")));
+@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable affectedNode __attribute__((swift_name("affectedNode")));
+@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable originalNext __attribute__((swift_name("originalNext")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -3431,35 +3896,6 @@ __attribute__((swift_name("Ktor_httpContentType.Companion")))
 @property (class, readonly, getter=shared) SharedKtor_httpContentTypeCompanion *shared __attribute__((swift_name("shared")));
 - (SharedKtor_httpContentType *)parseValue:(NSString *)value __attribute__((swift_name("parse(value:)")));
 @property (readonly) SharedKtor_httpContentType *Any __attribute__((swift_name("Any")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreParentJob")))
-@protocol SharedKotlinx_coroutines_coreParentJob <SharedKotlinx_coroutines_coreJob>
-@required
-- (SharedKotlinCancellationException *)getChildJobCancellationCause __attribute__((swift_name("getChildJobCancellationCause()")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreSelectInstance")))
-@protocol SharedKotlinx_coroutines_coreSelectInstance
-@required
-- (void)disposeOnSelectHandle:(id<SharedKotlinx_coroutines_coreDisposableHandle>)handle __attribute__((swift_name("disposeOnSelect(handle:)")));
-- (id _Nullable)performAtomicTrySelectDesc:(SharedKotlinx_coroutines_coreAtomicDesc *)desc __attribute__((swift_name("performAtomicTrySelect(desc:)")));
-- (void)resumeSelectWithExceptionException:(SharedKotlinThrowable *)exception __attribute__((swift_name("resumeSelectWithException(exception:)")));
-- (BOOL)trySelect __attribute__((swift_name("trySelect()")));
-- (id _Nullable)trySelectOtherOtherOp:(SharedKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp * _Nullable)otherOp __attribute__((swift_name("trySelectOther(otherOp:)")));
-@property (readonly) id<SharedKotlinContinuation> completion __attribute__((swift_name("completion")));
-@property (readonly) BOOL isSelected __attribute__((swift_name("isSelected")));
-@end
-
-__attribute__((swift_name("KotlinSuspendFunction0")))
-@protocol SharedKotlinSuspendFunction0 <SharedKotlinFunction>
-@required
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)invokeWithCompletionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("invoke(completionHandler:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -3545,165 +3981,6 @@ __attribute__((swift_name("Ktor_ioByteReadPacket.Companion")))
 @property (readonly) SharedKtor_ioByteReadPacket *Empty __attribute__((swift_name("Empty")));
 @end
 
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("CinteropCoreLogLevel")))
-@interface SharedCinteropCoreLogLevel : SharedKotlinEnum<SharedCinteropCoreLogLevel *>
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly, getter=companion) SharedCinteropCoreLogLevelCompanion *companion __attribute__((swift_name("companion")));
-@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelAll __attribute__((swift_name("rlmLogLevelAll")));
-@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelTrace __attribute__((swift_name("rlmLogLevelTrace")));
-@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelDebug __attribute__((swift_name("rlmLogLevelDebug")));
-@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelDetail __attribute__((swift_name("rlmLogLevelDetail")));
-@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelInfo __attribute__((swift_name("rlmLogLevelInfo")));
-@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelWarning __attribute__((swift_name("rlmLogLevelWarning")));
-@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelError __attribute__((swift_name("rlmLogLevelError")));
-@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelFatal __attribute__((swift_name("rlmLogLevelFatal")));
-@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelOff __attribute__((swift_name("rlmLogLevelOff")));
-+ (SharedKotlinArray<SharedCinteropCoreLogLevel *> *)values __attribute__((swift_name("values()")));
-@property (readonly) int32_t priority __attribute__((swift_name("priority")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Library_baseRealmStorageType")))
-@interface SharedLibrary_baseRealmStorageType : SharedKotlinEnum<SharedLibrary_baseRealmStorageType *>
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly) SharedLibrary_baseRealmStorageType *bool_ __attribute__((swift_name("bool_")));
-@property (class, readonly) SharedLibrary_baseRealmStorageType *int_ __attribute__((swift_name("int_")));
-@property (class, readonly) SharedLibrary_baseRealmStorageType *string __attribute__((swift_name("string")));
-@property (class, readonly) SharedLibrary_baseRealmStorageType *binary __attribute__((swift_name("binary")));
-@property (class, readonly) SharedLibrary_baseRealmStorageType *object __attribute__((swift_name("object")));
-@property (class, readonly) SharedLibrary_baseRealmStorageType *float_ __attribute__((swift_name("float_")));
-@property (class, readonly) SharedLibrary_baseRealmStorageType *double_ __attribute__((swift_name("double_")));
-@property (class, readonly) SharedLibrary_baseRealmStorageType *timestamp __attribute__((swift_name("timestamp")));
-@property (class, readonly) SharedLibrary_baseRealmStorageType *objectId __attribute__((swift_name("objectId")));
-@property (class, readonly) SharedLibrary_baseRealmStorageType *uuid __attribute__((swift_name("uuid")));
-+ (SharedKotlinArray<SharedLibrary_baseRealmStorageType *> *)values __attribute__((swift_name("values()")));
-@property (readonly) id<SharedKotlinKClass> kClass __attribute__((swift_name("kClass")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreAtomicDesc")))
-@interface SharedKotlinx_coroutines_coreAtomicDesc : SharedBase
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (void)completeOp:(SharedKotlinx_coroutines_coreAtomicOp<id> *)op failure:(id _Nullable)failure __attribute__((swift_name("complete(op:failure:)")));
-- (id _Nullable)prepareOp:(SharedKotlinx_coroutines_coreAtomicOp<id> *)op __attribute__((swift_name("prepare(op:)")));
-@property SharedKotlinx_coroutines_coreAtomicOp<id> *atomicOp __attribute__((swift_name("atomicOp")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreOpDescriptor")))
-@interface SharedKotlinx_coroutines_coreOpDescriptor : SharedBase
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (BOOL)isEarlierThanThat:(SharedKotlinx_coroutines_coreOpDescriptor *)that __attribute__((swift_name("isEarlierThan(that:)")));
-- (id _Nullable)performAffected:(id _Nullable)affected __attribute__((swift_name("perform(affected:)")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) SharedKotlinx_coroutines_coreAtomicOp<id> * _Nullable atomicOp __attribute__((swift_name("atomicOp")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNode.PrepareOp")))
-@interface SharedKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp : SharedKotlinx_coroutines_coreOpDescriptor
-- (instancetype)initWithAffected:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)affected next:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)next desc:(SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc *)desc __attribute__((swift_name("init(affected:next:desc:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-+ (instancetype)new __attribute__((unavailable));
-- (void)finishPrepare __attribute__((swift_name("finishPrepare()")));
-- (id _Nullable)performAffected:(id _Nullable)affected __attribute__((swift_name("perform(affected:)")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode *affected __attribute__((swift_name("affected")));
-@property (readonly) SharedKotlinx_coroutines_coreAtomicOp<id> *atomicOp __attribute__((swift_name("atomicOp")));
-@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc *desc __attribute__((swift_name("desc")));
-@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode *next __attribute__((swift_name("next")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("CinteropCoreLogLevel.Companion")))
-@interface SharedCinteropCoreLogLevelCompanion : SharedBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) SharedCinteropCoreLogLevelCompanion *shared __attribute__((swift_name("shared")));
-- (SharedCinteropCoreLogLevel *)valueFromPriorityPriority:(int16_t)priority __attribute__((swift_name("valueFromPriority(priority:)")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreAtomicOp")))
-@interface SharedKotlinx_coroutines_coreAtomicOp<__contravariant T> : SharedKotlinx_coroutines_coreOpDescriptor
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (void)completeAffected:(T _Nullable)affected failure:(id _Nullable)failure __attribute__((swift_name("complete(affected:failure:)")));
-- (id _Nullable)decideDecision:(id _Nullable)decision __attribute__((swift_name("decide(decision:)")));
-- (id _Nullable)performAffected:(id _Nullable)affected __attribute__((swift_name("perform(affected:)")));
-- (id _Nullable)prepareAffected:(T _Nullable)affected __attribute__((swift_name("prepare(affected:)")));
-@property (readonly) SharedKotlinx_coroutines_coreAtomicOp<id> *atomicOp __attribute__((swift_name("atomicOp")));
-@property (readonly) id _Nullable consensus __attribute__((swift_name("consensus")));
-@property (readonly) BOOL isDecided __attribute__((swift_name("isDecided")));
-@property (readonly) int64_t opSequence __attribute__((swift_name("opSequence")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNode")))
-@interface SharedKotlinx_coroutines_coreLockFreeLinkedListNode : SharedBase
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (void)addLastNode:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)node __attribute__((swift_name("addLast(node:)")));
-- (BOOL)addLastIfNode:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)node condition:(SharedBoolean *(^)(void))condition __attribute__((swift_name("addLastIf(node:condition:)")));
-- (BOOL)addLastIfPrevNode:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)node predicate:(SharedBoolean *(^)(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *))predicate __attribute__((swift_name("addLastIfPrev(node:predicate:)")));
-- (BOOL)addLastIfPrevAndIfNode:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)node predicate:(SharedBoolean *(^)(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *))predicate condition:(SharedBoolean *(^)(void))condition __attribute__((swift_name("addLastIfPrevAndIf(node:predicate:condition:)")));
-- (BOOL)addOneIfEmptyNode:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)node __attribute__((swift_name("addOneIfEmpty(node:)")));
-- (SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<SharedKotlinx_coroutines_coreLockFreeLinkedListNode *> *)describeAddLastNode:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)node __attribute__((swift_name("describeAddLast(node:)")));
-- (SharedKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<SharedKotlinx_coroutines_coreLockFreeLinkedListNode *> *)describeRemoveFirst __attribute__((swift_name("describeRemoveFirst()")));
-- (void)helpRemove __attribute__((swift_name("helpRemove()")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (SharedKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable)nextIfRemoved __attribute__((swift_name("nextIfRemoved()")));
-- (BOOL)remove __attribute__((swift_name("remove()")));
-- (id _Nullable)removeFirstIfIsInstanceOfOrPeekIfPredicate:(SharedBoolean *(^)(id _Nullable))predicate __attribute__((swift_name("removeFirstIfIsInstanceOfOrPeekIf(predicate:)")));
-- (SharedKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable)removeFirstOrNull __attribute__((swift_name("removeFirstOrNull()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) BOOL isRemoved __attribute__((swift_name("isRemoved")));
-@property (readonly, getter=next_) id next __attribute__((swift_name("next")));
-@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode *nextNode __attribute__((swift_name("nextNode")));
-@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode *prevNode __attribute__((swift_name("prevNode")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNode.AbstractAtomicDesc")))
-@interface SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc : SharedKotlinx_coroutines_coreAtomicDesc
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (void)completeOp:(SharedKotlinx_coroutines_coreAtomicOp<id> *)op failure:(id _Nullable)failure __attribute__((swift_name("complete(op:failure:)")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (id _Nullable)failureAffected:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)affected __attribute__((swift_name("failure(affected:)")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (void)finishOnSuccessAffected:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)affected next:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)next __attribute__((swift_name("finishOnSuccess(affected:next:)")));
-- (void)finishPreparePrepareOp:(SharedKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp *)prepareOp __attribute__((swift_name("finishPrepare(prepareOp:)")));
-- (id _Nullable)onPreparePrepareOp:(SharedKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp *)prepareOp __attribute__((swift_name("onPrepare(prepareOp:)")));
-- (void)onRemovedAffected:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)affected __attribute__((swift_name("onRemoved(affected:)")));
-- (id _Nullable)prepareOp:(SharedKotlinx_coroutines_coreAtomicOp<id> *)op __attribute__((swift_name("prepare(op:)")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (BOOL)retryAffected:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)affected next:(id)next __attribute__((swift_name("retry(affected:next:)")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (SharedKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable)takeAffectedNodeOp:(SharedKotlinx_coroutines_coreOpDescriptor *)op __attribute__((swift_name("takeAffectedNode(op:)")));
-- (id)updatedNextAffected:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)affected next:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)next __attribute__((swift_name("updatedNext(affected:next:)")));
-@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable affectedNode __attribute__((swift_name("affectedNode")));
-@property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable originalNext __attribute__((swift_name("originalNext")));
-@end
-
 __attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc")))
 @interface SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T> : SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc
 - (instancetype)initWithQueue:(SharedKotlinx_coroutines_coreLockFreeLinkedListNode *)queue node:(T)node __attribute__((swift_name("init(queue:node:)"))) __attribute__((objc_designated_initializer));
@@ -3763,6 +4040,56 @@ __attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFi
 @property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable originalNext __attribute__((swift_name("originalNext")));
 @property (readonly) SharedKotlinx_coroutines_coreLockFreeLinkedListNode *queue __attribute__((swift_name("queue")));
 @property (readonly) T _Nullable result __attribute__((swift_name("result")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CinteropCoreLogLevel")))
+@interface SharedCinteropCoreLogLevel : SharedKotlinEnum<SharedCinteropCoreLogLevel *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly, getter=companion) SharedCinteropCoreLogLevelCompanion *companion __attribute__((swift_name("companion")));
+@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelAll __attribute__((swift_name("rlmLogLevelAll")));
+@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelTrace __attribute__((swift_name("rlmLogLevelTrace")));
+@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelDebug __attribute__((swift_name("rlmLogLevelDebug")));
+@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelDetail __attribute__((swift_name("rlmLogLevelDetail")));
+@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelInfo __attribute__((swift_name("rlmLogLevelInfo")));
+@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelWarning __attribute__((swift_name("rlmLogLevelWarning")));
+@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelError __attribute__((swift_name("rlmLogLevelError")));
+@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelFatal __attribute__((swift_name("rlmLogLevelFatal")));
+@property (class, readonly) SharedCinteropCoreLogLevel *rlmLogLevelOff __attribute__((swift_name("rlmLogLevelOff")));
++ (SharedKotlinArray<SharedCinteropCoreLogLevel *> *)values __attribute__((swift_name("values()")));
+@property (readonly) int32_t priority __attribute__((swift_name("priority")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Library_baseRealmStorageType")))
+@interface SharedLibrary_baseRealmStorageType : SharedKotlinEnum<SharedLibrary_baseRealmStorageType *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly) SharedLibrary_baseRealmStorageType *bool_ __attribute__((swift_name("bool_")));
+@property (class, readonly) SharedLibrary_baseRealmStorageType *int_ __attribute__((swift_name("int_")));
+@property (class, readonly) SharedLibrary_baseRealmStorageType *string __attribute__((swift_name("string")));
+@property (class, readonly) SharedLibrary_baseRealmStorageType *binary __attribute__((swift_name("binary")));
+@property (class, readonly) SharedLibrary_baseRealmStorageType *object __attribute__((swift_name("object")));
+@property (class, readonly) SharedLibrary_baseRealmStorageType *float_ __attribute__((swift_name("float_")));
+@property (class, readonly) SharedLibrary_baseRealmStorageType *double_ __attribute__((swift_name("double_")));
+@property (class, readonly) SharedLibrary_baseRealmStorageType *timestamp __attribute__((swift_name("timestamp")));
+@property (class, readonly) SharedLibrary_baseRealmStorageType *objectId __attribute__((swift_name("objectId")));
+@property (class, readonly) SharedLibrary_baseRealmStorageType *uuid __attribute__((swift_name("uuid")));
++ (SharedKotlinArray<SharedLibrary_baseRealmStorageType *> *)values __attribute__((swift_name("values()")));
+@property (readonly) id<SharedKotlinKClass> kClass __attribute__((swift_name("kClass")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CinteropCoreLogLevel.Companion")))
+@interface SharedCinteropCoreLogLevelCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedCinteropCoreLogLevelCompanion *shared __attribute__((swift_name("shared")));
+- (SharedCinteropCoreLogLevel *)valueFromPriorityPriority:(int16_t)priority __attribute__((swift_name("valueFromPriority(priority:)")));
 @end
 
 #pragma pop_macro("_Nullable_result")

@@ -23,7 +23,7 @@ class AuthViewModel @Inject constructor(
     val loginErrorMessageListener: MutableState<String> by lazy { mutableStateOf("") }
 
     init {
-        initViewModel()
+        initializeViewModel()
     }
 
     private fun onGetLoginInformation() {

@@ -5,8 +5,13 @@ struct ContentView: View {
 	let greet = Greeting().greeting()
 
 	var body: some View {
-		Text(greet)
-        Text("Is User Logged In ? \(CoinaApplicationUtils.isUserLoggedIn())" as String)
+        if CoinaApplicationUtils.isUserLoggedIn() {
+            Text(greet)
+            Text("Is User Logged In ? \(CoinaApplicationUtils.isUserLoggedIn())" as String)
+        } else {
+            LoginScreen()
+        }
+		
 	}
 }
 

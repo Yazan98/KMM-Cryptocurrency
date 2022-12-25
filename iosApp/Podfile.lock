@@ -1,16 +1,23 @@
 PODS:
+  - ObjectMapper (3.5.3)
   - shared (1.0)
 
 DEPENDENCIES:
+  - ObjectMapper (~> 3.5)
   - shared (from `../shared`)
+
+SPEC REPOS:
+  trunk:
+    - ObjectMapper
 
 EXTERNAL SOURCES:
   shared:
     :path: "../shared"
 
 SPEC CHECKSUMS:
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   shared: 2d3b24a8fe27b7d9e65b8d075a9672fbc6a1aa10
 
-PODFILE CHECKSUM: f282da88f39e69507b0a255187c8a6b644477756
+PODFILE CHECKSUM: 9c0b39927bb987afd2cb73f6445ba47e57b76ca7
 
 COCOAPODS: 1.11.3

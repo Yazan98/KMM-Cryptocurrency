@@ -15,7 +15,9 @@ object AuthModule {
     @Provides
     @Singleton
     fun getApplicationApiManager(): ApplicationApiManager {
-        return ApplicationApiManager(HttpBaseClient().httpClient)
+        return ApplicationApiManager().apply {
+            addHttpClient(HttpBaseClient().httpClient)
+        }
     }
 
 

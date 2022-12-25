@@ -38,7 +38,7 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
         }
     }
 
-    actual fun initViewModel() {
+    actual fun initializeViewModel() {
         getSupportedUseCases().forEach { useCase ->
             scope.launch(Dispatchers.Default) {
                 useCase.getChannelListener().consumeEach {

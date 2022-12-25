@@ -6,7 +6,6 @@ import androidx.lifecycle.viewModelScope
 import com.yazantarifi.android.home.action.CoinsAction
 import com.yazantarifi.android.home.state.CoinsState
 import com.yazantarifi.coina.CoinaApplicationState
-import com.yazantarifi.coina.api.requests.ApplicationApiManager
 import com.yazantarifi.coina.database.CoinsDataSource
 import com.yazantarifi.coina.models.CoinModel
 import com.yazantarifi.coina.useCases.GetCoinsUseCase
@@ -25,7 +24,7 @@ class CoinsViewModel @Inject constructor(
     val coinsStateListener: MutableState<ArrayList<CoinModel>> by lazy { mutableStateOf(arrayListOf()) }
     val coinsLoadingState: MutableState<Boolean> by lazy { mutableStateOf(false) }
     init {
-        initViewModel()
+        initializeViewModel()
     }
 
     override fun executeAction(action: CoinsAction) {

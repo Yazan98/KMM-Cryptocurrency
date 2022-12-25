@@ -34,7 +34,9 @@ object ApplicationModule {
     @Provides
     @Singleton
     fun getAuthUseCase(apiManager: ApplicationApiManager, database: CoinsDataSource): AuthUseCase {
-        return AuthUseCase(apiManager, database)
+        return AuthUseCase().apply {
+            addDependencies(apiManager, database)
+        }
     }
 
     @Provides
