@@ -39,7 +39,7 @@ class CoinViewScreen : BaseScreen() {
         val viewModel: CoinViewModel = hiltViewModel()
         LaunchedEffect(true) {
             if (viewModel.screenContentState.value == null) {
-                viewModel.onNewAction(CoinAction.GetCoinByKey(coinId))
+                viewModel.executeAction(CoinAction.GetCoinByKey(coinId))
             }
         }
 

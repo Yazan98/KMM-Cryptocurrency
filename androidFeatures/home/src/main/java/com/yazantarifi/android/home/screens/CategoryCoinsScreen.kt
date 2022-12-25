@@ -57,7 +57,7 @@ class CategoryCoinsScreen : BaseScreen() {
 
         LaunchedEffect(true) {
             if (viewModel.screenContentState.value.isEmpty()) {
-                viewModel.onNewAction(CategoriesCoinAction.GetCategoryCoin(categoryName))
+                viewModel.executeAction(CategoriesCoinAction.GetCategoryCoin(categoryName))
             }
         }
 
@@ -74,7 +74,6 @@ class CategoryCoinsScreen : BaseScreen() {
                 ApplicationLoadingComposable(message = stringResource(id = R.string.loading))
             } else {
                 LazyColumn(modifier = Modifier
-                    .padding(10.dp)
                     .background(ApplicationColors.getScreenBackgroundColor())) {
                     itemsIndexed(viewModel.screenContentState.value) { index, item ->
                         CoinComposable(item) {

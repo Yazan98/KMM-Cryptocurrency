@@ -42,7 +42,7 @@ abstract class CoinaUseCase<Arguments, Result>: CoroutineScope, CoinaUseCaseType
     protected fun onSendLoadingState(isLoading: Boolean) {
         when (isLoading) {
             true -> onSendState(CoinaApplicationState.Loading)
-            false -> onSendState(CoinaApplicationState.Loading)
+            false -> onSendState(CoinaApplicationState.Loaded)
         }
     }
 

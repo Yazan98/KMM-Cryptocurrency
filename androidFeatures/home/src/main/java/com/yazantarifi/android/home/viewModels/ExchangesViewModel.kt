@@ -5,12 +5,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.viewModelScope
 import com.yazantarifi.android.home.action.ExchangeAction
 import com.yazantarifi.android.home.state.ExchangeState
-import com.yazantarifi.coina.api.requests.ApplicationApiManager
+import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.database.ExchangesDataSource
 import com.yazantarifi.coina.models.ExchangeModel
+import com.yazantarifi.coina.useCases.GetExchangesUseCase
 import com.yazantarifi.coina.viewModels.CoinaViewModel
-import com.yazantarifi.coina.viewModels.listeners.CoinaLoadingStateListener
-import com.yazantarifi.coina.viewModels.listeners.CoinaStateListener
+import com.yazantarifi.coina.viewModels.useCases.CoinaUseCaseType
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -18,18 +18,17 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ExchangesViewModel @Inject constructor(
-    private val apiManager: ApplicationApiManager,
+    private val getExchangesUseCase: GetExchangesUseCase,
     private val database: ExchangesDataSource
-): CoinaViewModel<ExchangeAction, ExchangeState>(), CoinaStateListener<ExchangeState>, CoinaLoadingStateListener {
+): CoinaViewModel<ExchangeAction, ExchangeState>() {
 
     val screenLoadingState: MutableState<Boolean> by lazy { mutableStateOf(false) }
     val screenContentState: MutableState<ArrayList<ExchangeModel>> by lazy { mutableStateOf(arrayListOf()) }
     init {
-        registerStateListener(this)
-        registerLoadingStateListener(this)
+        initViewModel()
     }
 
-    override fun onNewAction(action: ExchangeAction) {
+    override fun executeAction(action: ExchangeAction) {
         if (action is ExchangeAction.GetExchanges) {
             getExchangesList()
         }
@@ -37,19 +36,7 @@ class ExchangesViewModel @Inject constructor(
 
     private fun getExchangesList() {
         viewModelScope.launch(Dispatchers.IO) {
-            if (state.value is ExchangeState.LoadingState) {
-                onLoadingStateChanged(true)
-                apiManager.getExchanges(database) {
-                    onLoadingStateChanged(false)
-                    it.handleResult({
-                        it?.let {
-                            onAcceptNewState(ExchangeState.ListState(it))
-                        }
-                    }, {
-
-                    })
-                }
-            }
+            getExchangesUseCase(Unit)
         }
     }
 
@@ -58,16 +45,29 @@ class ExchangesViewModel @Inject constructor(
         return ExchangeState.ListState(database.getExchanges())
     }
 
-    override fun onLoadingStateChanged(newState: Boolean) {
-        viewModelScope.launch(Dispatchers.Main) {
-            screenLoadingState.value = newState
+    override fun onListenerTriggered(key: String, value: CoinaApplicationState<Any>) {
+        if (key == getExchangesUseCase.getUseCaseKey()) {
+            value.handleResult({
+                (it as? ArrayList<ExchangeModel>)?.let {
+                    screenContentState.value = it
+                }
+            }, {
+
+            }, {
+                screenLoadingState.value = it
+            })
         }
     }
 
-    override fun onUpdateState(newState: ExchangeState) {
-        if (newState is ExchangeState.ListState) {
-            screenContentState.value = newState.data
+    override fun onExceptionListenerTriggered(key: String, value: Throwable) {
+
+    }
+
+    override fun getSupportedUseCases(): ArrayList<CoinaUseCaseType<Any>> {
+        return ArrayList<CoinaUseCaseType<Any>>().apply {
+            add(getExchangesUseCase as CoinaUseCaseType<Any>)
         }
     }
+
 
 }

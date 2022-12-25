@@ -2,14 +2,13 @@ package com.yazantarifi.android.home.viewModels
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import androidx.lifecycle.viewModelScope
 import com.yazantarifi.android.home.action.CategoriesCoinAction
 import com.yazantarifi.android.home.state.CategoriesCoinState
-import com.yazantarifi.coina.api.requests.ApplicationApiManager
+import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.models.CoinModel
+import com.yazantarifi.coina.useCases.GetCategoryCoinsUseCase
 import com.yazantarifi.coina.viewModels.CoinaViewModel
-import com.yazantarifi.coina.viewModels.listeners.CoinaLoadingStateListener
-import com.yazantarifi.coina.viewModels.listeners.CoinaStateListener
+import com.yazantarifi.coina.viewModels.useCases.CoinaUseCaseType
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,17 +16,16 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CategoriesCoinViewModel @Inject constructor(
-    private val apiManager: ApplicationApiManager
-): CoinaViewModel<CategoriesCoinAction, CategoriesCoinState>(), CoinaStateListener<CategoriesCoinState>, CoinaLoadingStateListener {
+    private val getCategoryCoinsUseCase: GetCategoryCoinsUseCase
+): CoinaViewModel<CategoriesCoinAction, CategoriesCoinState>() {
 
     val screenLoadingState: MutableState<Boolean> by lazy { mutableStateOf(false) }
     val screenContentState: MutableState<ArrayList<CoinModel>> by lazy { mutableStateOf(arrayListOf()) }
     init {
-        registerStateListener(this)
-        registerLoadingStateListener(this)
+        initViewModel()
     }
 
-    override fun onNewAction(action: CategoriesCoinAction) {
+    override fun executeAction(action: CategoriesCoinAction) {
         if (action is CategoriesCoinAction.GetCategoryCoin) {
             getCoinsByCategoryName(action.categoryName)
         }
@@ -35,17 +33,7 @@ class CategoriesCoinViewModel @Inject constructor(
 
     private fun getCoinsByCategoryName(categoryName: String) {
         scope.launch(Dispatchers.IO) {
-            onLoadingStateChanged(true)
-            apiManager.getCoinsByCategoryName(categoryName) {
-                it.handleResult({
-                    onLoadingStateChanged(false)
-                    it?.let {
-                        onAcceptNewState(CategoriesCoinState.ListState(it))
-                    }
-                }, {
-                    onLoadingStateChanged(false)
-                })
-            }
+            getCategoryCoinsUseCase(GetCategoryCoinsUseCase.Args(categoryName))
         }
     }
 
@@ -53,15 +41,27 @@ class CategoriesCoinViewModel @Inject constructor(
         return CategoriesCoinState.LoadingState
     }
 
-    override fun onLoadingStateChanged(newState: Boolean) {
-        scope.launch(Dispatchers.Main) {
-            screenLoadingState.value = newState
+    override fun onListenerTriggered(key: String, value: CoinaApplicationState<Any>) {
+        if (key == GetCategoryCoinsUseCase.KEY) {
+            value.handleResult({
+                (it as? ArrayList<CoinModel>)?.let {
+                    screenContentState.value = it
+                }
+            }, {
+
+            }, {
+                screenLoadingState.value = it
+            })
         }
     }
 
-    override fun onUpdateState(newState: CategoriesCoinState) {
-        if (newState is CategoriesCoinState.ListState) {
-            screenContentState.value = newState.coins
+    override fun onExceptionListenerTriggered(key: String, value: Throwable) {
+
+    }
+
+    override fun getSupportedUseCases(): ArrayList<CoinaUseCaseType<Any>> {
+        return ArrayList<CoinaUseCaseType<Any>>().apply {
+            add(getCategoryCoinsUseCase as CoinaUseCaseType<Any>)
         }
     }
 

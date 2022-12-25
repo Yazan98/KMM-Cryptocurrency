@@ -3,23 +3,16 @@ package com.yazantarifi.coina.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.yazantarifi.coina.CoinaApplicationState
-import com.yazantarifi.coina.viewModels.listeners.CoinaLoadingStateListener
 import com.yazantarifi.coina.viewModels.props.CoinaAction
 import com.yazantarifi.coina.viewModels.props.CoinaEither
 import com.yazantarifi.coina.viewModels.props.CoinaSideEffect
 import com.yazantarifi.coina.viewModels.props.CoinaState
-import com.yazantarifi.coina.viewModels.listeners.CoinaStateListener
 import com.yazantarifi.coina.viewModels.useCases.CoinaUseCaseType
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.cancel
-import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.channels.consumeEach
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharedFlow
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 

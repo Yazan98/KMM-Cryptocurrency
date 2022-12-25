@@ -1,8 +1,6 @@
 package com.yazantarifi.coina.viewModels
 
 import com.yazantarifi.coina.CoinaApplicationState
-import com.yazantarifi.coina.viewModels.listeners.CoinaLoadingStateListener
-import com.yazantarifi.coina.viewModels.listeners.CoinaStateListener
 import com.yazantarifi.coina.viewModels.props.CoinaAction
 import com.yazantarifi.coina.viewModels.props.CoinaEither
 import com.yazantarifi.coina.viewModels.props.CoinaSideEffect

@@ -2,12 +2,13 @@ package com.yazantarifi.coin.viewModel
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
+import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.api.requests.ApplicationApiManager
 import com.yazantarifi.coina.models.CoinInformation
 import com.yazantarifi.coina.models.CoinModel
+import com.yazantarifi.coina.useCases.CoinInfoUseCase
 import com.yazantarifi.coina.viewModels.CoinaViewModel
-import com.yazantarifi.coina.viewModels.listeners.CoinaLoadingStateListener
-import com.yazantarifi.coina.viewModels.listeners.CoinaStateListener
+import com.yazantarifi.coina.viewModels.useCases.CoinaUseCaseType
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -15,17 +16,16 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CoinViewModel @Inject constructor(
-    private val apiManager: ApplicationApiManager
-): CoinaViewModel<CoinAction, CoinState>(), CoinaStateListener<CoinState>, CoinaLoadingStateListener {
+    private val getCoinInfoUseCase: CoinInfoUseCase
+): CoinaViewModel<CoinAction, CoinState>() {
 
     val screenLoadingState: MutableState<Boolean> by lazy { mutableStateOf(false) }
     val screenContentState: MutableState<CoinInformation?> by lazy { mutableStateOf(null) }
     init {
-        registerStateListener(this)
-        registerLoadingStateListener(this)
+        initViewModel()
     }
 
-    override fun onNewAction(action: CoinAction) {
+    override fun executeAction(action: CoinAction) {
         if (action is CoinAction.GetCoinByKey) {
             getCoinInformationByKey(action.id)
         }
@@ -33,17 +33,7 @@ class CoinViewModel @Inject constructor(
 
     private fun getCoinInformationByKey(id: String) {
         scope.launch(Dispatchers.IO) {
-            onAcceptLoadingState(true)
-            apiManager.getCoinInformation(id) {
-                it.handleResult({
-                    onAcceptLoadingState(false)
-                    it?.let {
-                        onAcceptNewState(CoinState.InfoState(it))
-                    }
-                }, {
-                    onAcceptLoadingState(false)
-                })
-            }
+            getCoinInfoUseCase(CoinInfoUseCase.Args(id))
         }
     }
 
@@ -51,15 +41,28 @@ class CoinViewModel @Inject constructor(
         return CoinState.LoadingState
     }
 
-    override fun onLoadingStateChanged(newState: Boolean) {
-        scope.launch(Dispatchers.Main) {
-            screenLoadingState.value = newState
+    override fun onListenerTriggered(key: String, value: CoinaApplicationState<Any>) {
+        if (key == CoinInfoUseCase.KEY) {
+            value.handleResult({
+                if (it is CoinInformation) {
+                    screenContentState.value = it
+                }
+            }, {
+
+            }, {
+                screenLoadingState.value = it
+            })
         }
     }
 
-    override fun onUpdateState(newState: CoinState) {
-        if (newState is CoinState.InfoState) {
-            screenContentState.value = newState.info
+    override fun onExceptionListenerTriggered(key: String, value: Throwable) {
+        println("Error :: Key : $key - Value : ${value.message}")
+    }
+
+    override fun getSupportedUseCases(): ArrayList<CoinaUseCaseType<Any>> {
+        return ArrayList<CoinaUseCaseType<Any>>().apply {
+            add(getCoinInfoUseCase as CoinaUseCaseType<Any>)
         }
     }
+
 }

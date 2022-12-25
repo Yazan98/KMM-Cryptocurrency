@@ -35,6 +35,12 @@ import com.yazantarifi.coina.context.CoinaStorageProvider;
 import com.yazantarifi.coina.database.CategoriesDataSource;
 import com.yazantarifi.coina.database.CoinsDataSource;
 import com.yazantarifi.coina.database.ExchangesDataSource;
+import com.yazantarifi.coina.useCases.AuthUseCase;
+import com.yazantarifi.coina.useCases.CoinInfoUseCase;
+import com.yazantarifi.coina.useCases.GetCategoriesUseCase;
+import com.yazantarifi.coina.useCases.GetCategoryCoinsUseCase;
+import com.yazantarifi.coina.useCases.GetCoinsUseCase;
+import com.yazantarifi.coina.useCases.GetExchangesUseCase;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
 import dagger.hilt.android.flags.HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule;
@@ -521,22 +527,22 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
       public T get() {
         switch (id) {
           case 0: // com.yazantarifi.android.auth.viewModel.AuthViewModel 
-          return (T) new AuthViewModel(singletonCImpl.getStorageProviderImplementationInstanceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get(), singletonCImpl.getCoinsDataSourceProvider.get());
+          return (T) new AuthViewModel(singletonCImpl.getStorageProviderImplementationInstanceProvider.get(), singletonCImpl.getAuthUseCaseProvider.get());
 
           case 1: // com.yazantarifi.android.home.viewModels.CategoriesCoinViewModel 
-          return (T) new CategoriesCoinViewModel(singletonCImpl.getApplicationApiManagerProvider.get());
+          return (T) new CategoriesCoinViewModel(singletonCImpl.getGetCategoryCoinsUseCaseProvider.get());
 
           case 2: // com.yazantarifi.android.home.viewModels.CategoriesViewModel 
-          return (T) new CategoriesViewModel(singletonCImpl.getCategoriesDataSourceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get());
+          return (T) new CategoriesViewModel(singletonCImpl.getGetCategoriesUseCaseProvider.get(), singletonCImpl.getCategoriesDataSourceProvider.get());
 
           case 3: // com.yazantarifi.coin.viewModel.CoinViewModel 
-          return (T) new CoinViewModel(singletonCImpl.getApplicationApiManagerProvider.get());
+          return (T) new CoinViewModel(singletonCImpl.getCoinInfoUseCaseProvider.get());
 
           case 4: // com.yazantarifi.android.home.viewModels.CoinsViewModel 
-          return (T) new CoinsViewModel(singletonCImpl.getCoinsDataSourceProvider.get(), singletonCImpl.getApplicationApiManagerProvider.get());
+          return (T) new CoinsViewModel(singletonCImpl.getCoinsDataSourceProvider.get(), singletonCImpl.getGetCoinsUseCaseProvider.get());
 
           case 5: // com.yazantarifi.android.home.viewModels.ExchangesViewModel 
-          return (T) new ExchangesViewModel(singletonCImpl.getApplicationApiManagerProvider.get(), singletonCImpl.getExchangesDataSourceProvider.get());
+          return (T) new ExchangesViewModel(singletonCImpl.getGetExchangesUseCaseProvider.get(), singletonCImpl.getExchangesDataSourceProvider.get());
 
           default: throw new AssertionError(id);
         }
@@ -623,9 +629,21 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
 
     private Provider<CoinsDataSource> getCoinsDataSourceProvider;
 
+    private Provider<AuthUseCase> getAuthUseCaseProvider;
+
+    private Provider<GetCategoryCoinsUseCase> getGetCategoryCoinsUseCaseProvider;
+
     private Provider<CategoriesDataSource> getCategoriesDataSourceProvider;
 
+    private Provider<GetCategoriesUseCase> getGetCategoriesUseCaseProvider;
+
+    private Provider<CoinInfoUseCase> getCoinInfoUseCaseProvider;
+
+    private Provider<GetCoinsUseCase> getGetCoinsUseCaseProvider;
+
     private Provider<ExchangesDataSource> getExchangesDataSourceProvider;
+
+    private Provider<GetExchangesUseCase> getGetExchangesUseCaseProvider;
 
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
       this.applicationContextModule = applicationContextModuleParam;
@@ -636,10 +654,16 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
     @SuppressWarnings("unchecked")
     private void initialize(final ApplicationContextModule applicationContextModuleParam) {
       this.getStorageProviderImplementationInstanceProvider = DoubleCheck.provider(new SwitchingProvider<CoinaStorageProvider>(singletonCImpl, 0));
-      this.getApplicationApiManagerProvider = DoubleCheck.provider(new SwitchingProvider<ApplicationApiManager>(singletonCImpl, 1));
-      this.getCoinsDataSourceProvider = DoubleCheck.provider(new SwitchingProvider<CoinsDataSource>(singletonCImpl, 2));
-      this.getCategoriesDataSourceProvider = DoubleCheck.provider(new SwitchingProvider<CategoriesDataSource>(singletonCImpl, 3));
-      this.getExchangesDataSourceProvider = DoubleCheck.provider(new SwitchingProvider<ExchangesDataSource>(singletonCImpl, 4));
+      this.getApplicationApiManagerProvider = DoubleCheck.provider(new SwitchingProvider<ApplicationApiManager>(singletonCImpl, 2));
+      this.getCoinsDataSourceProvider = DoubleCheck.provider(new SwitchingProvider<CoinsDataSource>(singletonCImpl, 3));
+      this.getAuthUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<AuthUseCase>(singletonCImpl, 1));
+      this.getGetCategoryCoinsUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<GetCategoryCoinsUseCase>(singletonCImpl, 4));
+      this.getCategoriesDataSourceProvider = DoubleCheck.provider(new SwitchingProvider<CategoriesDataSource>(singletonCImpl, 6));
+      this.getGetCategoriesUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<GetCategoriesUseCase>(singletonCImpl, 5));
+      this.getCoinInfoUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<CoinInfoUseCase>(singletonCImpl, 7));
+      this.getGetCoinsUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<GetCoinsUseCase>(singletonCImpl, 8));
+      this.getExchangesDataSourceProvider = DoubleCheck.provider(new SwitchingProvider<ExchangesDataSource>(singletonCImpl, 10));
+      this.getGetExchangesUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<GetExchangesUseCase>(singletonCImpl, 9));
     }
 
     @Override
@@ -678,16 +702,34 @@ public final class DaggerCoinaApplication_HiltComponents_SingletonC {
           case 0: // com.yazantarifi.coina.context.CoinaStorageProvider 
           return (T) ApplicationModule_GetStorageProviderImplementationInstanceFactory.getStorageProviderImplementationInstance(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
-          case 1: // com.yazantarifi.coina.api.requests.ApplicationApiManager 
+          case 1: // com.yazantarifi.coina.useCases.AuthUseCase 
+          return (T) ApplicationModule_GetAuthUseCaseFactory.getAuthUseCase(singletonCImpl.getApplicationApiManagerProvider.get(), singletonCImpl.getCoinsDataSourceProvider.get());
+
+          case 2: // com.yazantarifi.coina.api.requests.ApplicationApiManager 
           return (T) AuthModule_GetApplicationApiManagerFactory.getApplicationApiManager();
 
-          case 2: // com.yazantarifi.coina.database.CoinsDataSource 
+          case 3: // com.yazantarifi.coina.database.CoinsDataSource 
           return (T) HomeModule_GetCoinsDataSourceFactory.getCoinsDataSource();
 
-          case 3: // com.yazantarifi.coina.database.CategoriesDataSource 
+          case 4: // com.yazantarifi.coina.useCases.GetCategoryCoinsUseCase 
+          return (T) ApplicationModule_GetGetCategoryCoinsUseCaseFactory.getGetCategoryCoinsUseCase(singletonCImpl.getApplicationApiManagerProvider.get());
+
+          case 5: // com.yazantarifi.coina.useCases.GetCategoriesUseCase 
+          return (T) ApplicationModule_GetGetCategoriesUseCaseFactory.getGetCategoriesUseCase(singletonCImpl.getApplicationApiManagerProvider.get(), singletonCImpl.getCategoriesDataSourceProvider.get());
+
+          case 6: // com.yazantarifi.coina.database.CategoriesDataSource 
           return (T) HomeModule_GetCategoriesDataSourceFactory.getCategoriesDataSource();
 
-          case 4: // com.yazantarifi.coina.database.ExchangesDataSource 
+          case 7: // com.yazantarifi.coina.useCases.CoinInfoUseCase 
+          return (T) ApplicationModule_GetCoinInfoUseCaseFactory.getCoinInfoUseCase(singletonCImpl.getApplicationApiManagerProvider.get());
+
+          case 8: // com.yazantarifi.coina.useCases.GetCoinsUseCase 
+          return (T) ApplicationModule_GetGetCoinsUseCaseFactory.getGetCoinsUseCase(singletonCImpl.getApplicationApiManagerProvider.get(), singletonCImpl.getCoinsDataSourceProvider.get());
+
+          case 9: // com.yazantarifi.coina.useCases.GetExchangesUseCase 
+          return (T) ApplicationModule_GetGetExchangesUseCaseFactory.getGetExchangesUseCase(singletonCImpl.getApplicationApiManagerProvider.get(), singletonCImpl.getExchangesDataSourceProvider.get());
+
+          case 10: // com.yazantarifi.coina.database.ExchangesDataSource 
           return (T) HomeModule_GetExchangesDataSourceFactory.getExchangesDataSource();
 
           default: throw new AssertionError(id);

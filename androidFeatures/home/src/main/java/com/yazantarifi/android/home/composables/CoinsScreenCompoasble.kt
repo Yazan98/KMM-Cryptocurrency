@@ -50,7 +50,7 @@ fun CoinsScreenComposable(viewModel: CoinsViewModel) {
     val context = LocalContext.current
     LaunchedEffect(true) {
         if (viewModel.coinsStateListener.value.isEmpty()) {
-            viewModel.onNewAction(CoinsAction.GetCoins)
+            viewModel.executeAction(CoinsAction.GetCoins)
         }
     }
 
@@ -76,7 +76,7 @@ fun CoinsScreenComposable(viewModel: CoinsViewModel) {
                 placeholder = { androidx.compose.material.Text(text = stringResource(id = R.string.search_coin)) },
                 onValueChange = {
                     text = it
-                    viewModel.onNewAction(CoinsAction.GetCoinsByQuery(it))
+                    viewModel.executeAction(CoinsAction.GetCoinsByQuery(it))
                 },
                 label = { androidx.compose.material.Text(stringResource(id = R.string.search_coin)) }
             )

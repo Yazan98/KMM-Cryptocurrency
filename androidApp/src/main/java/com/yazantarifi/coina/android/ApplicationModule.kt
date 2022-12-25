@@ -1,12 +1,19 @@
 package com.yazantarifi.coina.android
 
 import android.content.Context
-import com.yazantarifi.android.auth.useCases.AuthUseCase
+import com.yazantarifi.coina.useCases.AuthUseCase
 import com.yazantarifi.coina.api.requests.ApplicationApiManager
 import com.yazantarifi.coina.context.CoinaContext
 import com.yazantarifi.coina.context.CoinaStorageKeyValue
 import com.yazantarifi.coina.context.CoinaStorageProvider
+import com.yazantarifi.coina.database.CategoriesDataSource
 import com.yazantarifi.coina.database.CoinsDataSource
+import com.yazantarifi.coina.database.ExchangesDataSource
+import com.yazantarifi.coina.useCases.CoinInfoUseCase
+import com.yazantarifi.coina.useCases.GetCategoriesUseCase
+import com.yazantarifi.coina.useCases.GetCategoryCoinsUseCase
+import com.yazantarifi.coina.useCases.GetCoinsUseCase
+import com.yazantarifi.coina.useCases.GetExchangesUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,6 +35,36 @@ object ApplicationModule {
     @Singleton
     fun getAuthUseCase(apiManager: ApplicationApiManager, database: CoinsDataSource): AuthUseCase {
         return AuthUseCase(apiManager, database)
+    }
+
+    @Provides
+    @Singleton
+    fun getCoinInfoUseCase(apiManager: ApplicationApiManager): CoinInfoUseCase {
+        return CoinInfoUseCase(apiManager)
+    }
+
+    @Provides
+    @Singleton
+    fun getGetCategoriesUseCase(apiManager: ApplicationApiManager, database: CategoriesDataSource): GetCategoriesUseCase {
+        return GetCategoriesUseCase(apiManager, database)
+    }
+
+    @Provides
+    @Singleton
+    fun getGetCategoryCoinsUseCase(apiManager: ApplicationApiManager): GetCategoryCoinsUseCase {
+        return GetCategoryCoinsUseCase(apiManager)
+    }
+
+    @Provides
+    @Singleton
+    fun getGetExchangesUseCase(apiManager: ApplicationApiManager, database: ExchangesDataSource): GetExchangesUseCase {
+        return GetExchangesUseCase(apiManager, database)
+    }
+
+    @Provides
+    @Singleton
+    fun getGetCoinsUseCase(apiManager: ApplicationApiManager, database: CoinsDataSource): GetCoinsUseCase {
+        return GetCoinsUseCase(apiManager, database)
     }
 
 }

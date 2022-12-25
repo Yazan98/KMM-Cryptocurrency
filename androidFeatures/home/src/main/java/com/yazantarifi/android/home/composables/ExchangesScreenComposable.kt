@@ -37,7 +37,7 @@ fun ExchangesScreenComposable(viewModel: ExchangesViewModel) {
     val context = LocalContext.current
     LaunchedEffect(true) {
         if (viewModel.screenContentState.value.isEmpty()) {
-            viewModel.onNewAction(ExchangeAction.GetExchanges)
+            viewModel.executeAction(ExchangeAction.GetExchanges)
         }
     }
 

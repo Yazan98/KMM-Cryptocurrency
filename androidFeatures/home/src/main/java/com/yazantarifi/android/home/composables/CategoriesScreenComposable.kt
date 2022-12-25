@@ -32,7 +32,7 @@ fun CategoriesScreenComposable(viewModel: CategoriesViewModel) {
     val context = LocalContext.current
     LaunchedEffect(true) {
         if (viewModel.screenContentState.value.isEmpty()) {
-            viewModel.onNewAction(CategoriesAction.GetCategories)
+            viewModel.executeAction(CategoriesAction.GetCategories)
         }
     }
 
