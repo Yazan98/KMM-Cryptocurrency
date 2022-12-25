@@ -30,9 +30,7 @@ struct CoinRowView: View {
                 Text(coin.symbol ?? "")
                     .multilineTextAlignment(.leading)
                     .textCase(.uppercase)
-                    .frame(width: 80)
             }
-            .frame(width: 80)
             
             Spacer()
             
