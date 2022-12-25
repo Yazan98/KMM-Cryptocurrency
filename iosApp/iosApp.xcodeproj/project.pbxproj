@@ -11,6 +11,12 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		8A64E1FE295763B800CDE592 /* CoinaApplicationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E1FD295763B800CDE592 /* CoinaApplicationUtils.swift */; };
+		8A64E204295766B800CDE592 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E203295766B800CDE592 /* LoginScreen.swift */; };
+		8A64E206295766C100CDE592 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E205295766C100CDE592 /* AuthViewModel.swift */; };
+		8A64E2092957670C00CDE592 /* AuthViewModelImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E2082957670C00CDE592 /* AuthViewModelImplementation.swift */; };
+		8A64E20C2957673A00CDE592 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E20B2957673A00CDE592 /* AuthState.swift */; };
+		8A64E20E2957673F00CDE592 /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E20D2957673F00CDE592 /* AuthAction.swift */; };
 		AD5AE9E0D88DCA6ACF13A89F /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47351D65E8247BC25554BD /* Pods_iosApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +28,12 @@
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A64E1FD295763B800CDE592 /* CoinaApplicationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinaApplicationUtils.swift; sourceTree = "<group>"; };
+		8A64E203295766B800CDE592 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		8A64E205295766C100CDE592 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		8A64E2082957670C00CDE592 /* AuthViewModelImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelImplementation.swift; sourceTree = "<group>"; };
+		8A64E20B2957673A00CDE592 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		8A64E20D2957673F00CDE592 /* AuthAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAction.swift; sourceTree = "<group>"; };
 		A891D5DB8E80B181DE980ED2 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BDD236638F544F92E3CEA187 /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +87,8 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				8A64E1FC2957638000CDE592 /* Features */,
+				8A64E1FB2957637700CDE592 /* Utils */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
@@ -84,13 +98,80 @@
 			path = iosApp;
 			sourceTree = "<group>";
 		};
+		8A64E1FB2957637700CDE592 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8A64E1FD295763B800CDE592 /* CoinaApplicationUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8A64E1FC2957638000CDE592 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				8A64E2022957667200CDE592 /* Core */,
+				8A64E2012957666400CDE592 /* Coin */,
+				8A64E2002957665E00CDE592 /* Home */,
+				8A64E1FF2957665900CDE592 /* Auth */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8A64E1FF2957665900CDE592 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				8A64E20A2957672900CDE592 /* AuthProps */,
+				8A64E207295766ED00CDE592 /* ViewModel */,
+				8A64E203295766B800CDE592 /* LoginScreen.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		8A64E2002957665E00CDE592 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8A64E2012957666400CDE592 /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coin;
+			sourceTree = "<group>";
+		};
+		8A64E2022957667200CDE592 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8A64E207295766ED00CDE592 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8A64E205295766C100CDE592 /* AuthViewModel.swift */,
+				8A64E2082957670C00CDE592 /* AuthViewModelImplementation.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8A64E20A2957672900CDE592 /* AuthProps */ = {
+			isa = PBXGroup;
+			children = (
+				8A64E20B2957673A00CDE592 /* AuthState.swift */,
+				8A64E20D2957673F00CDE592 /* AuthAction.swift */,
+			);
+			path = AuthProps;
+			sourceTree = "<group>";
+		};
 		C4B78B400DCC6DFDD419B89A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				A891D5DB8E80B181DE980ED2 /* Pods-iosApp.debug.xcconfig */,
 				BDD236638F544F92E3CEA187 /* Pods-iosApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -190,8 +271,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A64E206295766C100CDE592 /* AuthViewModel.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				8A64E2092957670C00CDE592 /* AuthViewModelImplementation.swift in Sources */,
+				8A64E20E2957673F00CDE592 /* AuthAction.swift in Sources */,
+				8A64E204295766B800CDE592 /* LoginScreen.swift in Sources */,
+				8A64E1FE295763B800CDE592 /* CoinaApplicationUtils.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				8A64E20C2957673A00CDE592 /* AuthState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,40 +1,65 @@
 package com.yazantarifi.coina.viewModels
 
+import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.viewModels.listeners.CoinaLoadingStateListener
 import com.yazantarifi.coina.viewModels.props.CoinaAction
 import com.yazantarifi.coina.viewModels.props.CoinaEither
 import com.yazantarifi.coina.viewModels.props.CoinaSideEffect
 import com.yazantarifi.coina.viewModels.props.CoinaState
 import com.yazantarifi.coina.viewModels.listeners.CoinaStateListener
+import com.yazantarifi.coina.viewModels.useCases.CoinaUseCase
+import com.yazantarifi.coina.viewModels.useCases.CoinaUseCaseType
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 
 expect abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
 
+    /**
+     * The Current Coroutine Context Used inside ViewModel
+     * Needed Because ViewModelScope By Default Working on Main Thread
+     */
     val scope: CoroutineScope
     val sideEffects: ArrayList<CoinaSideEffect<Action, *>>
     val state: MutableStateFlow<State>
-    val loadingState: MutableSharedFlow<Boolean>
-    var stateListener: CoinaStateListener<State>?
-    var loadingStateListener: CoinaLoadingStateListener?
-
-    fun onAcceptLoadingState(newState: Boolean)
 
     fun onAcceptNewState(newState: State)
 
-    fun registerStateListener(targetStateListener: CoinaStateListener<State>)
-
-    fun registerLoadingStateListener(targetStateListener: CoinaLoadingStateListener)
+    /**
+     * Initialize the ViewModel Streaming Listeners for Each UseCase
+     * Now We Run Consumers to Collect the Data From Each Channel and Return it to Sub ViewModel
+     */
+    fun initViewModel()
 
     fun registerSideEffect(sideEffect: CoinaSideEffect<Action, *>)
 
     fun onTriggerSideEffectAction(newAction: Action, sideEffectKey: String)
 
-    abstract fun onNewAction(action: Action)
+    /**
+     * Any Event in ViewModel Should Start from Here
+     * Here is the Start Point in ViewModel to Submit Actions to ViewModel from the View itself
+     */
+    abstract fun executeAction(action: Action)
 
     abstract fun getInitialState(): State
 
+    actual abstract fun onExceptionListenerTriggered(key: String, value: Throwable)
+
+    /**
+     * This Method is Triggered When UseCases Submit the State or Result To Return it Back to ViewModel
+     * Like Loading, Error, Data
+     */
+    abstract fun onListenerTriggered(key: String, value: CoinaApplicationState<Any>)
+
+    /**
+     * Save The Current UseCases Inside the ViewModel to Clear Them Automaticlly When ViewModel Destroyed
+     */
+    abstract fun getSupportedUseCases(): ArrayList<CoinaUseCaseType<Any>>
+
+    /**
+     * Remove The Instances and listeners when Destroy the ViewModel
+     */
     fun clear(): CoinaEither<Boolean, Exception>
 
 }

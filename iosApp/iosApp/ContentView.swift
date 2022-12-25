@@ -6,6 +6,7 @@ struct ContentView: View {
 
 	var body: some View {
 		Text(greet)
+        Text("Is User Logged In ? \(CoinaApplicationUtils.isUserLoggedIn())" as String)
 	}
 }
 

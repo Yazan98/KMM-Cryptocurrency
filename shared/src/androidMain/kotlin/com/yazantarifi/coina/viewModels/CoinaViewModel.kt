@@ -2,15 +2,19 @@ package com.yazantarifi.coina.viewModels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.viewModels.listeners.CoinaLoadingStateListener
 import com.yazantarifi.coina.viewModels.props.CoinaAction
 import com.yazantarifi.coina.viewModels.props.CoinaEither
 import com.yazantarifi.coina.viewModels.props.CoinaSideEffect
 import com.yazantarifi.coina.viewModels.props.CoinaState
 import com.yazantarifi.coina.viewModels.listeners.CoinaStateListener
+import com.yazantarifi.coina.viewModels.useCases.CoinaUseCaseType
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.cancel
+import kotlinx.coroutines.channels.ReceiveChannel
+import kotlinx.coroutines.channels.consumeEach
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -24,17 +28,22 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState>: Vi
     actual val scope: CoroutineScope = viewModelScope
     actual val sideEffects: ArrayList<CoinaSideEffect<Action, *>> = ArrayList()
     actual val state: MutableStateFlow<State> by lazy { MutableStateFlow(getInitialState()) }
-    actual val loadingState: MutableSharedFlow<Boolean> by lazy { MutableSharedFlow() }
-    actual var stateListener: CoinaStateListener<State>? = null
-    actual var loadingStateListener: CoinaLoadingStateListener? = null
 
-    actual abstract fun onNewAction(action: Action)
+    actual fun initViewModel() {
+        getSupportedUseCases().forEach { useCase ->
+            scope.launch(Dispatchers.IO) {
+                useCase.getChannelListener().consumeEach {
+                    scope.launch(Dispatchers.Main) {
+                        onListenerTriggered(useCase.getUseCaseKey(), it)
+                    }
+                }
 
-    actual abstract fun getInitialState(): State
-
-    actual fun onAcceptLoadingState(newState: Boolean) {
-        scope.launch(Dispatchers.IO) {
-            loadingState.emit(newState)
+                useCase.getErrorChannelListener().consumeEach {
+                    scope.launch(Dispatchers.Main) {
+                        onExceptionListenerTriggered(useCase.getUseCaseKey(), it)
+                    }
+                }
+            }
         }
     }
 
@@ -42,24 +51,6 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState>: Vi
         scope.launch(Dispatchers.IO) {
             state.update {
                 newState
-            }
-        }
-    }
-
-    actual fun registerStateListener(targetStateListener: CoinaStateListener<State>) {
-        this.stateListener = targetStateListener
-        scope.launch(Dispatchers.IO) {
-            state.stateIn(scope).collect {
-                stateListener?.onUpdateState(it)
-            }
-        }
-    }
-
-    actual fun registerLoadingStateListener(targetStateListener: CoinaLoadingStateListener) {
-        this.loadingStateListener = targetStateListener
-        scope.launch(Dispatchers.IO) {
-            loadingState.stateIn(scope).collectLatest {
-                loadingStateListener?.onLoadingStateChanged(it)
             }
         }
     }
@@ -81,11 +72,12 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState>: Vi
 
     actual fun clear(): CoinaEither<Boolean, Exception> {
         return try {
-            loadingStateListener = null
-            stateListener = null
             scope.cancel()
             sideEffects.clear()
-            stateListener = null
+            getSupportedUseCases().forEach {
+                it.clear()
+            }
+
             CoinaEither(true, null)
         } catch (ex: Exception) {
             CoinaEither(null, ex)
@@ -103,5 +95,14 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState>: Vi
         }
         super.onCleared()
     }
+
+    actual abstract fun executeAction(action: Action)
+
+    actual abstract fun getInitialState(): State
+
+    actual abstract fun onListenerTriggered(key: String, value: CoinaApplicationState<Any>)
+    actual abstract fun onExceptionListenerTriggered(key: String, value: Throwable)
+
+    actual abstract fun getSupportedUseCases(): ArrayList<CoinaUseCaseType<Any>>
 
 }
