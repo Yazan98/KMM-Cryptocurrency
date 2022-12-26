@@ -14,35 +14,35 @@ struct CoinsListScreen: View {
     @StateObject var viewModel: CoinsListViewModel = CoinsListViewModel()
     
     var body: some View {
-            VStack {
-                TextField("Search By Coin Symbol or Name", text: $viewModel.searchQuery)
-                    .padding()
-                    .overlay(RoundedRectangle(cornerRadius: 8.0).strokeBorder(CoinaTheme.textColor, style: StrokeStyle(lineWidth: 1.0)))
-                    .foregroundColor(CoinaTheme.textColor)
-                    .padding(.trailing, 20)
-                    .padding(.leading, 20)
-                
-                if viewModel.coinsList.isEmpty {
-                    Spacer()
-                } else {
-                    ScrollView {
-                        LazyVStack {
-                            ForEach(viewModel.coinsList, id: \.self) { item in
-                                CoinRowView(coin: item)
-                            }
+        VStack {
+            TextField("Search By Coin Symbol or Name", text: $viewModel.searchQuery)
+                .padding()
+                .overlay(RoundedRectangle(cornerRadius: 8.0).strokeBorder(CoinaTheme.textColor, style: StrokeStyle(lineWidth: 1.0)))
+                .foregroundColor(CoinaTheme.textColor)
+                .padding(.trailing, 20)
+                .padding(.leading, 20)
+            
+            if viewModel.coinsList.isEmpty {
+                Spacer()
+            } else {
+                ScrollView {
+                    LazyVStack {
+                        ForEach(viewModel.coinsList, id: \.self) { item in
+                            CoinRowView(coin: item)
                         }
                     }
                 }
             }
-            .clipped()
-            .onAppear {
-                if viewModel.viewModelImplemenetation == nil {
-                    viewModel.addViewModelImplementationInstance(instance: CoinsListViewModelImplementation())
-                }
-                
-                viewModel.viewModelImplemenetation?.executeAction(action: CoinsListAction.GetCoinsList())
-            }
         }
+        .clipped()
+        .onAppear {
+            if viewModel.viewModelImplemenetation == nil {
+                viewModel.addViewModelImplementationInstance(instance: CoinsListViewModelImplementation())
+            }
+            
+            viewModel.viewModelImplemenetation?.executeAction(action: CoinsListAction.GetCoinsList())
+        }
+    }
 }
 
 struct CoinsListScreen_Previews: PreviewProvider {

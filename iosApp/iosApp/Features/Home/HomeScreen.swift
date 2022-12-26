@@ -11,27 +11,31 @@ import SwiftUI
 struct HomeScreen: View {
     var body: some View {
         NavigationView {
-            TabView {
-                CoinsListScreen()
-                    .clipped()
-                    .tabItem {
-                        Image(systemName: "house")
-                        Text("Coins")
-                    }
-                CategoriesScreen()
-                    .tabItem {
-                        Image(systemName: "list.bullet")
-                        Text("Categories")
-                    }
-                ExchangesScreen()
-                    .tabItem {
-                        Image(systemName: "star.fill")
-                        Text("Exchanges")
-                    }
+            ZStack {
+                CoinaTheme.backgroundColor.ignoresSafeArea()
+                TabView {
+                    CoinsListScreen()
+                        .clipped()
+                        .tabItem {
+                            Image(systemName: "house")
+                            Text("Coins")
+                        }
+                    CategoriesScreen()
+                        .tabItem {
+                            Image(systemName: "list.bullet")
+                            Text("Categories")
+                        }
+                    ExchangesScreen()
+                        .tabItem {
+                            Image(systemName: "star.fill")
+                            Text("Exchanges")
+                        }
+                }
+                .navigationBarTitle("Coina")
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .navigationBarTitle("Coina")
-            .navigationBarTitleDisplayMode(.inline)
         }
+        
     }
 }
 

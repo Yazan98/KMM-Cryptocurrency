@@ -42,25 +42,25 @@ object ApplicationModule {
     @Provides
     @Singleton
     fun getCoinInfoUseCase(apiManager: ApplicationApiManager): CoinInfoUseCase {
-        return CoinInfoUseCase(apiManager)
+        return CoinInfoUseCase().addDependencies(apiManager)
     }
 
     @Provides
     @Singleton
     fun getGetCategoriesUseCase(apiManager: ApplicationApiManager, database: CategoriesDataSource): GetCategoriesUseCase {
-        return GetCategoriesUseCase(apiManager, database)
+        return GetCategoriesUseCase().addDependencies(apiManager, database)
     }
 
     @Provides
     @Singleton
     fun getGetCategoryCoinsUseCase(apiManager: ApplicationApiManager): GetCategoryCoinsUseCase {
-        return GetCategoryCoinsUseCase(apiManager)
+        return GetCategoryCoinsUseCase().addDependencies(apiManager)
     }
 
     @Provides
     @Singleton
     fun getGetExchangesUseCase(apiManager: ApplicationApiManager, database: ExchangesDataSource): GetExchangesUseCase {
-        return GetExchangesUseCase(apiManager, database)
+        return GetExchangesUseCase().addDependencies(apiManager, database)
     }
 
     @Provides
