@@ -9,8 +9,30 @@
 import SwiftUI
 
 struct ExchangesScreen: View {
+    
+    @StateObject private var viewModel: ExchangesViewModel = ExchangesViewModel()
+    
     var body: some View {
-        Text("Excehanges Screen")
+        VStack {
+            if viewModel.loadingState {
+                ProgressView().progressViewStyle(CircularProgressViewStyle())
+            } else {
+                if viewModel.contentState.isEmpty == false {
+                    ScrollView {
+                        LazyVStack {
+                            ForEach(viewModel.contentState, id: \.self) { item in
+                                ExchangeView(exchange: item)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .clipped()
+        .onAppear {
+            viewModel.initViewModelInstance(viewModelInstance: ExchangesListViewModel())
+            viewModel.viewModelInstance?.executeAction(action: ExchangesAction.GetExchangesList())
+        }
     }
 }
 
