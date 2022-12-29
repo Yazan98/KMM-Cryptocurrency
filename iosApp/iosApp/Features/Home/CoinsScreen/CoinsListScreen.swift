@@ -21,43 +21,51 @@ struct CoinsListScreen: View {
     }
     
     var body: some View {
+        
         VStack {
-            if categoryTarget.isEmpty == true {
-                TextField("Search By Coin Symbol or Name", text: $viewModel.searchQuery)
-                    .padding()
-                    .overlay(RoundedRectangle(cornerRadius: 8.0).strokeBorder(CoinaTheme.textColor, style: StrokeStyle(lineWidth: 1.0)))
-                    .foregroundColor(CoinaTheme.textColor)
-                    .padding(.trailing, 20)
-                    .padding(.leading, 20)
+            if viewModel.loadingState {
+                ProgressView().progressViewStyle(CircularProgressViewStyle())
             } else {
-                Text("")
-                    .navigationTitle(categoryName)
-                    .navigationBarTitleDisplayMode(.inline)
-            }
-            
-            if viewModel.coinsList.isEmpty {
-                Spacer()
-            } else {
-                ScrollView {
-                    LazyVStack {
-                        ForEach(viewModel.coinsList, id: \.self) { item in
-                            CoinRowView(coin: item)
+                    if categoryTarget.isEmpty == true {
+                        TextField("Search By Coin Symbol or Name", text: $viewModel.searchQuery)
+                            .padding()
+                            .overlay(RoundedRectangle(cornerRadius: 8.0).strokeBorder(CoinaTheme.textColor, style: StrokeStyle(lineWidth: 1.0)))
+                            .foregroundColor(CoinaTheme.textColor)
+                            .padding(.trailing, 20)
+                            .padding(.leading, 20)
+                    } else {
+                        Text("")
+                            .navigationTitle(categoryName)
+                            .navigationBarTitleDisplayMode(.inline)
+                    }
+                    
+                    if viewModel.coinsList.isEmpty {
+                        Spacer()
+                    } else {
+                        ScrollView {
+                            LazyVStack {
+                                ForEach(viewModel.coinsList, id: \.self) { item in
+                                    CoinRowView(coin: item)
+                                }
+                            }
                         }
                     }
                 }
-            }
+                
         }
         .clipped()
         .onAppear {
-            if viewModel.viewModelImplemenetation == nil {
-                viewModel.addViewModelImplementationInstance(instance: CoinsListViewModelImplementation())
-            }
-            
-            if categoryTarget.isEmpty {
-                viewModel.viewModelImplemenetation?.executeAction(action: CoinsListAction.GetCoinsList())
-            } else {
-                viewModel.viewModelImplemenetation?.executeAction(action: CoinsListAction.GetCoinsListByCategoryName(categoryName: categoryTarget))
-            }
+                if viewModel.viewModelImplemenetation == nil {
+                    viewModel.addViewModelImplementationInstance(instance: CoinsListViewModelImplementation())
+                }
+                
+                if categoryTarget.isEmpty {
+                    viewModel.viewModelImplemenetation?.executeAction(action: CoinsListAction.GetCoinsList())
+                } else {
+                    viewModel.viewModelImplemenetation?.executeAction(action: CoinsListAction.GetCoinsListByCategoryName(categoryName: categoryTarget))
+                }
         }
+        
+        
     }
 }

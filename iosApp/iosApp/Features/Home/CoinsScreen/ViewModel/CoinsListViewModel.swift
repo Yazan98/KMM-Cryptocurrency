@@ -13,6 +13,7 @@ import shared
     
     @Published var searchQuery: String = ""
     @Published var coinsList: [CoinModel] = []
+    @Published var loadingState: Bool = false
     
     var viewModelImplemenetation: CoinsListViewModelImplementation? = nil
     
@@ -29,7 +30,7 @@ import shared
     }
     
     func onLoadingState(isLoading: Bool) {
-        
+        loadingState = isLoading
     }
     
 }

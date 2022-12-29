@@ -9,7 +9,7 @@
 import Foundation
 import shared
 
-@MainActor class CoinsListViewModelImplementation : CoinaViewModel<CoinsListAction, CoinsListState> {
+class CoinsListViewModelImplementation : CoinaViewModel<CoinsListAction, CoinsListState> {
     
     private var stateListener: CoinaStateListener? = nil
     private var categoryCoinsUseCase = GetCategoryCoinsUseCase().addDependencies(apiManager: CoinaSingletonUtils.getApiManagerInstance())
@@ -28,13 +28,15 @@ import shared
     }
     
     override func executeAction(action: CoinsListAction) {
-        if action is CoinsListAction.GetCoinsList {
-            self.getCoinsList()
-        }
-        
-        if action is CoinsListAction.GetCoinsListByCategoryName {
-            let categoryName = (action as! CoinsListAction.GetCoinsListByCategoryName).categoryName
-            getCoinsByCategoryName(categoryName: categoryName)
+        DispatchQueue.global(qos: .background).async {
+            if action is CoinsListAction.GetCoinsList {
+                self.getCoinsList()
+            }
+            
+            if action is CoinsListAction.GetCoinsListByCategoryName {
+                let categoryName = (action as! CoinsListAction.GetCoinsListByCategoryName).categoryName
+                self.getCoinsByCategoryName(categoryName: categoryName)
+            }
         }
     }
     
@@ -47,15 +49,17 @@ import shared
     }
     
     override func onListenerTriggered(key: String, value: CoinaApplicationState<AnyObject>) {
-        if key == coinsUseCase.getUseCaseKey() || key == categoryCoinsUseCase.getUseCaseKey() {
-            value.handleResult(onSuccess: { result in
-                let coinsList = result as! [CoinModel]
-                self.stateListener?.onStatetriggered(state: CoinsListState.ListState(list: coinsList))
-            }, onError: { exception in
-                self.stateListener?.onStatetriggered(state: CoinsListState.ErrorState(message: exception.exception?.message ?? ""))
-            }, onLoading: { loadingState in
-                self.stateListener?.onLoadingState(isLoading: loadingState as! Bool)
-            })
+        DispatchQueue.main.async {
+            if key == self.coinsUseCase.getUseCaseKey() || key == self.categoryCoinsUseCase.getUseCaseKey() {
+                value.handleResult(onSuccess: { result in
+                    let coinsList = result as! [CoinModel]
+                    self.stateListener?.onStatetriggered(state: CoinsListState.ListState(list: coinsList))
+                }, onError: { exception in
+                    self.stateListener?.onStatetriggered(state: CoinsListState.ErrorState(message: exception.exception?.message ?? ""))
+                }, onLoading: { loadingState in
+                    self.stateListener?.onLoadingState(isLoading: loadingState as! Bool)
+                })
+            }
         }
     }
     
