@@ -40,6 +40,7 @@ struct ExchangeView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(Color.gray)
                 }
+                .frame(minWidth: 200)
             }
             
             var year = exchange.yearEstablished ?? 0

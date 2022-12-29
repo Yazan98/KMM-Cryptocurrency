@@ -1,6 +1,6 @@
 package com.yazantarifi.coina.database.models
 
-import com.yazantarifi.coina.models.Category
+import com.yazantarifi.coina.models.CategoryModel
 import io.realm.kotlin.ext.realmListOf
 import io.realm.kotlin.types.RealmList
 import io.realm.kotlin.types.RealmObject
@@ -15,13 +15,13 @@ open class RealmCategory: RealmObject {
     var marketGap: Double? = 0.0
 
     companion object {
-        fun toCategory(realmCategory: RealmCategory): Category {
+        fun toCategory(realmCategory: RealmCategory): CategoryModel {
             val images = ArrayList<String>()
             realmCategory.images?.forEach {
                 images.add(it)
             }
 
-            return Category(
+            return CategoryModel(
                 realmCategory.id,
                 realmCategory.name,
                 realmCategory.content,

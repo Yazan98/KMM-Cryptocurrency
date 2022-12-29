@@ -6,7 +6,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Category(
+data class CategoryModel(
     @SerialName("id") var id: String? = "",
     @SerialName("name") var name: String? = "",
     @SerialName("content") var content: String? = "",
@@ -14,7 +14,7 @@ data class Category(
     @SerialName("top_3_coins") var topCoins: ArrayList<String>? = null,
 ) {
     companion object {
-        fun toRealmCategory(category: Category): RealmCategory {
+        fun toRealmCategory(category: CategoryModel): RealmCategory {
             return RealmCategory().apply {
                 id = category.id ?: ""
                 name = category.name ?: ""

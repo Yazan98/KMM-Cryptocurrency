@@ -7,7 +7,7 @@ import com.yazantarifi.android.home.action.CategoriesAction
 import com.yazantarifi.android.home.state.CategoriesState
 import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.database.CategoriesDataSource
-import com.yazantarifi.coina.models.Category
+import com.yazantarifi.coina.models.CategoryModel
 import com.yazantarifi.coina.useCases.GetCategoriesUseCase
 import com.yazantarifi.coina.viewModels.CoinaViewModel
 import com.yazantarifi.coina.viewModels.useCases.CoinaUseCaseType
@@ -23,7 +23,7 @@ class CategoriesViewModel @Inject constructor(
 ): CoinaViewModel<CategoriesAction, CategoriesState>() {
 
     val screenLoadingState: MutableState<Boolean> by lazy { mutableStateOf(false) }
-    val screenContentState: MutableState<ArrayList<Category>> by lazy { mutableStateOf(arrayListOf()) }
+    val screenContentState: MutableState<ArrayList<CategoryModel>> by lazy { mutableStateOf(arrayListOf()) }
     init {
         initializeViewModel()
     }
@@ -48,7 +48,7 @@ class CategoriesViewModel @Inject constructor(
     override fun onListenerTriggered(key: String, value: CoinaApplicationState<Any>) {
         if (key == GetCategoriesUseCase.KEY) {
             value.handleResult({
-                (it as? ArrayList<Category>)?.let {
+                (it as? ArrayList<CategoryModel>)?.let {
                     screenContentState.value = it
                 }
             }, {

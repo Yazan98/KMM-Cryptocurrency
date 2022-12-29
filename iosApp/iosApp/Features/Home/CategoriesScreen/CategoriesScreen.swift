@@ -7,15 +7,32 @@
 //
 
 import SwiftUI
+import shared
 
 struct CategoriesScreen: View {
+    
+    @StateObject private var viewModel: CategoriesViewModel = CategoriesViewModel()
+    
     var body: some View {
-        Text("Categories Screen")
-    }
-}
-
-struct CategoriesScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        CategoriesScreen()
+        VStack {
+            if viewModel.loadingState {
+                ProgressView().progressViewStyle(CircularProgressViewStyle())
+            } else {
+                if viewModel.listState.isEmpty == false {
+                    ScrollView {
+                        LazyVStack {
+                            ForEach(Array(viewModel.listState.enumerated()), id: \.offset) { index, element in
+                                CategoryView(category: element, index: index)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .clipped()
+        .onAppear {
+            viewModel.addViewModelInstance(instance: CategoriesViewModelImplementation())
+            viewModel.viewModelInstance?.executeAction(action: CategoriesAction.GetCategoriesAction())
+        }
     }
 }

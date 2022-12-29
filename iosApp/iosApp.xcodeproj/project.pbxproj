@@ -30,6 +30,11 @@
 		8A4532FD295A1ABA001D4682 /* ExchangesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4532FC295A1ABA001D4682 /* ExchangesAction.swift */; };
 		8A4532FF295A1AF0001D4682 /* ExchangesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4532FE295A1AF0001D4682 /* ExchangesListViewModel.swift */; };
 		8A453301295A1DC1001D4682 /* ExchangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A453300295A1DC1001D4682 /* ExchangeView.swift */; };
+		8A453303295D41F5001D4682 /* CategoriesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A453302295D41F5001D4682 /* CategoriesState.swift */; };
+		8A453306295D42CB001D4682 /* CategoriesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A453305295D42CB001D4682 /* CategoriesAction.swift */; };
+		8A453308295D42F2001D4682 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A453307295D42F2001D4682 /* CategoriesViewModel.swift */; };
+		8A45330A295D4345001D4682 /* CategoriesViewModelImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A453309295D4345001D4682 /* CategoriesViewModelImplementation.swift */; };
+		8A45330C295D45ED001D4682 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A45330B295D45ED001D4682 /* CategoryView.swift */; };
 		8A64E1FE295763B800CDE592 /* CoinaApplicationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E1FD295763B800CDE592 /* CoinaApplicationUtils.swift */; };
 		8A64E204295766B800CDE592 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E203295766B800CDE592 /* LoginScreen.swift */; };
 		8A64E206295766C100CDE592 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64E205295766C100CDE592 /* AuthViewModel.swift */; };
@@ -66,6 +71,11 @@
 		8A4532FC295A1ABA001D4682 /* ExchangesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangesAction.swift; sourceTree = "<group>"; };
 		8A4532FE295A1AF0001D4682 /* ExchangesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangesListViewModel.swift; sourceTree = "<group>"; };
 		8A453300295A1DC1001D4682 /* ExchangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeView.swift; sourceTree = "<group>"; };
+		8A453302295D41F5001D4682 /* CategoriesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesState.swift; sourceTree = "<group>"; };
+		8A453305295D42CB001D4682 /* CategoriesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesAction.swift; sourceTree = "<group>"; };
+		8A453307295D42F2001D4682 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		8A453309295D4345001D4682 /* CategoriesViewModelImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModelImplementation.swift; sourceTree = "<group>"; };
+		8A45330B295D45ED001D4682 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		8A64E1FD295763B800CDE592 /* CoinaApplicationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinaApplicationUtils.swift; sourceTree = "<group>"; };
 		8A64E203295766B800CDE592 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		8A64E205295766C100CDE592 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -148,6 +158,7 @@
 		8A075C9A29588B8400FEFF23 /* CategoriesScreen */ = {
 			isa = PBXGroup;
 			children = (
+				8A453304295D42AB001D4682 /* ViewModel */,
 				8A075C9529588AD300FEFF23 /* CategoriesScreen.swift */,
 			);
 			path = CategoriesScreen;
@@ -180,6 +191,17 @@
 				8A4532FA295A1A66001D4682 /* ExchangesState.swift */,
 				8A4532FC295A1ABA001D4682 /* ExchangesAction.swift */,
 				8A4532FE295A1AF0001D4682 /* ExchangesListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8A453304295D42AB001D4682 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8A453302295D41F5001D4682 /* CategoriesState.swift */,
+				8A453305295D42CB001D4682 /* CategoriesAction.swift */,
+				8A453307295D42F2001D4682 /* CategoriesViewModel.swift */,
+				8A453309295D4345001D4682 /* CategoriesViewModelImplementation.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -241,6 +263,7 @@
 			children = (
 				8A075CA42958977300FEFF23 /* CoinRowView.swift */,
 				8A453300295A1DC1001D4682 /* ExchangeView.swift */,
+				8A45330B295D45ED001D4682 /* CategoryView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -389,8 +412,10 @@
 				8A64E206295766C100CDE592 /* AuthViewModel.swift in Sources */,
 				8A453301295A1DC1001D4682 /* ExchangeView.swift in Sources */,
 				8A075C91295872C000FEFF23 /* CoinaTheme.swift in Sources */,
+				8A453303295D41F5001D4682 /* CategoriesState.swift in Sources */,
 				8A075CA129588CD400FEFF23 /* CoinsListAction.swift in Sources */,
 				8A075C8D2958502000FEFF23 /* AppExtentions.swift in Sources */,
+				8A45330C295D45ED001D4682 /* CategoryView.swift in Sources */,
 				8A4532F9295A1A28001D4682 /* ExchangesViewModel.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				8A4532FB295A1A66001D4682 /* ExchangesState.swift in Sources */,
@@ -404,11 +429,14 @@
 				8A075C9429588AC200FEFF23 /* CoinsListScreen.swift in Sources */,
 				8A64E204295766B800CDE592 /* LoginScreen.swift in Sources */,
 				8A075CA52958977300FEFF23 /* CoinRowView.swift in Sources */,
+				8A45330A295D4345001D4682 /* CategoriesViewModelImplementation.swift in Sources */,
 				8A075C9629588AD300FEFF23 /* CategoriesScreen.swift in Sources */,
 				8A075C8929583F3A00FEFF23 /* CoinaSingletonUtils.swift in Sources */,
 				8A64E1FE295763B800CDE592 /* CoinaApplicationUtils.swift in Sources */,
+				8A453308295D42F2001D4682 /* CategoriesViewModel.swift in Sources */,
 				8A075CA9295899FF00FEFF23 /* RemoteImageView.swift in Sources */,
 				8A075C9F29588CB100FEFF23 /* CoinsListViewModelImplementation.swift in Sources */,
+				8A453306295D42CB001D4682 /* CategoriesAction.swift in Sources */,
 				8A075C8F2958507600FEFF23 /* HomeScreen.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				8A075C8B2958499C00FEFF23 /* CoinaStateListener.swift in Sources */,

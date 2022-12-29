@@ -14,6 +14,15 @@ class CoinaSingletonUtils {
     private static var applicationApiServiceInstance: ApplicationApiManager? = nil
     private static var coinsDataSource: CoinsDataSource? = nil
     private static var exchangesDataSource: ExchangesDataSource? = nil
+    private static var categoriesDataSource: CategoriesDataSource? = nil
+    
+    static func getCategoriesDataSource() -> CategoriesDataSource {
+        if categoriesDataSource == nil {
+            categoriesDataSource = CategoriesDataSource()
+        }
+        
+        return categoriesDataSource ?? CategoriesDataSource()
+    }
     
     static func getExchangesDataSourceInstance() -> ExchangesDataSource {
         if exchangesDataSource == nil {

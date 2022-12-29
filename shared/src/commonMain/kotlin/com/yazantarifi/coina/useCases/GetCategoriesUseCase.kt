@@ -3,14 +3,12 @@ package com.yazantarifi.coina.useCases
 import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.api.requests.ApplicationApiManager
 import com.yazantarifi.coina.database.CategoriesDataSource
-import com.yazantarifi.coina.database.CoinsDataSource
-import com.yazantarifi.coina.models.Category
+import com.yazantarifi.coina.models.CategoryModel
 import com.yazantarifi.coina.viewModels.useCases.CoinaUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
-class GetCategoriesUseCase: CoinaUseCase<Unit, ArrayList<Category>>() {
+class GetCategoriesUseCase: CoinaUseCase<Unit, ArrayList<CategoryModel>>() {
 
     private var apiManager: ApplicationApiManager? = null
     private var dataSource: CategoriesDataSource? = null

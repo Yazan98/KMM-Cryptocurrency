@@ -6,7 +6,7 @@ import com.yazantarifi.coina.api.CoinaResponseCode
 import com.yazantarifi.coina.database.CategoriesDataSource
 import com.yazantarifi.coina.database.CoinsDataSource
 import com.yazantarifi.coina.database.ExchangesDataSource
-import com.yazantarifi.coina.models.Category
+import com.yazantarifi.coina.models.CategoryModel
 import com.yazantarifi.coina.models.CoinInformation
 import com.yazantarifi.coina.models.CoinModel
 import com.yazantarifi.coina.models.ExchangeModel
@@ -112,12 +112,12 @@ class ApplicationApiManager: ApplicationApiManagerImplementation {
 
     override suspend fun getCategories(
         database: CategoriesDataSource,
-        onNewStateTriggered: (CoinaApplicationState<ArrayList<Category>>) -> Unit
+        onNewStateTriggered: (CoinaApplicationState<ArrayList<CategoryModel>>) -> Unit
     ) {
         withContext(Dispatchers.Default) {
             try {
                 if (database.isDataSourceEmpty()) {
-                    val request: ArrayList<Category> = httpClient?.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_LIST_CATEGORIES)?.body() ?: ArrayList()
+                    val request: ArrayList<CategoryModel> = httpClient?.get(CoinaApiInfo.COINS_BASE_URL + CoinaApiLinks.COINS_LIST_CATEGORIES)?.body() ?: ArrayList()
                     database.writeCategoriesData(request)
                     onNewStateTriggered(CoinaApplicationState.Success(request))
                 } else {
