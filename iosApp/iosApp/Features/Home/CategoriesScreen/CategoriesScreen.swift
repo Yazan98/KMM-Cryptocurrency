@@ -22,7 +22,9 @@ struct CategoriesScreen: View {
                     ScrollView {
                         LazyVStack {
                             ForEach(Array(viewModel.listState.enumerated()), id: \.offset) { index, element in
-                                CategoryView(category: element, index: index)
+                                NavigationLink(destination: CoinsListScreen(categoryTarget: element.id ?? "", categoryName: element.name ?? "")) {
+                                    CategoryView(category: element, index: index)
+                                }
                             }
                         }
                     }

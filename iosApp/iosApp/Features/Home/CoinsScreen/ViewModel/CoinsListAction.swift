@@ -11,4 +11,10 @@ import shared
 
 public class CoinsListAction : NSObject, CoinaAction {
     public class GetCoinsList: CoinsListAction {}
+    public class GetCoinsListByCategoryName: CoinsListAction {
+        public var categoryName: String
+        init(categoryName: String) {
+            self.categoryName = categoryName
+        }
+    }
 }

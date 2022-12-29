@@ -12,15 +12,28 @@ import shared
 struct CoinsListScreen: View {
     
     @StateObject var viewModel: CoinsListViewModel = CoinsListViewModel()
+    var categoryTarget: String = ""
+    var categoryName: String = ""
+    
+    init(categoryTarget: String, categoryName: String) {
+        self.categoryTarget = categoryTarget
+        self.categoryName = categoryName
+    }
     
     var body: some View {
         VStack {
-            TextField("Search By Coin Symbol or Name", text: $viewModel.searchQuery)
-                .padding()
-                .overlay(RoundedRectangle(cornerRadius: 8.0).strokeBorder(CoinaTheme.textColor, style: StrokeStyle(lineWidth: 1.0)))
-                .foregroundColor(CoinaTheme.textColor)
-                .padding(.trailing, 20)
-                .padding(.leading, 20)
+            if categoryTarget.isEmpty == true {
+                TextField("Search By Coin Symbol or Name", text: $viewModel.searchQuery)
+                    .padding()
+                    .overlay(RoundedRectangle(cornerRadius: 8.0).strokeBorder(CoinaTheme.textColor, style: StrokeStyle(lineWidth: 1.0)))
+                    .foregroundColor(CoinaTheme.textColor)
+                    .padding(.trailing, 20)
+                    .padding(.leading, 20)
+            } else {
+                Text("")
+                    .navigationTitle(categoryName)
+                    .navigationBarTitleDisplayMode(.inline)
+            }
             
             if viewModel.coinsList.isEmpty {
                 Spacer()
@@ -40,13 +53,11 @@ struct CoinsListScreen: View {
                 viewModel.addViewModelImplementationInstance(instance: CoinsListViewModelImplementation())
             }
             
-            viewModel.viewModelImplemenetation?.executeAction(action: CoinsListAction.GetCoinsList())
+            if categoryTarget.isEmpty {
+                viewModel.viewModelImplemenetation?.executeAction(action: CoinsListAction.GetCoinsList())
+            } else {
+                viewModel.viewModelImplemenetation?.executeAction(action: CoinsListAction.GetCoinsListByCategoryName(categoryName: categoryTarget))
+            }
         }
-    }
-}
-
-struct CoinsListScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        CoinsListScreen()
     }
 }

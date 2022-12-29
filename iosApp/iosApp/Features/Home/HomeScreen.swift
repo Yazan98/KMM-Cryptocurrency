@@ -14,7 +14,7 @@ struct HomeScreen: View {
             ZStack {
                 CoinaTheme.backgroundColor.ignoresSafeArea()
                 TabView {
-                    CoinsListScreen()
+                    CoinsListScreen(categoryTarget: "", categoryName: "")
                         .clipped()
                         .tabItem {
                             Image(systemName: "house")
