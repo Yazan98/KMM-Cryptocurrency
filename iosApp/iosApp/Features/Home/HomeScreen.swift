@@ -9,23 +9,28 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    
+    private let coinsListScreen = CoinsListScreen(categoryTarget: "", categoryName: "")
+    private let categoriesListScreen = CategoriesScreen()
+    private let exchangesListScreen = ExchangesScreen()
+    
     var body: some View {
         NavigationView {
             ZStack {
                 CoinaTheme.backgroundColor.ignoresSafeArea()
                 TabView {
-                    CoinsListScreen(categoryTarget: "", categoryName: "")
+                    coinsListScreen
                         .clipped()
                         .tabItem {
                             Image(systemName: "house")
                             Text("Coins")
                         }
-                    CategoriesScreen()
+                    categoriesListScreen
                         .tabItem {
                             Image(systemName: "list.bullet")
                             Text("Categories")
                         }
-                    ExchangesScreen()
+                    exchangesListScreen
                         .tabItem {
                             Image(systemName: "star.fill")
                             Text("Exchanges")
