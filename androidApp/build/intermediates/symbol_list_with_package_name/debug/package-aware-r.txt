@@ -1804,6 +1804,7 @@ color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
 color purple_200
+color purple_200_height
 color purple_500
 color purple_700
 color ripple_material_dark

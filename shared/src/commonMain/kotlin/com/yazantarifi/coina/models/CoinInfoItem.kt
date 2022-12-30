@@ -1,6 +1,7 @@
 package com.yazantarifi.coina.models
 
 import com.yazantarifi.coina.formatDecimalSeparator
+import kotlin.jvm.JvmField
 
 data class CoinInfoItem(
     val type: Int,
@@ -10,11 +11,12 @@ data class CoinInfoItem(
     val chart: ArrayList<Double>? = null,
 ) {
     companion object {
-        const val TYPE_TITLE = 1
-        const val TYPE_CHART = 2
-        const val TYPE_SECTION_TITLE = 3
-        const val TYPE_SECTION = 4
-        const val TYPE_DESCRIPTION = 5
+
+        @JvmField val TYPE_TITLE = 1
+        @JvmField val TYPE_CHART = 2
+        @JvmField val TYPE_SECTION_TITLE = 3
+        @JvmField val TYPE_SECTION = 4
+        @JvmField val TYPE_DESCRIPTION = 5
 
 
         fun getScreenItems(coinInformation: CoinInformation?): ArrayList<CoinInfoItem> {

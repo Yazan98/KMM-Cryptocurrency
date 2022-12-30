@@ -784,6 +784,7 @@
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
     <color name="purple_200">#FF5252</color>
+    <color name="purple_200_height">#EF0606</color>
     <color name="purple_500">#FF5252</color>
     <color name="purple_700">#FF5252</color>
     <color name="ripple_material_dark">#33ffffff</color>

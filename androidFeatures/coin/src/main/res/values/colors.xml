@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="black" type="color">#000000</item>
+    <color name="purple_200">#FF5252</color>
+    <color name="purple_200_height">#EF0606</color>
+</resources>

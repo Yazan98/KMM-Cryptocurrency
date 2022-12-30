@@ -25,11 +25,13 @@ struct HomeScreen: View {
                             Image(systemName: "house")
                             Text("Coins")
                         }
+                    
                     categoriesListScreen
                         .tabItem {
                             Image(systemName: "list.bullet")
                             Text("Categories")
                         }
+                    
                     exchangesListScreen
                         .tabItem {
                             Image(systemName: "star.fill")

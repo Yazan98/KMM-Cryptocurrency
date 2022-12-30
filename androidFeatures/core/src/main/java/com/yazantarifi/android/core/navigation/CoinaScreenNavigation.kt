@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 
 enum class CoinaScreenNavigation constructor(private val screenPath: String) {
-    HOME_SCREEN("com.yazantarifi.android.home.HomeScreen"),
+    HOME_SCREEN("com.yazantarifi.android.home.screens.HomeScreen"),
     COIN_VIEW("com.yazantarifi.coin.CoinViewScreen");
 
     companion object {
