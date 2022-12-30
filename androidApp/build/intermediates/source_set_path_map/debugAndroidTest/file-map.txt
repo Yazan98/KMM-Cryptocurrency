@@ -1,0 +1,6 @@
+com.yazantarifi.coina.android.test.androidApp-androidTest-0 /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/generated/res/resValues/androidTest/debug
+com.yazantarifi.coina.android.test.androidApp-mergeDebugAndroidTestResources-1 /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.yazantarifi.coina.android.test.androidApp-mergeDebugAndroidTestResources-2 /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.yazantarifi.coina.android.test.androidApp-merged_res-3 /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/merged_res/debugAndroidTest
+com.yazantarifi.coina.android.test.androidApp-androidTest-4 /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/androidTest/res
+com.yazantarifi.coina.android.test.androidApp-androidTestDebug-5 /Users/yazantarifi/DevelopmentProjects/Coina/androidApp/src/androidTestDebug/res

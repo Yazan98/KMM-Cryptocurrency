@@ -1307,6 +1307,7 @@ color gray_2
 color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color icons_color
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color

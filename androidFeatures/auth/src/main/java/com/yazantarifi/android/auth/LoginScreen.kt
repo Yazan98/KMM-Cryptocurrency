@@ -4,6 +4,7 @@ package com.yazantarifi.android.auth
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -78,7 +79,9 @@ class LoginScreen : BaseScreen() {
                 )
             }
         ) {
-            Box(modifier = Modifier.padding(it)) {
+            Box(modifier = Modifier
+                .padding(it)
+                .background(ApplicationColors.getScreenBackgroundColor())) {
                 if (viewModel.loginStateListener.value) {
                     CoinaScreenNavigation.startScreen(this@LoginScreen, CoinaScreenNavigation.HOME_SCREEN)
                     finish()
@@ -108,14 +111,16 @@ class LoginScreen : BaseScreen() {
                             text = stringResource(id = R.string.welcome_back),
                             fontSize = TextUnit(20f, TextUnitType.Sp),
                             textAlign = TextAlign.Center,
-                            fontWeight = FontWeight.Bold
+                            fontWeight = FontWeight.Bold,
+                            color = ApplicationColors.getTextColor()
                         )
                         Spacer(modifier = Modifier.height(5.dp))
                         Text(
                             text = stringResource(id = R.string.welcome_back_sub),
                             fontSize = TextUnit(20f, TextUnitType.Sp),
                             textAlign = TextAlign.Center,
-                            modifier = Modifier.padding(10.dp)
+                            modifier = Modifier.padding(10.dp),
+                            color = ApplicationColors.getTextColor()
                         )
 
                         Column(modifier = Modifier.padding(20.dp)) {
@@ -127,7 +132,8 @@ class LoginScreen : BaseScreen() {
                             Text(
                                 modifier = Modifier.fillMaxWidth(),
                                 text = stringResource(id = R.string.forget_password),
-                                textAlign = TextAlign.End
+                                textAlign = TextAlign.End,
+                                color = ApplicationColors.getTextColor(),
                             )
 
                             Spacer(modifier = Modifier.height(25.dp))
@@ -157,18 +163,19 @@ class LoginScreen : BaseScreen() {
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Divider(
-                                    color = ApplicationColors.getOutlineColor(),
+                                    color = ApplicationColors.getTextColor(),
                                     thickness = 1.dp,
                                     modifier = Modifier.width(75.dp)
                                 )
                                 Spacer(modifier = Modifier.width(10.dp))
                                 Text(
                                     text = stringResource(id = R.string.continue_with),
-                                    modifier = Modifier.wrapContentWidth()
+                                    modifier = Modifier.wrapContentWidth(),
+                                    color = ApplicationColors.getTextColor()
                                 )
                                 Spacer(modifier = Modifier.width(10.dp))
                                 Divider(
-                                    color = ApplicationColors.getOutlineColor(),
+                                    color = ApplicationColors.getTextColor(),
                                     thickness = 1.dp,
                                     modifier = Modifier.width(75.dp)
                                 )
@@ -186,7 +193,7 @@ class LoginScreen : BaseScreen() {
                                     onClick = {
 
                                     },
-                                    backgroundColor = ApplicationColors.getScreenBackgroundColor(),
+                                    backgroundColor = ApplicationColors.getTextColor(),
                                     contentColor = Color.White
                                 ) {
                                     AsyncImage(
@@ -204,7 +211,7 @@ class LoginScreen : BaseScreen() {
                                     onClick = {
 
                                     },
-                                    backgroundColor = ApplicationColors.getScreenBackgroundColor(),
+                                    backgroundColor = ApplicationColors.getTextColor(),
                                     contentColor = Color.White
                                 ) {
                                     AsyncImage(
@@ -225,7 +232,7 @@ class LoginScreen : BaseScreen() {
                                 horizontalArrangement = Arrangement.Center,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Text(text = stringResource(id = R.string.not_a_member))
+                                Text(text = stringResource(id = R.string.not_a_member),  color = ApplicationColors.getTextColor())
                                 Spacer(modifier = Modifier.width(10.dp))
                                 Text(text = stringResource(id = R.string.register_now), color = Color(0xFF3a75ea))
                             }

@@ -21,7 +21,13 @@ fun LoginEmailTextField(viewModel: AuthViewModel) {
     OutlinedTextField(
         modifier = Modifier.fillMaxWidth(),
         value = text,
-        colors = TextFieldDefaults.outlinedTextFieldColors(focusedLabelColor = ApplicationColors.getApplicationColor(), focusedBorderColor = ApplicationColors.getApplicationColor()),
+        colors = TextFieldDefaults.outlinedTextFieldColors(
+            focusedLabelColor = ApplicationColors.getApplicationColor(),
+            focusedBorderColor = ApplicationColors.getApplicationColor(),
+            textColor = ApplicationColors.getTextColor(),
+            unfocusedLabelColor = ApplicationColors.getTextColor(),
+            unfocusedBorderColor = ApplicationColors.getTextColor()
+        ),
         placeholder = { Text(text = stringResource(id = R.string.email_hint)) },
         onValueChange = {
             text = it

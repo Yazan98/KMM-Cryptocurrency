@@ -37,7 +37,13 @@ fun LoginPasswordTextField(viewModel: AuthViewModel) {
         },
         label = { Text(stringResource(id = R.string.email_pass)) },
         singleLine = true,
-        colors = TextFieldDefaults.outlinedTextFieldColors(focusedLabelColor = ApplicationColors.getApplicationColor(), focusedBorderColor = ApplicationColors.getApplicationColor()),
+        colors = TextFieldDefaults.outlinedTextFieldColors(
+            focusedLabelColor = ApplicationColors.getApplicationColor(),
+            focusedBorderColor = ApplicationColors.getApplicationColor(),
+            textColor = ApplicationColors.getTextColor(),
+            unfocusedLabelColor = ApplicationColors.getTextColor(),
+            unfocusedBorderColor = ApplicationColors.getTextColor()
+        ),
         visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
         trailingIcon = {

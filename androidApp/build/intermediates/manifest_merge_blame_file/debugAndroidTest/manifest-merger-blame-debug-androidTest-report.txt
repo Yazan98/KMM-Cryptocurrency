@@ -1,0 +1,34 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.yazantarifi.coina.android.test" >
+4
+5    <uses-sdk
+5-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest554706585683250314.xml:5:5-74
+6        android:minSdkVersion="24"
+6-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest554706585683250314.xml:5:15-41
+7        android:targetSdkVersion="33" />
+7-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest554706585683250314.xml:5:42-71
+8
+9    <instrumentation
+9-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest554706585683250314.xml:11:5-15:79
+10        android:name="android.test.InstrumentationTestRunner"
+10-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest554706585683250314.xml:11:22-75
+11        android:functionalTest="false"
+11-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest554706585683250314.xml:14:22-52
+12        android:handleProfiling="false"
+12-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest554706585683250314.xml:13:22-53
+13        android:label="Tests for com.yazantarifi.coina.android"
+13-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest554706585683250314.xml:15:22-77
+14        android:targetPackage="com.yazantarifi.coina.android" />
+14-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest554706585683250314.xml:12:22-75
+15
+16    <application
+16-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest554706585683250314.xml:7:5-9:19
+17        android:debuggable="true"
+18        android:extractNativeLibs="false" >
+19        <uses-library android:name="android.test.runner" />
+19-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest554706585683250314.xml:8:9-60
+19-->/Users/yazantarifi/DevelopmentProjects/Coina/androidApp/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest554706585683250314.xml:8:23-57
+20    </application>
+21
+22</manifest>
