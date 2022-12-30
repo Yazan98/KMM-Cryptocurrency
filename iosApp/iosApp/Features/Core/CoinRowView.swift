@@ -12,7 +12,8 @@ import shared
 struct CoinRowView: View {
     var coin: CoinModel
     var body: some View {
-        NavigationLink(destination: CoinInformationScreen(coinId: coin.id ?? "", name: coin.name ?? "", isPriceChanges: coin.getPriceChanges() > 0.0)) {
+        let priceChange: Double = Double(truncating: coin.percentChange!)
+        NavigationLink(destination: CoinInformationScreen(coinId: coin.id ?? "", name: coin.name ?? "", isPriceChanges: priceChange > 0.0)) {
             HStack {
                 HStack {
                     RemoteImageView(
@@ -45,9 +46,7 @@ struct CoinRowView: View {
                     Text("$\(PriceExt().formatDecimalSeparator(price: Double(truncating: coin.price!)))")
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .foregroundColor(CoinaTheme.textColor)
-                    
-                    let priceChange: Double = Double(truncating: coin.percentChange!)
-                    
+                                        
                     HStack {
                         if priceChange > 0.0 {
                             Image(systemName: "chevron.up")
