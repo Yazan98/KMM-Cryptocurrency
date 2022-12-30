@@ -9,7 +9,7 @@
 import Foundation
 import shared
 
-@MainActor class AuthViewModelImplementation : CoinaViewModel<AuthAction, AuthState> {
+class AuthViewModelImplementation : CoinaViewModel<AuthAction, AuthState> {
     
     private var stateListener: CoinaStateListener? = nil
     private var authUseCase: AuthUseCase = AuthUseCase().addDependencies(apiManager: CoinaSingletonUtils.getApiManagerInstance(), database: CoinaSingletonUtils.getCoinsDataSourceInstance())
@@ -24,8 +24,10 @@ import shared
     }
     
     override func executeAction(action: AuthAction) {
-        if (action is LoginAction) {
-            onLoginUserAction(action: action)
+        DispatchQueue.global(qos: .background).async {
+            if (action is LoginAction) {
+                self.onLoginUserAction(action: action)
+            }
         }
     }
     
@@ -35,20 +37,24 @@ import shared
     }
     
     override func onListenerTriggered(key: String, value: CoinaApplicationState<AnyObject>) {
-        if key == self.authUseCase.getUseCaseKey() {
-            value.handleResult(onSuccess: { payload in
-                self.stateListener?.onStatetriggered(state: AuthState.SuccessState())
-            }, onError: { exception in
-                self.stateListener?.onStatetriggered(state: AuthState.ErrorState(message: exception.exception?.message ?? ""))
-            }, onLoading: { loadingState in
-                self.stateListener?.onLoadingState(isLoading: loadingState as! Bool)
-            })
+        DispatchQueue.main.async {
+            if key == self.authUseCase.getUseCaseKey() {
+                value.handleResult(onSuccess: { payload in
+                    self.stateListener?.onStatetriggered(state: AuthState.SuccessState())
+                }, onError: { exception in
+                    self.stateListener?.onStatetriggered(state: AuthState.ErrorState(message: exception.exception?.message ?? ""))
+                }, onLoading: { loadingState in
+                    self.stateListener?.onLoadingState(isLoading: loadingState as! Bool)
+                })
+            }
         }
     }
     
     override func onExceptionListenerTriggered(key: String, value: KotlinThrowable) {
-        print("Exception Triggered")
-        self.stateListener?.onStatetriggered(state: AuthState.ErrorState(message: value.message ?? ""))
+        DispatchQueue.main.async {
+            print("Exception Triggered")
+            self.stateListener?.onStatetriggered(state: AuthState.ErrorState(message: value.message ?? ""))
+        }
     }
     
     override func getSupportedUseCases() -> NSMutableArray {

@@ -55,7 +55,6 @@ class AuthViewModel @Inject constructor(
                 }
             }, {
                 loginErrorMessageListener.value = it.exception?.message ?: ""
-                loginErrorMessageListener.value = ""
             }, {
                 loginLoadingState.value = it
             })

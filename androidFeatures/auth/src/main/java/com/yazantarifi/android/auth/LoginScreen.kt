@@ -84,9 +84,12 @@ class LoginScreen : BaseScreen() {
                     finish()
                 }
 
-                LaunchedEffect(viewModel.loginErrorMessageListener.value.isNotEmpty()) {
-                    coroutineScope.launch {
-                        scaffoldState.snackbarHostState.showSnackbar(viewModel.loginErrorMessageListener.value)
+                LaunchedEffect(viewModel.loginErrorMessageListener.value) {
+                    if (viewModel.loginErrorMessageListener.value.isNotEmpty()) {
+                        coroutineScope.launch {
+                            scaffoldState.snackbarHostState.showSnackbar(viewModel.loginErrorMessageListener.value)
+                            viewModel.loginErrorMessageListener.value = ""
+                        }
                     }
                 }
 

@@ -61,10 +61,6 @@ struct LoginScreen: View {
                             }
                             
                             Button(action: {
-                                if viewModel.viewModelImplementation == nil {
-                                    viewModel.addViewModelImplementatio(impl: AuthViewModelImplementation())
-                                }
-                                
                                 viewModel.viewModelImplementation?.executeAction(action: LoginAction(arguments: LoginArgs(email: viewModel.email, password: viewModel.password)))
                             }) {
                                 Text("Login")
@@ -154,6 +150,12 @@ struct LoginScreen: View {
                         Spacer()
                     }
                 }
+            }
+            .onAppear {
+                if viewModel.viewModelImplementation == nil {
+                    viewModel.addViewModelImplementatio(impl: AuthViewModelImplementation())
+                }
+                
             }
             .navigationTitle("Coina")
             .navigationBarTitleDisplayMode(.inline)
