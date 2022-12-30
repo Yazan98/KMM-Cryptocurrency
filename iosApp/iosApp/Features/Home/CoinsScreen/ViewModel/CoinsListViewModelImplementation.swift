@@ -37,6 +37,18 @@ class CoinsListViewModelImplementation : CoinaViewModel<CoinsListAction, CoinsLi
                 let categoryName = (action as! CoinsListAction.GetCoinsListByCategoryName).categoryName
                 self.getCoinsByCategoryName(categoryName: categoryName)
             }
+            
+            if action is CoinsListAction.GetCoinsBySearchQuery {
+                let query = (action as! CoinsListAction.GetCoinsBySearchQuery).query
+                self.getCoinsBySearchQuery(query: query)
+            }
+        }
+    }
+    
+    private func getCoinsBySearchQuery(query: String) {
+        let dataSourceResult = CoinaSingletonUtils.getCoinsDataSourceInstance().getCoinsBySearchQuery(query: query)
+        DispatchQueue.main.async {
+            self.stateListener?.onStatetriggered(state: CoinsListState.ListState(list: dataSourceResult as! [CoinModel]))
         }
     }
     

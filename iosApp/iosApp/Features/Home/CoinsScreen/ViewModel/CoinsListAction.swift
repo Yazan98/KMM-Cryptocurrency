@@ -11,6 +11,13 @@ import shared
 
 public class CoinsListAction : NSObject, CoinaAction {
     public class GetCoinsList: CoinsListAction {}
+    public class GetCoinsBySearchQuery: CoinsListAction {
+        var query: String
+        init(query: String) {
+            self.query = query
+        }
+    }
+    
     public class GetCoinsListByCategoryName: CoinsListAction {
         public var categoryName: String
         init(categoryName: String) {

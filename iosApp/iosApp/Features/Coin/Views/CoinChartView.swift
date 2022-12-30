@@ -43,6 +43,7 @@ struct CoinChartView: View {
                 chartDateLabels
                     .padding(.horizontal, 4)
             }
+            .padding()
             .font(.caption)
             .foregroundColor(CoinaTheme.textColor)
             .onAppear {

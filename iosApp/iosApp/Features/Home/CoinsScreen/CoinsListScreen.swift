@@ -27,7 +27,14 @@ struct CoinsListScreen: View {
                 ProgressView().progressViewStyle(CircularProgressViewStyle())
             } else {
                     if categoryTarget.isEmpty == true {
-                        TextField("Search By Coin Symbol or Name", text: $viewModel.searchQuery)
+                        let binding = Binding<String>(get: {
+                                    viewModel.searchQuery
+                                }, set: {
+                                    viewModel.searchQuery = $0
+                                    viewModel.viewModelImplemenetation?.executeAction(action: CoinsListAction.GetCoinsBySearchQuery(query: viewModel.searchQuery))
+                                })
+                        
+                        TextField("Search By Coin Symbol or Name", text: binding)
                             .padding()
                             .overlay(RoundedRectangle(cornerRadius: 8.0).strokeBorder(CoinaTheme.textColor, style: StrokeStyle(lineWidth: 1.0)))
                             .foregroundColor(CoinaTheme.textColor)
