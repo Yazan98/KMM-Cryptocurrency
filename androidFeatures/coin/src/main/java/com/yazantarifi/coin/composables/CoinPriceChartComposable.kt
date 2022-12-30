@@ -27,7 +27,7 @@ import com.yazantarifi.android.coin.R
 import com.yazantarifi.coina.models.CoinInfoItem
 
 @Composable
-fun CoinPriceChartComposable(item: CoinInfoItem) {
+fun CoinPriceChartComposable(item: CoinInfoItem, isPriceIncreasing: Boolean) {
     val context = LocalContext.current
     val configuration = LocalConfiguration.current
     val screenWidth = configuration.screenWidthDp.px
@@ -57,9 +57,9 @@ fun CoinPriceChartComposable(item: CoinInfoItem) {
 
             val lineDataSet = LineDataSet(data, "Price Changes in Last 7 Days").apply {
                 mode = LineDataSet.Mode.CUBIC_BEZIER
-                color = context.getColor(R.color.purple_200)
-                highLightColor = context.getColor(R.color.purple_200_height)
-                fillColor = context.getColor(R.color.purple_200)
+                color = if (isPriceIncreasing) context.getColor(R.color.purple_200_inc) else context.getColor(R.color.purple_200)
+                highLightColor = if (isPriceIncreasing) context.getColor(R.color.purple_200_height_inc) else context.getColor(R.color.purple_200_height)
+                fillColor = if (isPriceIncreasing) context.getColor(R.color.purple_200_inc) else context.getColor(R.color.purple_200)
                 lineWidth = 2f
                 setDrawFilled(true)
                 setDrawCircles(false)

@@ -9,6 +9,7 @@ data class CoinInfoItem(
     val value: String,
     val image: String? = null,
     val chart: ArrayList<Double>? = null,
+    val lastUpdated: String? = null,
 ) {
     companion object {
 
@@ -26,7 +27,7 @@ data class CoinInfoItem(
                 items.add(CoinInfoItem(TYPE_TITLE, coinInformation.name ?: "", coinInformation.symbol ?: "", coinInformation.image?.large))
 
                 items.add(CoinInfoItem(TYPE_SECTION_TITLE, "Price Changes", "", ""))
-                items.add(CoinInfoItem(TYPE_CHART, coinInformation.name ?: "", coinInformation.symbol ?: "", coinInformation.image?.large, coinInformation.marketData?.value?.value))
+                items.add(CoinInfoItem(TYPE_CHART, coinInformation.name ?: "", coinInformation.symbol ?: "", coinInformation.image?.large, coinInformation.marketData?.value?.value, coinInformation.marketData?.value?.lastUpdated))
 
                 items.add(CoinInfoItem(TYPE_SECTION_TITLE, "Description", "", ""))
                 items.add(CoinInfoItem(TYPE_DESCRIPTION, "", coinInformation.description?.value ?: "", ""))

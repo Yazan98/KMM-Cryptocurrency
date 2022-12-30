@@ -12,7 +12,7 @@ import shared
 struct CoinRowView: View {
     var coin: CoinModel
     var body: some View {
-        NavigationLink(destination: CoinInformationScreen(coinId: coin.id ?? "", name: coin.name ?? "")) {
+        NavigationLink(destination: CoinInformationScreen(coinId: coin.id ?? "", name: coin.name ?? "", isPriceChanges: coin.getPriceChanges() > 0.0)) {
             HStack {
                 HStack {
                     RemoteImageView(

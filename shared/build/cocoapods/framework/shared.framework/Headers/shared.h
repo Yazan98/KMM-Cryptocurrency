@@ -1067,19 +1067,21 @@ __attribute__((swift_name("CoinIcon.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CoinInfoItem")))
 @interface SharedCoinInfoItem : SharedBase
-- (instancetype)initWithType:(int32_t)type title:(NSString *)title value:(NSString *)value image:(NSString * _Nullable)image chart:(NSMutableArray<SharedDouble *> * _Nullable)chart __attribute__((swift_name("init(type:title:value:image:chart:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithType:(int32_t)type title:(NSString *)title value:(NSString *)value image:(NSString * _Nullable)image chart:(NSMutableArray<SharedDouble *> * _Nullable)chart lastUpdated:(NSString * _Nullable)lastUpdated __attribute__((swift_name("init(type:title:value:image:chart:lastUpdated:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) SharedCoinInfoItemCompanion *companion __attribute__((swift_name("companion")));
 - (int32_t)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NSString *)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NSString *)component3 __attribute__((swift_name("component3()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NSString * _Nullable)component4 __attribute__((swift_name("component4()"))) __attribute__((deprecated("use corresponding property instead")));
 - (NSMutableArray<SharedDouble *> * _Nullable)component5 __attribute__((swift_name("component5()"))) __attribute__((deprecated("use corresponding property instead")));
-- (SharedCoinInfoItem *)doCopyType:(int32_t)type title:(NSString *)title value:(NSString *)value image:(NSString * _Nullable)image chart:(NSMutableArray<SharedDouble *> * _Nullable)chart __attribute__((swift_name("doCopy(type:title:value:image:chart:)")));
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()"))) __attribute__((deprecated("use corresponding property instead")));
+- (SharedCoinInfoItem *)doCopyType:(int32_t)type title:(NSString *)title value:(NSString *)value image:(NSString * _Nullable)image chart:(NSMutableArray<SharedDouble *> * _Nullable)chart lastUpdated:(NSString * _Nullable)lastUpdated __attribute__((swift_name("doCopy(type:title:value:image:chart:lastUpdated:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSMutableArray<SharedDouble *> * _Nullable chart __attribute__((swift_name("chart")));
 @property (readonly) NSString * _Nullable image __attribute__((swift_name("image")));
+@property (readonly) NSString * _Nullable lastUpdated __attribute__((swift_name("lastUpdated")));
 @property (readonly) NSString *title __attribute__((swift_name("title")));
 @property (readonly) int32_t type __attribute__((swift_name("type")));
 @property (readonly) NSString *value __attribute__((swift_name("value")));
@@ -1220,13 +1222,15 @@ __attribute__((swift_name("CoinLinks.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CoinMarketPrice")))
 @interface SharedCoinMarketPrice : SharedBase
-- (instancetype)initWithValue:(NSMutableArray<SharedDouble *> * _Nullable)value __attribute__((swift_name("init(value:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithValue:(NSMutableArray<SharedDouble *> * _Nullable)value lastUpdated:(NSString * _Nullable)lastUpdated __attribute__((swift_name("init(value:lastUpdated:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) SharedCoinMarketPriceCompanion *companion __attribute__((swift_name("companion")));
 - (NSMutableArray<SharedDouble *> * _Nullable)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
-- (SharedCoinMarketPrice *)doCopyValue:(NSMutableArray<SharedDouble *> * _Nullable)value __attribute__((swift_name("doCopy(value:)")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
+- (SharedCoinMarketPrice *)doCopyValue:(NSMutableArray<SharedDouble *> * _Nullable)value lastUpdated:(NSString * _Nullable)lastUpdated __attribute__((swift_name("doCopy(value:lastUpdated:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable lastUpdated __attribute__((swift_name("lastUpdated")));
 @property (readonly) NSMutableArray<SharedDouble *> * _Nullable value __attribute__((swift_name("value")));
 @end
 
@@ -1288,6 +1292,7 @@ __attribute__((swift_name("CoinModel")))
 - (SharedCoinModel *)doCopyId:(NSString * _Nullable)id symbol:(NSString * _Nullable)symbol name:(NSString * _Nullable)name image:(NSString * _Nullable)image price:(SharedDouble * _Nullable)price marketGapRank:(SharedInt * _Nullable)marketGapRank percentChange:(SharedDouble * _Nullable)percentChange __attribute__((swift_name("doCopy(id:symbol:name:image:price:marketGapRank:percentChange:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSString *)getPriceChangeText __attribute__((swift_name("getPriceChangeText()")));
+- (double)getPriceChanges __attribute__((swift_name("getPriceChanges()")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));

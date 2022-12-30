@@ -79,6 +79,7 @@ class CategoryCoinsScreen : BaseScreen() {
                         CoinComposable(item) {
                             startActivity(CoinaScreenNavigation.getIntent(this@CategoryCoinsScreen, CoinaScreenNavigation.COIN_VIEW).apply {
                                 putExtra(CoinaNavigationsArgs.COIN_KEY, item.id ?: "")
+                                putExtra(CoinaNavigationsArgs.COIN_PRICE_KEY, (item.getPriceChanges()) > 0.0)
                             })
                         }
                     }

@@ -88,6 +88,7 @@ fun CoinsScreenComposable(viewModel: CoinsViewModel) {
                     CoinComposable(item) {
                         context.startActivity(CoinaScreenNavigation.getIntent(context, CoinaScreenNavigation.COIN_VIEW).apply {
                             putExtra(CoinaNavigationsArgs.COIN_KEY, item.id ?: "")
+                            putExtra(CoinaNavigationsArgs.COIN_PRICE_KEY, (item.getPriceChanges()) > 0.0)
                         })
                     }
                 }

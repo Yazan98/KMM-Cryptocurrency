@@ -32,7 +32,6 @@ public final class ApplicationModule {
     }
     
     @org.jetbrains.annotations.NotNull
-    @javax.inject.Singleton
     @dagger.Provides
     public final com.yazantarifi.coina.useCases.CoinInfoUseCase getCoinInfoUseCase(@org.jetbrains.annotations.NotNull
     com.yazantarifi.coina.api.requests.ApplicationApiManager apiManager) {

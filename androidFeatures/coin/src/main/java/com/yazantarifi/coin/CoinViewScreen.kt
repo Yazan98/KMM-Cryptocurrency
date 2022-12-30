@@ -36,6 +36,7 @@ class CoinViewScreen : BaseScreen() {
     @Composable
     override fun OnScreenContent(savedInstanceState: Bundle?) {
         val coinId = intent?.extras?.getString(CoinaNavigationsArgs.COIN_KEY, "") ?: ""
+        val isPriceIncreasing = intent?.extras?.getBoolean(CoinaNavigationsArgs.COIN_PRICE_KEY, false) ?: false
         val viewModel: CoinViewModel = hiltViewModel()
         LaunchedEffect(true) {
             if (viewModel.screenContentState.value == null) {
@@ -65,7 +66,7 @@ class CoinViewScreen : BaseScreen() {
                         items(CoinInfoItem.getScreenItems(viewModel.screenContentState.value)) { item ->
                             when (item.type) {
                                 CoinInfoItem.TYPE_TITLE -> CoinTitleComposable(item = item)
-                                CoinInfoItem.TYPE_CHART -> CoinPriceChartComposable(item)
+                                CoinInfoItem.TYPE_CHART -> CoinPriceChartComposable(item, isPriceIncreasing)
                                 CoinInfoItem.TYPE_SECTION_TITLE -> SectionTitleComposable(item)
                                 CoinInfoItem.TYPE_SECTION -> SectionComposable(item)
                                 CoinInfoItem.TYPE_DESCRIPTION -> DescriptionComposable(item)

@@ -13,11 +13,13 @@ struct CoinInformationScreen: View {
     
     private var coinId: String = ""
     private var name: String = ""
+    private var isPriceChanges: Bool = false
     @StateObject private var viewModel: CoinInfoViewModel = CoinInfoViewModel()
     
-    init(coinId: String, name: String) {
+    init(coinId: String, name: String, isPriceChanges: Bool) {
         self.coinId = coinId
         self.name = name
+        self.isPriceChanges = isPriceChanges
     }
     
     var body: some View {
@@ -49,6 +51,10 @@ struct CoinInformationScreen: View {
                                 
                                 if item.type == CoinInfoItem.companion.TYPE_DESCRIPTION {
                                     CoinInfoDescription(item: item)
+                                }
+                                
+                                if item.type == CoinInfoItem.companion.TYPE_CHART {
+                                    CoinChartView(coin: item, isPriceChangeds: isPriceChanges)
                                 }
                             }
                         }

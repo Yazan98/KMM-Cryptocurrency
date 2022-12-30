@@ -40,7 +40,8 @@ data class CoinMarketPriceInfo(
 
 @Serializable
 data class CoinMarketPrice(
-    @SerialName("price") val value: ArrayList<Double>? = null
+    @SerialName("price") val value: ArrayList<Double>? = null,
+    @SerialName("last_updated") val lastUpdated: String? = ""
 )
 
 @Serializable

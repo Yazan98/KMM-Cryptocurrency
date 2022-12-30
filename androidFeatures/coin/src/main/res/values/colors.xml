@@ -3,4 +3,6 @@
     <item name="black" type="color">#000000</item>
     <color name="purple_200">#FF5252</color>
     <color name="purple_200_height">#EF0606</color>
+    <color name="purple_200_inc">#80FF52</color>
+    <color name="purple_200_height_inc">#1DEF06</color>
 </resources>

@@ -34,4 +34,9 @@ data class CoinModel(
         return (round(number3digits * 100.0) / 100.0).toString()
     }
 
+    fun getPriceChanges(): Double {
+        val number3digits:Double = round((percentChange ?: 0.0) * 1000.0) / 1000.0
+        return (round(number3digits * 100.0) / 100.0)
+    }
+
 }

@@ -40,7 +40,6 @@ object ApplicationModule {
     }
 
     @Provides
-    @Singleton
     fun getCoinInfoUseCase(apiManager: ApplicationApiManager): CoinInfoUseCase {
         return CoinInfoUseCase().addDependencies(apiManager)
     }
