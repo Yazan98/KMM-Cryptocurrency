@@ -4,6 +4,8 @@
 
 ![](https://github.com/Yazan98/Coina/blob/main/resources/Screenshot%202022-12-30%20at%2010.32.59%20AM.png?raw=true)
 
+![](https://github.com/Yazan98/Coina/blob/main/resources/Screenshot%202022-12-30%20at%2011.29.07%20AM.png?raw=true)
+
 ## Description
 
 This Project is a Kotlin Multiplatform Mobile Application That Built on Android, IOS Platforms to show Cryptocurrencies Information Based on Free [Api](https://www.coingecko.com/en/api/documentation)
