@@ -97,4 +97,14 @@ If Gradle Build Failed for First Time
 8. Run IOS App
 ```
 
+## Useful Resources
 
+1. [Key Value Store](https://medium.com/@shmehdi01/shared-preference-in-kmm-kotlin-multiplatform-2bca14214093)
+2. [SwiftUI](https://www.youtube.com/watch?v=TTYKL6CfbSs&list=PLwvDm4Vfkdphbc3bgy_LpLRQ9DDfFGcFu)
+3. [Shared ViewModels](https://proandroiddev.com/kotlin-multiplatform-mobile-and-how-share-viewmodel-an-architecture-proposal-b6f86b61abf9)
+4. [Shared ViewModels](https://medium.com/double-symmetry/kotlin-multiplatform-tales-a-shared-viewmodel-f9d0792f69f9)
+5. [Ktor Documentation](https://ktor.io/docs/getting-started-ktor-client-multiplatform-mobile.html)
+6. [KMM Documentation](https://kotlinlang.org/docs/multiplatform-mobile-ktor-sqldelight.html)
+7. [Api Link](https://www.coingecko.com/en/api/documentation)
+8. [Android Charts Library](https://github.com/PhilJay/MPAndroidChart)
+9. [Realm Kotlin SDK](https://www.mongodb.com/docs/realm/sdk/kotlin/install/kotlin-multiplatform/)
