@@ -82,6 +82,10 @@ IOS App
 1. [Application Images](https://github.com/Yazan98/Coina/tree/main/resources)
 2. [Video Compare Android, IOS](https://github.com/Yazan98/Coina/blob/main/resources/Compare%20Platforms.mp4)
 
+## IDEs Requirements
+1. Android Studio Version: Android Studio Flamingo | 2022.2.1 Canary 5
+2. XCode Version: Version 14.2 (14C18)
+
 ## Steps to Run the Project
 ```
 1. Open Android Studio with Root Application
@@ -108,3 +112,4 @@ If Gradle Build Failed for First Time
 7. [Api Link](https://www.coingecko.com/en/api/documentation)
 8. [Android Charts Library](https://github.com/PhilJay/MPAndroidChart)
 9. [Realm Kotlin SDK](https://www.mongodb.com/docs/realm/sdk/kotlin/install/kotlin-multiplatform/)
+10. [XCode-Kotlin Plugin](https://github.com/touchlab/xcode-kotlin)
