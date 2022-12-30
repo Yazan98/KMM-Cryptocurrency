@@ -54,6 +54,16 @@ IOS App
 2. Google MaterialComponents - Snackbar
 3. ObjectMapper
 4. Shared Module
+5. Cocoapods Dependencies
+6. Ktor Darwin Client
+
+## Application Training Parts
+1. Auth Screen Exists to Test (SharedPrefs, UserDefault) with same Key Value Manager
+2. Coins List Simulate Multiple UseCases and Actions in one ViewModel
+3. Coins List Simulate Same Database Query to Search in Coins
+4. Categories List Simulate Navigation Between Screens in Each Platform
+5. Auth, Home Screens Support Dark, White Mode in each Platform
+6. Project Structure Built Based on cocoapods to Import Shared Library 
 
 ## Application Flow Information
 
@@ -69,3 +79,20 @@ IOS App
 
 1. [Application Images](https://github.com/Yazan98/Coina/tree/main/resources)
 2. [Video Compare Android, IOS](https://github.com/Yazan98/Coina/blob/main/resources/Compare%20Platforms.mp4)
+
+## Steps to Run the Project
+```
+1. Open Android Studio with Root Application
+2. Open Terminal and Execute (pod install)
+
+If Gradle Build Failed for First Time
+3. Execute Command (cd iosApp)
+4. Execute Command (pod install)
+
+5. Run The Android App
+6. Open XCode with iosApp Folder
+7. Execute Command (pod update shared)
+8. Run IOS App
+```
+
+
