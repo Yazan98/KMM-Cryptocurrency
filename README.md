@@ -1,5 +1,7 @@
 # Coina
 
+![](https://github.com/Yazan98/KMM-Cryptocurrency/blob/main/resources/app_landing_screen.png?raw=true)
+
 > Cryptocurrency Mobile Application
 
 ![](https://github.com/Yazan98/Coina/blob/main/resources/Screenshot%202022-12-30%20at%2010.32.59%20AM.png?raw=true)
