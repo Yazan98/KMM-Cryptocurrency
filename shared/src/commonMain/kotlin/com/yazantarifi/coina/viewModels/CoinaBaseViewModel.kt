@@ -7,9 +7,8 @@ import com.yazantarifi.coina.viewModels.props.CoinaSideEffect
 import com.yazantarifi.coina.viewModels.props.CoinaState
 import com.yazantarifi.coina.viewModels.useCases.CoinaUseCaseType
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.flow.MutableStateFlow
 
-expect abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
+expect abstract class CoinaBaseViewModel<Action: CoinaAction, State: CoinaState, StateType> {
 
     /**
      * The Current Coroutine Context Used inside ViewModel
@@ -17,9 +16,7 @@ expect abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
      */
     val scope: CoroutineScope
     val sideEffects: ArrayList<CoinaSideEffect<Action, *>>
-    val state: MutableStateFlow<State>
-
-    fun onAcceptNewState(newState: State)
+    var state: StateType?
 
     /**
      * Initialize the ViewModel Streaming Listeners for Each UseCase
@@ -54,5 +51,7 @@ expect abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
      * Remove The Instances and listeners when Destroy the ViewModel
      */
     fun clear(): CoinaEither<Boolean, Exception>
+
+    fun getCurrentState(): State?
 
 }

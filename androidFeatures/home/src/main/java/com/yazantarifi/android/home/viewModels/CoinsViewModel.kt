@@ -9,6 +9,7 @@ import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.database.CoinsDataSource
 import com.yazantarifi.coina.models.CoinModel
 import com.yazantarifi.coina.useCases.GetCoinsUseCase
+import com.yazantarifi.coina.viewModels.CoinaBaseViewModel
 import com.yazantarifi.coina.viewModels.CoinaViewModel
 import com.yazantarifi.coina.viewModels.useCases.CoinaUseCaseType
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -19,7 +20,7 @@ import javax.inject.Inject
 class CoinsViewModel @Inject constructor(
     private val dataSource: CoinsDataSource,
     private val getCoinsUseCase: GetCoinsUseCase
-    ): CoinaViewModel<CoinsAction, CoinsState>() {
+): CoinaViewModel<CoinsAction, CoinsState>() {
 
     val coinsStateListener: MutableState<ArrayList<CoinModel>> by lazy { mutableStateOf(arrayListOf()) }
     val coinsLoadingState: MutableState<Boolean> by lazy { mutableStateOf(false) }
