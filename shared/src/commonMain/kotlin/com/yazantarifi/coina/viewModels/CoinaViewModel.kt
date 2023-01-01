@@ -39,8 +39,6 @@ expect abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
 
     abstract fun getInitialState(): State
 
-    actual abstract fun onExceptionListenerTriggered(key: String, value: Throwable)
-
     /**
      * This Method is Triggered When UseCases Submit the State or Result To Return it Back to ViewModel
      * Like Loading, Error, Data

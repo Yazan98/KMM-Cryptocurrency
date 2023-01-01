@@ -26,7 +26,7 @@ class CoinInfoUseCase: CoinaUseCase<CoinInfoUseCase.Args, CoinInformation>() {
     override fun run(args: Args) {
         launch(Dispatchers.Default) {
             if (args.key.isEmpty()) {
-                onSendErrorState(CoinaValidationException("Coin Id Can't be Empty"))
+                onSendState(CoinaApplicationState.Error(CoinaValidationException("Coin Id Can't be Empty")))
                 return@launch
             }
 

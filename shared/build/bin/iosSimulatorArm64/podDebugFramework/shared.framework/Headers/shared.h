@@ -403,7 +403,6 @@ __attribute__((swift_name("CoinaUseCaseType")))
 @required
 - (void)clear __attribute__((swift_name("clear()")));
 - (id<SharedKotlinx_coroutines_coreReceiveChannel>)getChannelListener __attribute__((swift_name("getChannelListener()")));
-- (id<SharedKotlinx_coroutines_coreReceiveChannel>)getErrorChannelListener __attribute__((swift_name("getErrorChannelListener()")));
 - (NSString *)getUseCaseKey __attribute__((swift_name("getUseCaseKey()")));
 @end
 
@@ -413,13 +412,7 @@ __attribute__((swift_name("CoinaUseCase")))
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (void)clear __attribute__((swift_name("clear()")));
 - (id<SharedKotlinx_coroutines_coreReceiveChannel>)getChannelListener __attribute__((swift_name("getChannelListener()")));
-- (id<SharedKotlinx_coroutines_coreReceiveChannel>)getErrorChannelListener __attribute__((swift_name("getErrorChannelListener()")));
 - (void)invokeParams:(Arguments _Nullable)params __attribute__((swift_name("invoke(params:)")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (void)onSendErrorStateException:(SharedKotlinThrowable *)exception __attribute__((swift_name("onSendErrorState(exception:)")));
 
 /**
  * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
@@ -848,7 +841,6 @@ __attribute__((swift_name("CoinaViewModel")))
 - (NSMutableArray<id<SharedCoinaUseCaseType>> *)getSupportedUseCases __attribute__((swift_name("getSupportedUseCases()")));
 - (void)initializeViewModel __attribute__((swift_name("initializeViewModel()")));
 - (void)onAcceptNewStateNewState:(State)newState __attribute__((swift_name("onAcceptNewState(newState:)")));
-- (void)onExceptionListenerTriggeredKey:(NSString *)key value:(SharedKotlinThrowable *)value __attribute__((swift_name("onExceptionListenerTriggered(key:value:)")));
 - (void)onListenerTriggeredKey:(NSString *)key value:(SharedCoinaApplicationState<id> *)value __attribute__((swift_name("onListenerTriggered(key:value:)")));
 - (void)onTriggerSideEffectActionNewAction:(Action)newAction sideEffectKey:(NSString *)sideEffectKey __attribute__((swift_name("onTriggerSideEffectAction(newAction:sideEffectKey:)")));
 - (void)registerSideEffectSideEffect:(SharedCoinaSideEffect<Action, id> *)sideEffect __attribute__((swift_name("registerSideEffect(sideEffect:)")));

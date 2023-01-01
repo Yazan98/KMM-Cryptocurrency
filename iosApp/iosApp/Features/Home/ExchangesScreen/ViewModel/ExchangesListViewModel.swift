@@ -9,7 +9,7 @@
 import Foundation
 import shared
 
-@MainActor class ExchangesListViewModel : CoinaViewModel<ExchangesAction, ExchangesState> {
+class ExchangesListViewModel : CoinaViewModel<ExchangesAction, ExchangesState> {
     
     private var stateListener: CoinaStateListener? = nil
     private var exchangesUseCase = GetExchangesUseCase().addDependencies(
@@ -27,8 +27,10 @@ import shared
     }
     
     override func executeAction(action: ExchangesAction) {
-        if action is ExchangesAction.GetExchangesList {
-            self.getExchangesList()
+        DispatchQueue.global().async {
+            if action is ExchangesAction.GetExchangesList {
+                self.getExchangesList()
+            }
         }
     }
     
@@ -37,20 +39,18 @@ import shared
     }
     
     override func onListenerTriggered(key: String, value: CoinaApplicationState<AnyObject>) {
-        if key == exchangesUseCase.getUseCaseKey() {
-            value.handleResult(onSuccess: { result in
-                let exchangesList = result as! [ExchangeModel]
-                self.stateListener?.onStatetriggered(state: ExchangesState.ListState(exchanges: exchangesList))
-            }, onError: { exception in
-                self.stateListener?.onStatetriggered(state: ExchangesState.ErrorState(message: exception.exception?.message ?? ""))
-            }, onLoading: { loadingState in
-                self.stateListener?.onLoadingState(isLoading: loadingState as! Bool)
-            })
+        DispatchQueue.main.async {
+            if key == self.exchangesUseCase.getUseCaseKey() {
+                value.handleResult(onSuccess: { result in
+                    let exchangesList = result as! [ExchangeModel]
+                    self.stateListener?.onStatetriggered(state: ExchangesState.ListState(exchanges: exchangesList))
+                }, onError: { exception in
+                    self.stateListener?.onStatetriggered(state: ExchangesState.ErrorState(message: exception.exception?.message ?? ""))
+                }, onLoading: { loadingState in
+                    self.stateListener?.onLoadingState(isLoading: loadingState as! Bool)
+                })
+            }
         }
-    }
-    
-    override func onExceptionListenerTriggered(key: String, value: KotlinThrowable) {
-    
     }
     
     override func getSupportedUseCases() -> NSMutableArray {
