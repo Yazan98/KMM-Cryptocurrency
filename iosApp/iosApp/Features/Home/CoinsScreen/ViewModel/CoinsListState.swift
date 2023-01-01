@@ -9,7 +9,7 @@
 import Foundation
 import shared
 
-class CoinsListState : CoinaState {
+class CoinsListState: NSObject, CoinaState {
     class LoadingState: CoinsListState {}
     class ErrorState: CoinsListState {
         var message: String = ""

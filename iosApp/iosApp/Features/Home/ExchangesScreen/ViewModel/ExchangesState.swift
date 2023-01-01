@@ -10,6 +10,7 @@ import Foundation
 import shared
 
 public class ExchangesState : NSObject, CoinaState {
+    public class LoadingState: ExchangesState {}
     public class ErrorState: ExchangesState {
         var message: String
         init(message: String) {

@@ -10,20 +10,14 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancel
-import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.channels.consumeEach
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.stateIn
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
 
 actual abstract class CoinaBaseViewModel<Action: CoinaAction, State: CoinaState, StateType> {
 
-    private var stateListener: CoinaStateListener<State>? = null
+    private var stateListener: CoinaStateListenerHandler<State>? = null
     actual val sideEffects: ArrayList<CoinaSideEffect<Action, *>> = ArrayList()
     actual var state: StateType? = null
     actual val scope: CoroutineScope = object: CoroutineScope {
@@ -41,8 +35,6 @@ actual abstract class CoinaBaseViewModel<Action: CoinaAction, State: CoinaState,
                 }
             }
         }
-
-        onNewStateTriggered(getInitialState())
     }
 
     actual fun onTriggerSideEffectAction(newAction: Action, sideEffectKey: String) {
@@ -75,13 +67,13 @@ actual abstract class CoinaBaseViewModel<Action: CoinaAction, State: CoinaState,
         }
     }
 
-    protected fun addStateListener(instance: CoinaStateListener<State>) {
+    protected fun addStateListener(instance: CoinaStateListenerHandler<State>) {
         if (stateListener == null) {
             stateListener = instance
         }
     }
 
-    protected fun getStateListenerInstance(): CoinaStateListener<State>? {
+    protected fun getStateListenerInstance(): CoinaStateListenerHandler<State>? {
         return this.stateListener
     }
 

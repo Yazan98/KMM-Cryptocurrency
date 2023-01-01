@@ -53,6 +53,15 @@ public class CategoriesViewModelImplementation : CoinaViewModel<CategoriesAction
         }
     }
     
+    public override func getInitialState() -> CategoriesState {
+        let dataSource = CoinaSingletonUtils.getCategoriesDataSource()
+        if dataSource.isDataSourceEmpty() {
+            return CategoriesState.LoadingState()
+        } else {
+            return CategoriesState.ListState(list: dataSource.getCategories() as! [CategoryModel])
+        }
+    }
+    
     public override func getSupportedUseCases() -> NSMutableArray {
         return [categoriesUseCase]
     }

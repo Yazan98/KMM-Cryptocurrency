@@ -54,6 +54,10 @@ class AuthViewModelImplementation : CoinaViewModel<AuthAction, AuthState> {
         return [authUseCase]
     }
     
+    override func getInitialState() -> AuthState {
+        return AuthState.EmptyState()
+    }
+    
     deinit {
         clear_()
         self.stateListener = nil

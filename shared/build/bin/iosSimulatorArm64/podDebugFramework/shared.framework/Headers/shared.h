@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedCoinaApplicationStateError, SharedCoinaApplicationState<__covariant T>, SharedKotlinThrowable, SharedKotlinNothing, SharedCoinaApplicationStateLoaded, SharedCoinaApplicationStateLoading, SharedCoinaApplicationStateSuccess<__covariant T>, SharedPriceExt, SharedCoinaApiInfo, SharedCoinaResponseCode, SharedKtor_client_coreHttpClient, SharedKotlinArray<T>, SharedKotlinException, SharedCategoriesDataSource, SharedCategoryModel, SharedCoinInformation, SharedCoinsDataSource, SharedCoinModel, SharedExchangesDataSource, SharedExchangeModel, SharedApplicationApiManager, SharedCoinaApiLinks, SharedCoinaUseCase<Arguments, Result>, SharedAuthUseCaseCompanion, SharedAuthUseCase, SharedAuthUseCaseArgs, SharedCoinInfoUseCaseCompanion, SharedCoinInfoUseCase, SharedCoinInfoUseCaseArgs, SharedGetCategoriesUseCaseCompanion, SharedGetCategoriesUseCase, SharedKotlinUnit, SharedGetCategoryCoinsUseCaseCompanion, SharedGetCategoryCoinsUseCase, SharedGetCategoryCoinsUseCaseArgs, SharedGetCoinsUseCaseCompanion, SharedGetCoinsUseCase, SharedGetExchangesUseCaseCompanion, SharedGetExchangesUseCase, NSObject, SharedCoinaStorageKeys, SharedCoinaStorageKeyValue, SharedCoinaBaseDataSource, SharedRealmCategoryCompanion, SharedRealmCategory, SharedRealmCoinModelCompanion, SharedRealmCoinModel, SharedRealmExchangeModelCompanion, SharedRealmExchangeModel, SharedCoinaEither<State, SecondState>, SharedCoinaSideEffect<Action, Result>, SharedCategoryModelCompanion, SharedCoinCommunityCompanion, SharedCoinCommunity, SharedCoinDescriptionCompanion, SharedCoinDescription, SharedCoinDeveloperCompanion, SharedCoinDeveloper, SharedCoinIconCompanion, SharedCoinIcon, SharedCoinInfoItemCompanion, SharedCoinInfoItem, SharedCoinLinks, SharedCoinMarketPriceInfo, SharedCoinInformationCompanion, SharedCoinRepository, SharedCoinLinksCompanion, SharedCoinMarketPriceCompanion, SharedCoinMarketPrice, SharedCoinMarketPriceInfoCompanion, SharedCoinModelCompanion, SharedCoinRepositoryCompanion, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedCoinaFragmentsNavigation, SharedExchangeModelCompanion, SharedKtor_utilsTypeInfo, SharedKtor_client_coreHttpClientEngineConfig, SharedKtor_client_coreHttpClientConfig<T>, SharedKtor_eventsEvents, SharedKtor_client_coreHttpReceivePipeline, SharedKtor_client_coreHttpRequestPipeline, SharedKtor_client_coreHttpResponsePipeline, SharedKtor_client_coreHttpSendPipeline, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinCancellationException, SharedLibrary_baseVersionId, SharedKotlinKTypeProjection, SharedKtor_client_coreHttpRequestData, SharedKtor_client_coreHttpResponseData, SharedKotlinx_coroutines_coreCoroutineDispatcher, SharedKtor_client_coreProxyConfig, SharedKtor_utilsAttributeKey<T>, SharedKtor_eventsEventDefinition<T>, SharedKtor_utilsPipelinePhase, SharedKtor_utilsPipeline<TSubject, TContext>, SharedKtor_client_coreHttpReceivePipelinePhases, SharedKtor_client_coreHttpResponse, SharedKtor_client_coreHttpRequestPipelinePhases, SharedKtor_client_coreHttpRequestBuilder, SharedKtor_client_coreHttpResponsePipelinePhases, SharedKtor_client_coreHttpResponseContainer, SharedKtor_client_coreHttpClientCall, SharedKtor_client_coreHttpSendPipelinePhases, SharedLibrary_baseUpdatePolicy, SharedKotlinByteArray, SharedLibrary_baseLogConfiguration, SharedLibrary_baseSort, SharedKotlinPair<__covariant A, __covariant B>, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinKVariance, SharedKotlinKTypeProjectionCompanion, SharedKtor_httpUrl, SharedKtor_httpHttpMethod, SharedKtor_httpOutgoingContent, SharedKtor_httpHttpStatusCode, SharedKtor_utilsGMTDate, SharedKtor_httpHttpProtocolVersion, SharedKotlinAbstractCoroutineContextElement, SharedKotlinx_coroutines_coreCoroutineDispatcherKey, SharedKtor_httpHeadersBuilder, SharedKtor_client_coreHttpRequestBuilderCompanion, SharedKtor_httpURLBuilder, SharedKtor_client_coreHttpClientCallCompanion, SharedKotlinx_coroutines_coreAtomicDesc, SharedKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, SharedKotlinByteIterator, SharedLibrary_baseLogLevel, SharedKtor_httpUrlCompanion, SharedKtor_httpURLProtocol, SharedKtor_httpHttpMethodCompanion, SharedKtor_httpContentType, SharedKtor_httpHttpStatusCodeCompanion, SharedKtor_utilsGMTDateCompanion, SharedKtor_utilsWeekDay, SharedKtor_utilsMonth, SharedKtor_httpHttpProtocolVersionCompanion, SharedKotlinAbstractCoroutineContextKey<B, E>, SharedKtor_ioMemory, SharedKtor_ioChunkBuffer, SharedKtor_ioBuffer, SharedKtor_ioByteReadPacket, SharedKtor_utilsStringValuesBuilderImpl, SharedKtor_httpURLBuilderCompanion, SharedKotlinx_coroutines_coreAtomicOp<__contravariant T>, SharedKotlinx_coroutines_coreOpDescriptor, SharedKotlinx_coroutines_coreLockFreeLinkedListNode, SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, SharedLibrary_baseLogLevelCompanion, SharedKtor_httpURLProtocolCompanion, SharedKtor_httpHeaderValueParam, SharedKtor_httpHeaderValueWithParametersCompanion, SharedKtor_httpHeaderValueWithParameters, SharedKtor_httpContentTypeCompanion, SharedKtor_utilsWeekDayCompanion, SharedKtor_utilsMonthCompanion, SharedKtor_ioMemoryCompanion, SharedKtor_ioBufferCompanion, SharedKtor_ioChunkBufferCompanion, SharedKtor_ioInputCompanion, SharedKtor_ioInput, SharedKtor_ioByteReadPacketCompanion, SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, SharedKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>, SharedCinteropCoreLogLevel, SharedLibrary_baseRealmStorageType, SharedCinteropCoreLogLevelCompanion;
+@class SharedCoinaApplicationStateError, SharedCoinaApplicationState<__covariant T>, SharedKotlinThrowable, SharedKotlinNothing, SharedCoinaApplicationStateLoaded, SharedCoinaApplicationStateLoading, SharedCoinaApplicationStateSuccess<__covariant T>, SharedPriceExt, SharedCoinaApiInfo, SharedCoinaResponseCode, SharedKtor_client_coreHttpClient, SharedKotlinArray<T>, SharedKotlinException, SharedCategoriesDataSource, SharedCategoryModel, SharedCoinInformation, SharedCoinsDataSource, SharedCoinModel, SharedExchangesDataSource, SharedExchangeModel, SharedApplicationApiManager, SharedCoinaApiLinks, SharedCoinaUseCase<Arguments, Result>, SharedAuthUseCaseCompanion, SharedAuthUseCase, SharedAuthUseCaseArgs, SharedCoinInfoUseCaseCompanion, SharedCoinInfoUseCase, SharedCoinInfoUseCaseArgs, SharedGetCategoriesUseCaseCompanion, SharedGetCategoriesUseCase, SharedKotlinUnit, SharedGetCategoryCoinsUseCaseCompanion, SharedGetCategoryCoinsUseCase, SharedGetCategoryCoinsUseCaseArgs, SharedGetCoinsUseCaseCompanion, SharedGetCoinsUseCase, SharedGetExchangesUseCaseCompanion, SharedGetExchangesUseCase, NSObject, SharedCoinaStorageKeys, SharedCoinaStorageKeyValue, SharedCoinaBaseDataSource, SharedRealmCategoryCompanion, SharedRealmCategory, SharedRealmCoinModelCompanion, SharedRealmCoinModel, SharedRealmExchangeModelCompanion, SharedRealmExchangeModel, SharedCoinaEither<State, SecondState>, SharedCoinaSideEffect<Action, Result>, SharedCoinaBaseViewModel<Action, State, StateType>, SharedCategoryModelCompanion, SharedCoinCommunityCompanion, SharedCoinCommunity, SharedCoinDescriptionCompanion, SharedCoinDescription, SharedCoinDeveloperCompanion, SharedCoinDeveloper, SharedCoinIconCompanion, SharedCoinIcon, SharedCoinInfoItemCompanion, SharedCoinInfoItem, SharedCoinLinks, SharedCoinMarketPriceInfo, SharedCoinInformationCompanion, SharedCoinRepository, SharedCoinLinksCompanion, SharedCoinMarketPriceCompanion, SharedCoinMarketPrice, SharedCoinMarketPriceInfoCompanion, SharedCoinModelCompanion, SharedCoinRepositoryCompanion, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedCoinaFragmentsNavigation, SharedExchangeModelCompanion, SharedKtor_utilsTypeInfo, SharedKtor_client_coreHttpClientEngineConfig, SharedKtor_client_coreHttpClientConfig<T>, SharedKtor_eventsEvents, SharedKtor_client_coreHttpReceivePipeline, SharedKtor_client_coreHttpRequestPipeline, SharedKtor_client_coreHttpResponsePipeline, SharedKtor_client_coreHttpSendPipeline, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinCancellationException, SharedLibrary_baseVersionId, SharedKotlinKTypeProjection, SharedKtor_client_coreHttpRequestData, SharedKtor_client_coreHttpResponseData, SharedKotlinx_coroutines_coreCoroutineDispatcher, SharedKtor_client_coreProxyConfig, SharedKtor_utilsAttributeKey<T>, SharedKtor_eventsEventDefinition<T>, SharedKtor_utilsPipelinePhase, SharedKtor_utilsPipeline<TSubject, TContext>, SharedKtor_client_coreHttpReceivePipelinePhases, SharedKtor_client_coreHttpResponse, SharedKtor_client_coreHttpRequestPipelinePhases, SharedKtor_client_coreHttpRequestBuilder, SharedKtor_client_coreHttpResponsePipelinePhases, SharedKtor_client_coreHttpResponseContainer, SharedKtor_client_coreHttpClientCall, SharedKtor_client_coreHttpSendPipelinePhases, SharedLibrary_baseUpdatePolicy, SharedKotlinByteArray, SharedLibrary_baseLogConfiguration, SharedLibrary_baseSort, SharedKotlinPair<__covariant A, __covariant B>, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinKVariance, SharedKotlinKTypeProjectionCompanion, SharedKtor_httpUrl, SharedKtor_httpHttpMethod, SharedKtor_httpOutgoingContent, SharedKtor_httpHttpStatusCode, SharedKtor_utilsGMTDate, SharedKtor_httpHttpProtocolVersion, SharedKotlinAbstractCoroutineContextElement, SharedKotlinx_coroutines_coreCoroutineDispatcherKey, SharedKtor_httpHeadersBuilder, SharedKtor_client_coreHttpRequestBuilderCompanion, SharedKtor_httpURLBuilder, SharedKtor_client_coreHttpClientCallCompanion, SharedKotlinx_coroutines_coreAtomicDesc, SharedKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, SharedKotlinByteIterator, SharedLibrary_baseLogLevel, SharedKtor_httpUrlCompanion, SharedKtor_httpURLProtocol, SharedKtor_httpHttpMethodCompanion, SharedKtor_httpContentType, SharedKtor_httpHttpStatusCodeCompanion, SharedKtor_utilsGMTDateCompanion, SharedKtor_utilsWeekDay, SharedKtor_utilsMonth, SharedKtor_httpHttpProtocolVersionCompanion, SharedKotlinAbstractCoroutineContextKey<B, E>, SharedKtor_ioMemory, SharedKtor_ioChunkBuffer, SharedKtor_ioBuffer, SharedKtor_ioByteReadPacket, SharedKtor_utilsStringValuesBuilderImpl, SharedKtor_httpURLBuilderCompanion, SharedKotlinx_coroutines_coreAtomicOp<__contravariant T>, SharedKotlinx_coroutines_coreOpDescriptor, SharedKotlinx_coroutines_coreLockFreeLinkedListNode, SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, SharedLibrary_baseLogLevelCompanion, SharedKtor_httpURLProtocolCompanion, SharedKtor_httpHeaderValueParam, SharedKtor_httpHeaderValueWithParametersCompanion, SharedKtor_httpHeaderValueWithParameters, SharedKtor_httpContentTypeCompanion, SharedKtor_utilsWeekDayCompanion, SharedKtor_utilsMonthCompanion, SharedKtor_ioMemoryCompanion, SharedKtor_ioBufferCompanion, SharedKtor_ioChunkBufferCompanion, SharedKtor_ioInputCompanion, SharedKtor_ioInput, SharedKtor_ioByteReadPacketCompanion, SharedKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, SharedKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>, SharedCinteropCoreLogLevel, SharedLibrary_baseRealmStorageType, SharedCinteropCoreLogLevelCompanion;
 
-@protocol SharedPlatform, SharedApplicationApiManagerImplementation, SharedKotlinCoroutineContext, SharedKotlinx_coroutines_coreCoroutineScope, SharedKotlinx_coroutines_coreReceiveChannel, SharedCoinaUseCaseType, SharedKotlinx_coroutines_coreDeferred, SharedKotlinSuspendFunction0, SharedCoinaStorageProviderImplementation, SharedLibrary_baseRealm, SharedKotlinKClass, SharedLibrary_baseDeleteable, SharedLibrary_baseBaseRealmObject, SharedLibrary_baseRealmObject, SharedCoinaState, SharedCoinaStateListener, SharedKotlinx_coroutines_coreMutableStateFlow, SharedKotlinx_serialization_coreKSerializer, SharedKotlinComparable, SharedKotlinKType, SharedKtor_ioCloseable, SharedKtor_client_coreHttpClientEngine, SharedKtor_client_coreHttpClientEngineCapability, SharedKtor_utilsAttributes, SharedKotlinIterator, SharedKotlinCoroutineContextElement, SharedKotlinCoroutineContextKey, SharedKotlinx_coroutines_coreChannelIterator, SharedKotlinx_coroutines_coreSelectClause1, SharedKotlinx_coroutines_coreChildHandle, SharedKotlinx_coroutines_coreChildJob, SharedKotlinx_coroutines_coreDisposableHandle, SharedKotlinx_coroutines_coreJob, SharedKotlinSequence, SharedKotlinx_coroutines_coreSelectClause0, SharedKotlinFunction, SharedKotlinx_coroutines_coreFlow, SharedLibrary_baseMutableRealm, SharedLibrary_baseConfiguration, SharedLibrary_baseRealmQuery, SharedLibrary_baseRealmSchema, SharedLibrary_baseVersioned, SharedLibrary_baseBaseRealm, SharedLibrary_baseTypedRealm, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier, SharedKotlinx_coroutines_coreFlowCollector, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_coroutines_coreStateFlow, SharedKotlinx_coroutines_coreMutableSharedFlow, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKtor_client_coreHttpClientPlugin, SharedKotlinSuspendFunction2, SharedKotlinx_coroutines_coreSelectInstance, SharedKotlinSuspendFunction1, SharedKotlinx_coroutines_coreParentJob, SharedLibrary_baseCompactOnLaunchCallback, SharedLibrary_baseInitialDataCallback, SharedLibrary_baseRealmScalarQuery, SharedLibrary_baseRealmSingleQuery, SharedLibrary_baseRealmScalarNullableQuery, SharedLibrary_baseRealmElementQuery, SharedLibrary_baseRealmClass, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKtor_httpHeaders, SharedKotlinContinuation, SharedKotlinContinuationInterceptor, SharedKotlinx_coroutines_coreRunnable, SharedKtor_httpHttpMessage, SharedKtor_ioByteReadChannel, SharedKtor_httpHttpMessageBuilder, SharedKtor_client_coreHttpRequest, SharedLibrary_baseRealmLogger, SharedLibrary_baseRealmProperty, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKtor_httpParameters, SharedKotlinMapEntry, SharedKtor_utilsStringValues, SharedKtor_ioReadSession, SharedKotlinAppendable, SharedKtor_utilsStringValuesBuilder, SharedKtor_httpParametersBuilder, SharedLibrary_baseRealmPropertyType, SharedKtor_ioObjectPool;
+@protocol SharedPlatform, SharedApplicationApiManagerImplementation, SharedKotlinCoroutineContext, SharedKotlinx_coroutines_coreCoroutineScope, SharedKotlinx_coroutines_coreReceiveChannel, SharedCoinaUseCaseType, SharedKotlinx_coroutines_coreDeferred, SharedKotlinSuspendFunction0, SharedCoinaStorageProviderImplementation, SharedLibrary_baseRealm, SharedKotlinKClass, SharedLibrary_baseDeleteable, SharedLibrary_baseBaseRealmObject, SharedLibrary_baseRealmObject, SharedCoinaStateListenerHandler, SharedCoinaState, SharedKotlinx_serialization_coreKSerializer, SharedKotlinComparable, SharedKotlinKType, SharedKtor_ioCloseable, SharedKtor_client_coreHttpClientEngine, SharedKtor_client_coreHttpClientEngineCapability, SharedKtor_utilsAttributes, SharedKotlinIterator, SharedKotlinCoroutineContextElement, SharedKotlinCoroutineContextKey, SharedKotlinx_coroutines_coreChannelIterator, SharedKotlinx_coroutines_coreSelectClause1, SharedKotlinx_coroutines_coreChildHandle, SharedKotlinx_coroutines_coreChildJob, SharedKotlinx_coroutines_coreDisposableHandle, SharedKotlinx_coroutines_coreJob, SharedKotlinSequence, SharedKotlinx_coroutines_coreSelectClause0, SharedKotlinFunction, SharedKotlinx_coroutines_coreFlow, SharedLibrary_baseMutableRealm, SharedLibrary_baseConfiguration, SharedLibrary_baseRealmQuery, SharedLibrary_baseRealmSchema, SharedLibrary_baseVersioned, SharedLibrary_baseBaseRealm, SharedLibrary_baseTypedRealm, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKtor_client_coreHttpClientPlugin, SharedKotlinSuspendFunction2, SharedKotlinx_coroutines_coreSelectInstance, SharedKotlinSuspendFunction1, SharedKotlinx_coroutines_coreParentJob, SharedKotlinx_coroutines_coreFlowCollector, SharedLibrary_baseCompactOnLaunchCallback, SharedLibrary_baseInitialDataCallback, SharedLibrary_baseRealmScalarQuery, SharedLibrary_baseRealmSingleQuery, SharedLibrary_baseRealmScalarNullableQuery, SharedLibrary_baseRealmElementQuery, SharedLibrary_baseRealmClass, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKtor_httpHeaders, SharedKotlinContinuation, SharedKotlinContinuationInterceptor, SharedKotlinx_coroutines_coreRunnable, SharedKtor_httpHttpMessage, SharedKtor_ioByteReadChannel, SharedKtor_httpHttpMessageBuilder, SharedKtor_client_coreHttpRequest, SharedLibrary_baseRealmLogger, SharedLibrary_baseRealmProperty, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKtor_httpParameters, SharedKotlinMapEntry, SharedKtor_utilsStringValues, SharedKtor_ioReadSession, SharedKotlinAppendable, SharedKtor_utilsStringValuesBuilder, SharedKtor_httpParametersBuilder, SharedLibrary_baseRealmPropertyType, SharedKtor_ioObjectPool;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -831,40 +831,53 @@ __attribute__((swift_name("RealmExchangeModel.Companion")))
 - (SharedExchangeModel *)toExchangeModelModel:(SharedRealmExchangeModel *)model __attribute__((swift_name("toExchangeModel(model:)")));
 @end
 
-__attribute__((swift_name("CoinaStateListener")))
-@protocol SharedCoinaStateListener
-@required
-- (void)onLoadingStateChangedNewState:(BOOL)newState __attribute__((swift_name("onLoadingStateChanged(newState:)")));
-- (void)onStateChangedNewState:(id<SharedCoinaState>)newState __attribute__((swift_name("onStateChanged(newState:)")));
-@end
-
-__attribute__((swift_name("CoinaViewModel")))
-@interface SharedCoinaViewModel<Action, State> : SharedBase
+__attribute__((swift_name("CoinaBaseViewModel")))
+@interface SharedCoinaBaseViewModel<Action, State, StateType> : SharedBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 
 /**
  * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
 */
-- (void)addStateListenerInstance:(id<SharedCoinaStateListener>)instance __attribute__((swift_name("addStateListener(instance:)")));
+- (void)addStateListenerInstance:(id<SharedCoinaStateListenerHandler>)instance __attribute__((swift_name("addStateListener(instance:)")));
 - (SharedCoinaEither<SharedBoolean *, SharedKotlinException *> *)clear_ __attribute__((swift_name("clear_()")));
 - (void)executeActionAction:(Action)action __attribute__((swift_name("executeAction(action:)")));
+- (State _Nullable)getCurrentState __attribute__((swift_name("getCurrentState()")));
 - (State)getInitialState __attribute__((swift_name("getInitialState()")));
 
 /**
  * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
 */
-- (id<SharedCoinaStateListener> _Nullable)getStateListenerInstance __attribute__((swift_name("getStateListenerInstance()")));
+- (id<SharedCoinaStateListenerHandler> _Nullable)getStateListenerInstance __attribute__((swift_name("getStateListenerInstance()")));
 - (NSMutableArray<id<SharedCoinaUseCaseType>> *)getSupportedUseCases __attribute__((swift_name("getSupportedUseCases()")));
 - (void)initializeViewModel __attribute__((swift_name("initializeViewModel()")));
-- (void)onAcceptNewStateNewState:(State)newState __attribute__((swift_name("onAcceptNewState(newState:)")));
 - (void)onListenerTriggeredKey:(NSString *)key value:(SharedCoinaApplicationState<id> *)value __attribute__((swift_name("onListenerTriggered(key:value:)")));
 - (void)onNewStateTriggeredNewState:(State)newState __attribute__((swift_name("onNewStateTriggered(newState:)")));
 - (void)onTriggerSideEffectActionNewAction:(Action)newAction sideEffectKey:(NSString *)sideEffectKey __attribute__((swift_name("onTriggerSideEffectAction(newAction:sideEffectKey:)")));
 - (void)registerSideEffectSideEffect:(SharedCoinaSideEffect<Action, id> *)sideEffect __attribute__((swift_name("registerSideEffect(sideEffect:)")));
 @property (readonly) id<SharedKotlinx_coroutines_coreCoroutineScope> scope __attribute__((swift_name("scope")));
 @property (readonly) NSMutableArray<SharedCoinaSideEffect<Action, id> *> *sideEffects __attribute__((swift_name("sideEffects")));
-@property (readonly) id<SharedKotlinx_coroutines_coreMutableStateFlow> state __attribute__((swift_name("state")));
+@property StateType _Nullable state __attribute__((swift_name("state")));
+@end
+
+__attribute__((swift_name("CoinaStateListenerHandler")))
+@protocol SharedCoinaStateListenerHandler
+@required
+- (void)onLoadingStateChangedNewState:(BOOL)newState __attribute__((swift_name("onLoadingStateChanged(newState:)")));
+- (void)onStateChangedNewState:(id<SharedCoinaState>)newState __attribute__((swift_name("onStateChanged(newState:)")));
+@end
+
+__attribute__((swift_name("CoinaViewModel")))
+@interface SharedCoinaViewModel<Action, State> : SharedCoinaBaseViewModel<Action, State, State>
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (State _Nullable)getCurrentState __attribute__((swift_name("getCurrentState()")));
+- (void)initializeViewModel __attribute__((swift_name("initializeViewModel()")));
+
+/**
+ * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
+*/
+- (void)onAcceptNewStateNewState:(State)newState __attribute__((swift_name("onAcceptNewState(newState:)")));
 @end
 
 __attribute__((swift_name("CoinaAction")))
@@ -1763,60 +1776,6 @@ __attribute__((swift_name("KotlinKClass")))
 @property (readonly) NSString * _Nullable simpleName __attribute__((swift_name("simpleName")));
 @end
 
-__attribute__((swift_name("Kotlinx_coroutines_coreFlow")))
-@protocol SharedKotlinx_coroutines_coreFlow
-@required
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)collectCollector:(id<SharedKotlinx_coroutines_coreFlowCollector>)collector completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("collect(collector:completionHandler:)")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreSharedFlow")))
-@protocol SharedKotlinx_coroutines_coreSharedFlow <SharedKotlinx_coroutines_coreFlow>
-@required
-@property (readonly) NSArray<id> *replayCache __attribute__((swift_name("replayCache")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreStateFlow")))
-@protocol SharedKotlinx_coroutines_coreStateFlow <SharedKotlinx_coroutines_coreSharedFlow>
-@required
-@property (readonly) id _Nullable value __attribute__((swift_name("value")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreFlowCollector")))
-@protocol SharedKotlinx_coroutines_coreFlowCollector
-@required
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)emitValue:(id _Nullable)value completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("emit(value:completionHandler:)")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreMutableSharedFlow")))
-@protocol SharedKotlinx_coroutines_coreMutableSharedFlow <SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_coroutines_coreFlowCollector>
-@required
-
-/**
- * @note annotations
- *   kotlinx.coroutines.ExperimentalCoroutinesApi
-*/
-- (void)resetReplayCache __attribute__((swift_name("resetReplayCache()")));
-- (BOOL)tryEmitValue:(id _Nullable)value __attribute__((swift_name("tryEmit(value:)")));
-@property (readonly) id<SharedKotlinx_coroutines_coreStateFlow> subscriptionCount __attribute__((swift_name("subscriptionCount")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreMutableStateFlow")))
-@protocol SharedKotlinx_coroutines_coreMutableStateFlow <SharedKotlinx_coroutines_coreStateFlow, SharedKotlinx_coroutines_coreMutableSharedFlow>
-@required
-- (BOOL)compareAndSetExpect:(id _Nullable)expect update:(id _Nullable)update __attribute__((swift_name("compareAndSet(expect:update:)")));
-- (void)setValue:(id _Nullable)value __attribute__((swift_name("setValue(_:)")));
-@end
-
 __attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))
 @protocol SharedKotlinx_serialization_coreSerializationStrategy
 @required
@@ -2057,6 +2016,17 @@ __attribute__((swift_name("Kotlinx_coroutines_coreSelectClause0")))
 @protocol SharedKotlinx_coroutines_coreSelectClause0
 @required
 - (void)registerSelectClause0Select:(id<SharedKotlinx_coroutines_coreSelectInstance>)select block:(id<SharedKotlinSuspendFunction0>)block __attribute__((swift_name("registerSelectClause0(select:block:)")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreFlow")))
+@protocol SharedKotlinx_coroutines_coreFlow
+@required
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)collectCollector:(id<SharedKotlinx_coroutines_coreFlowCollector>)collector completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("collect(collector:completionHandler:)")));
 @end
 
 __attribute__((swift_name("Library_baseMutableRealm")))
@@ -2586,6 +2556,17 @@ __attribute__((swift_name("Kotlinx_coroutines_coreParentJob")))
 @protocol SharedKotlinx_coroutines_coreParentJob <SharedKotlinx_coroutines_coreJob>
 @required
 - (SharedKotlinCancellationException *)getChildJobCancellationCause __attribute__((swift_name("getChildJobCancellationCause()")));
+@end
+
+__attribute__((swift_name("Kotlinx_coroutines_coreFlowCollector")))
+@protocol SharedKotlinx_coroutines_coreFlowCollector
+@required
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)emitValue:(id _Nullable)value completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("emit(value:completionHandler:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))

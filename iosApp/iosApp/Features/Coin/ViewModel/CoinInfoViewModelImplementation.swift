@@ -52,6 +52,10 @@ public class CoinInfoViewModelImplementation : CoinaViewModel<CoinInfoAction, Co
         }
     }
     
+    public override func getInitialState() -> CoinInfoState {
+        return CoinInfoState.LoadingState()
+    }
+    
     public override func getSupportedUseCases() -> NSMutableArray {
         return [coinsUseCase]
     }

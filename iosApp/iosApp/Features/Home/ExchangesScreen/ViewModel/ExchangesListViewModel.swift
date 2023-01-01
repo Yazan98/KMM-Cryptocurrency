@@ -53,6 +53,15 @@ class ExchangesListViewModel : CoinaViewModel<ExchangesAction, ExchangesState> {
         }
     }
     
+    override func getInitialState() -> ExchangesState {
+        let dataSource = CoinaSingletonUtils.getExchangesDataSourceInstance()
+        if dataSource.isDataSourceEmpty() {
+            return ExchangesState.LoadingState()
+        } else {
+            return ExchangesState.ListState(exchanges: dataSource.getExchanges() as! [ExchangeModel])
+        }
+    }
+    
     override func getSupportedUseCases() -> NSMutableArray {
         return [exchangesUseCase]
     }

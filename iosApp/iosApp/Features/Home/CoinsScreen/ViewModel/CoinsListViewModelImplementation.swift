@@ -79,6 +79,15 @@ class CoinsListViewModelImplementation : CoinaViewModel<CoinsListAction, CoinsLi
         return [coinsUseCase, categoryCoinsUseCase]
     }
     
+    override func getInitialState() -> CoinsListState {
+        let dataSource = CoinaSingletonUtils.getCoinsDataSourceInstance()
+        if dataSource.isDataSourceEmpty() {
+            return CoinsListState.LoadingState()
+        } else {
+            return CoinsListState.ListState(list: dataSource.getCoinsBySearchQuery(query: "") as! [CoinModel])
+        }
+    }
+    
     deinit {
         clear_()
         self.stateListener = nil
