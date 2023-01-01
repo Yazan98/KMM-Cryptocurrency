@@ -17,20 +17,13 @@ abstract class CoinaUseCase<Arguments, Result>: CoroutineScope, CoinaUseCaseType
     private val parentJob = SupervisorJob()
     private val backgroundDispatcher = Dispatchers.Default
     private val resultChannel: Channel<CoinaApplicationState<Result>> by lazy { Channel() }
-    private val errorResultChannel: Channel<Throwable> by lazy { Channel() }
-
     private val receiveChannel: ReceiveChannel<CoinaApplicationState<Result>> by lazy { resultChannel }
-    private val errorsReceiveChannel: ReceiveChannel<Throwable> by lazy { errorResultChannel }
 
     override val coroutineContext: CoroutineContext
         get() = parentJob + backgroundDispatcher
 
     override fun getChannelListener(): ReceiveChannel<CoinaApplicationState<Result>> {
         return this.receiveChannel
-    }
-
-    override fun getErrorChannelListener(): ReceiveChannel<Throwable> {
-        return this.errorsReceiveChannel
     }
 
     protected fun onSendState(state: CoinaApplicationState<Result>) {
@@ -46,15 +39,8 @@ abstract class CoinaUseCase<Arguments, Result>: CoroutineScope, CoinaUseCaseType
         }
     }
 
-    protected fun onSendErrorState(exception: Throwable) {
-        launch {
-            errorResultChannel.send(exception)
-        }
-    }
-
     override fun clear() {
         this.resultChannel.close()
-        this.errorResultChannel.close()
         parentJob.cancel()
     }
 

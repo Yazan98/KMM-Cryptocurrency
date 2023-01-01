@@ -46,12 +46,6 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
                         onListenerTriggered(useCase.getUseCaseKey(), it)
                     }
                 }
-
-                useCase.getErrorChannelListener().consumeEach {
-                    scope.launch(Dispatchers.Main) {
-                        onExceptionListenerTriggered(useCase.getUseCaseKey(), it)
-                    }
-                }
             }
         }
     }
@@ -88,8 +82,6 @@ actual abstract class CoinaViewModel<Action: CoinaAction, State: CoinaState> {
     actual abstract fun executeAction(action: Action)
 
     actual abstract fun getInitialState(): State
-
-    actual abstract fun onExceptionListenerTriggered(key: String, value: Throwable)
 
     actual abstract fun onListenerTriggered(key: String, value: CoinaApplicationState<Any>)
 

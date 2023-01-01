@@ -59,15 +59,10 @@ class ExchangesViewModel @Inject constructor(
         }
     }
 
-    override fun onExceptionListenerTriggered(key: String, value: Throwable) {
-
-    }
-
     override fun getSupportedUseCases(): ArrayList<CoinaUseCaseType<Any>> {
         return ArrayList<CoinaUseCaseType<Any>>().apply {
             add(getExchangesUseCase as CoinaUseCaseType<Any>)
         }
     }
-
 
 }

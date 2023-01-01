@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.Icon
 import androidx.compose.material.OutlinedTextField
@@ -29,6 +30,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -110,7 +112,11 @@ fun CoinComposable(item: CoinModel, onItemClickListener: () -> Unit) {
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Row {
-            AsyncImage(model = item.image ?: "", contentDescription = "Image", modifier = Modifier.size(35.dp))
+            AsyncImage(
+                model = item.image ?: "",
+                contentDescription = "Image",
+                modifier = Modifier.size(35.dp).clip(CircleShape)
+            )
             Spacer(modifier = Modifier.width(20.dp))
             Column {
                 Text(text = item.name ?: "", color = ApplicationColors.getTextColor())

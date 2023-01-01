@@ -50,13 +50,6 @@ class AuthViewModelImplementation : CoinaViewModel<AuthAction, AuthState> {
         }
     }
     
-    override func onExceptionListenerTriggered(key: String, value: KotlinThrowable) {
-        DispatchQueue.main.async {
-            print("Exception Triggered")
-            self.stateListener?.onStatetriggered(state: AuthState.ErrorState(message: value.message ?? ""))
-        }
-    }
-    
     override func getSupportedUseCases() -> NSMutableArray {
         return [authUseCase]
     }

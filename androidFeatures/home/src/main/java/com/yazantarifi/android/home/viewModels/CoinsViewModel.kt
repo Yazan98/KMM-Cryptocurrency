@@ -50,10 +50,6 @@ class CoinsViewModel @Inject constructor(
         return CoinsState.ListState(dataSource.getCoins())
     }
 
-    override fun onExceptionListenerTriggered(key: String, value: Throwable) {
-
-    }
-
     override fun getSupportedUseCases(): ArrayList<CoinaUseCaseType<Any>> {
         return ArrayList<CoinaUseCaseType<Any>>().apply {
             add(getCoinsUseCase as CoinaUseCaseType<Any>)

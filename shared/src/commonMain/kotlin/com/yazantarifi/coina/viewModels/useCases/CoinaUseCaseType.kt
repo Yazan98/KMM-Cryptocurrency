@@ -9,8 +9,6 @@ interface CoinaUseCaseType<Result> {
 
     fun getChannelListener(): ReceiveChannel<CoinaApplicationState<Result>>
 
-    fun getErrorChannelListener(): ReceiveChannel<Throwable>
-
     fun getUseCaseKey(): String
 
 }

@@ -52,10 +52,6 @@ public class CoinInfoViewModelImplementation : CoinaViewModel<CoinInfoAction, Co
         }
     }
     
-    public override func onExceptionListenerTriggered(key: String, value: KotlinThrowable) {
-    
-    }
-    
     public override func getSupportedUseCases() -> NSMutableArray {
         return [coinsUseCase]
     }

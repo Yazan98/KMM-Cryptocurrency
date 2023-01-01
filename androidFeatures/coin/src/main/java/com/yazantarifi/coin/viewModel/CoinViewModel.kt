@@ -53,10 +53,6 @@ class CoinViewModel @Inject constructor(
         }
     }
 
-    override fun onExceptionListenerTriggered(key: String, value: Throwable) {
-        println("Error :: Key : $key - Value : ${value.message}")
-    }
-
     override fun getSupportedUseCases(): ArrayList<CoinaUseCaseType<Any>> {
         return ArrayList<CoinaUseCaseType<Any>>().apply {
             add(getCoinInfoUseCase as CoinaUseCaseType<Any>)

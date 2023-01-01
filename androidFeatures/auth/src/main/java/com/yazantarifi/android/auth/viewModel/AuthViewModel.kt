@@ -40,10 +40,6 @@ class AuthViewModel @Inject constructor(
         return AuthState.EmptyState
     }
 
-    override fun onExceptionListenerTriggered(key: String, value: Throwable) {
-        loginErrorMessageListener.value = value.message ?: ""
-    }
-
     override fun onListenerTriggered(key: String, value: CoinaApplicationState<Any>) {
         if (key == AuthUseCase.KEY) {
             value.handleResult({
