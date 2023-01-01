@@ -5,6 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.models.CoinInformation
 import com.yazantarifi.coina.useCases.CoinInfoUseCase
+import com.yazantarifi.coina.viewModels.CoinaBaseViewModel
 import com.yazantarifi.coina.viewModels.CoinaViewModel
 import com.yazantarifi.coina.viewModels.useCases.CoinaUseCaseType
 import dagger.hilt.android.lifecycle.HiltViewModel

@@ -9,6 +9,7 @@ import com.yazantarifi.coina.CoinaApplicationState
 import com.yazantarifi.coina.database.ExchangesDataSource
 import com.yazantarifi.coina.models.ExchangeModel
 import com.yazantarifi.coina.useCases.GetExchangesUseCase
+import com.yazantarifi.coina.viewModels.CoinaBaseViewModel
 import com.yazantarifi.coina.viewModels.CoinaViewModel
 import com.yazantarifi.coina.viewModels.useCases.CoinaUseCaseType
 import dagger.hilt.android.lifecycle.HiltViewModel

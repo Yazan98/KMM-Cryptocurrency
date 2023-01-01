@@ -1,1 +1,6 @@
 /androidApp/google-services.json
+/androidApp/build
+/androidFeatures/auth/build
+/androidFeatures/coin/build
+/androidFeatures/core/build
+/androidFeatures/home/build
